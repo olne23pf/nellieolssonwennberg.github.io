@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <!--left...icon-->
+  <div class="header-icon">
+    <img id="icon-img" src="/img/icon.png" />
+  </div>
+
+  <!--middle-->
+  <div class="title" id="title">
+    <a href="/">NELLIE<img id="title-img" src="/img/icon.png" />DESIGN</a>
+  </div>
+
+  <!--Source: https://www.youtube.com/watch?v=flItyHiDm7E, 2024-->
+  <!--hamburger menu-->
+  <div class="headerright">
+    {{#if session.isAdmin}}
+      <div class="account">
+        <a href="/userpage">
+          <img class="accountimg" src="/img/account.png" />
+        </a>
+      </div>
+    {{/if}}
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+  <ul class="nav-menu">
+    <li class="nav-item">
+      <a href="/projects" class="nav-link">work</a>
+    </li>
+    <li class="nav-item2">
+      <a href="/about" class="nav-link">about</a>
+    </li>
+    <li class="nav-item2">
+      <a href="/contact" class="nav-link">contact</a>
+    </li>
+    {{#if session.user}}
+      <li class="nav-item2"><a href="/logout">logout</a>
+      </li>
+    {{else}}
+      <li class="nav-item2">
+        <a href="/login" class="nav-link">login</a>
+      </li>
+    {{/if}}
+  </ul>
+</nav>

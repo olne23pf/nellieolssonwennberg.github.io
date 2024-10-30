@@ -1,0 +1,48 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> ABOUT </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div class="about">
+
+  <div class="aboutinformation">
+    <h1>Hi, I'm Nellie!</h1>
+    <p>
+      I'm Nellie Olsson Wennberg, I'm a passionate graphic design and web
+      development student at JU, where I'm learning to combine my love for
+      creativity with technical skills. With a degree in architectural
+      visualization, I've developed a strong foundation in Photoshop and 3D
+      design, which has fueled my passion and shaped the way I approach my work
+      today. I'm always excited to learn, grow, and push creative boundaries.
+      Calm, curious, and driven by a desire to develop, I believe in dreaming
+      big and constantly evolving both personally and professionally.
+    </p>
+  </div>
+  <img class="portrait-img" src="/img/cv-img.png" />
+</div>
+<div class="cv">
+  <h1>Skills</h1>
+  <div class="skills">
+
+    <div class="skilltable">
+      <ul>
+        <h4>type of skill</h4>
+        <h4>description</h4>
+        {{#each skills}}
+          <li>
+            <img id="skilldot" src="/img/icon.png" />
+            {{sname}}
+          </li>
+          <li id="description">
+            {{sdesc}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

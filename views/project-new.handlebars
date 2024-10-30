@@ -1,0 +1,76 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li>    {{#if project.pid}}
+<a> MODIFY PROJECT </a>  {{else}} <a>NEW PROJECT</a>{{/if}}</li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div id="principal">
+    <li class="backbtn">
+    <a href="/projects">back</a>
+  </li>
+    {{#if project.pid}}
+    <h1>Modify project</h1> 
+    {{else}} <h1>Create a new project</h1> 
+    {{/if}}
+  <div class="createnewproject">
+    {{#if project.pid}}
+    <form action="/project/modify/{{project.pid}}" method="POST">
+     {{else}}
+     <form action="/project-new" method="POST">
+     {{/if}}
+      <label for="projtitle">Title:</label>
+      <input
+        type="text"
+        id="projtitle"
+        name="projtitle"
+        required="required"
+      {{#if project.ptitle}} value="{{project.ptitle}}" {{/if}} /><br />
+
+      <label for="projdate">Date:</label>
+      <input
+        type="number"
+        id="projdate"
+        name="projdate"
+        min="2019"
+        max="2026"
+        required="required"
+      {{#if project.pdate}} value="{{project.pdate}}" {{/if}}
+      /><br />
+
+      <textarea id="projdesc" name="projdesc" required="required">
+        {{#if project.pdesc}}{{project.pdesc}}{{/if}}</textarea><br />
+
+      <label for="projcid">Categorie:</label>
+     <div id="choosecategorie">
+  <select name="projcid" id="projcid" required="required">
+    <option value="1" {{#if (eq project.cid "1")}}selected="selected"{{/if}}>Branding</option>
+    <option value="2" {{#if (eq project.cid "2")}}selected="selected"{{/if}}>Illustration</option>
+    <option value="3" {{#if (eq project.cid "3")}}selected="selected"{{/if}}>Programming</option>
+    <option value="4" {{#if (eq project.cid "4")}}selected="selected"{{/if}}>Print ads</option>
+    <option value="5" {{#if (eq project.cid "5")}}selected="selected"{{/if}}>Posters</option>
+ </select>
+</div>
+      <br />
+
+
+      <label for="projurl">img</label>
+      <input
+        type="text"
+        id="projurl"
+        name="projurl"
+        placeholder="/img/something.png"
+        required="required" {{#if project.pimgURL}} value="{{project.pimgURL}}" {{/if}}
+      /><br />
+      <input id="submitproject" type="submit" value={{#if project.pid}}"Modify project"{{else}}"Create new project"{{/if}} />
+    
+    {{#if error}} <!-- Display error if there's one -->
+    <p class="error">Failed to update project. Please try again.</p>
+  {{/if}}
+    </form>
+    </div>
+</div>

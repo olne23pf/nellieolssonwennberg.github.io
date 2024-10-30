@@ -1,0 +1,57 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> REGISTER </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div class="login">
+  <div class="mytextcard">
+    <!--<h1 class="loginform">Login</h1>-->
+    <div class="button-box">
+      <!--<div id="btn.register"></div>-->
+      <a href="/login"><button
+          type="button"
+          class="toggle-btn"
+          onclick="login()"
+        >Login</button></a>
+      <button
+        type="button"
+        class="toggle-btn-register"
+        onclick="register()"
+      >Register</button>
+    </div>
+    <h3 class="registertitle">Register With Username</h2>
+
+    <form id="register" class="input-group" action="/register" method="POST">
+      <label for="username">Username:</label><input
+        type="text"
+        id="username"
+        name="username"
+      /><br />
+      <!--
+      <label for="email">Email:</label><input
+        type="text"
+        id="email"
+        name="email"
+      /><br />-->
+      <label for="password">Password:</label><input
+        type="password"
+        id="password"
+        name="password"
+      /><br />
+      <input id="submitbtn" type="submit" value="Register" />
+    </form>
+  </div>
+
+  {{#if error}}
+    <div class="error">{{error}}</div>
+  {{/if}}
+  {{#if message}}
+    <div class="error">{{message}}</div>
+  {{/if}}
+  
+  </div>

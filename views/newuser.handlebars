@@ -1,0 +1,41 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> CREATE NEW USER </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+<div id="principal">
+  <li class="backbtn">
+    <a href="/userpage">back</a>
+  </li>
+  <div class="login">
+
+    <div class="mytextcard">
+
+      <h1>Create a new user</h1>
+
+      <form id="register" class="input-group" action="/newuser" method="POST">
+        <label for="username">Username:</label><input
+          type="text"
+          id="username"
+          name="username"
+        /><br />
+        <!--
+      <label for="email">Email:</label><input
+        type="text"
+        id="email"
+        name="email"
+      /><br />-->
+        <label for="password">Password:</label><input
+          type="password"
+          id="password"
+          name="password"
+        /><br />
+        <input id="submitbtn" type="submit" value="Add user" />
+      </form>
+    </div>
+  </div>
+</div>

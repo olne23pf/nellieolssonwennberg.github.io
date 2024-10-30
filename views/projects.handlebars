@@ -1,0 +1,80 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> WORK </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div class="projectpage">
+  <div class="projectTop">
+    <h1>All Projects</h1>
+  </div>
+  <!--Source: https://www.youtube.com/watch?v=KG8Pt1iskts, 2023-->
+  <!--How to create the filter "function" -->
+  <div class="filter">
+    <a>FILTER</a>
+    <span></span>
+    <div class="categories">
+    <p class="option" {{#if (eq ../selectedCid null)}} selected="selected"{{/if}} data-cid="">Show all</p>
+  {{#each categories}}
+    <p class="option" {{#if (eq ../selectedCid this.cid)}} selected="selected"{{/if}} data-cid="{{this.cid}}">{{this.ctitle}}</p>
+  {{/each}}
+    </div>  
+    {{#if session.isAdmin}}
+    <div class="addproject">
+  <a class="plus" href="/project-new">+</a>
+<a class="add" href="/project-new">Add New Project</a>
+    </div>
+  {{/if}}
+  </div>
+    
+    
+    {{#each projects}}
+
+  <div class="project">
+    <div class="project-text">
+        <ul>
+          <li class="titletext">
+            <a href="/project/{{pid}}">{{this.ptitle}}</a>
+          </li>
+          <li class="runningtext">
+            {{this.categories}}
+          </li>
+          <li class="datetext">
+            {{this.pdate}}
+          </li>
+{{#if ../session.isAdmin}}
+      <div class="editproject">
+        <div><a href="/project/modify/{{pid}}" class="modify">modify</a>
+        </div>
+        <div><a href="/project/delete/{{pid}}" class="delete">delete</a>
+        </div>
+      </div>
+{{/if}}
+        </ul>
+    </div>
+    <div class="project-img">
+        <a href="/project/{{pid}}">
+          <img src="{{this.pimgURL}}" alt="{{pimgURL}}" class="smallimage" />
+        </a>
+    </div>
+  </div>
+  
+  {{/each}}
+
+  <div class="pagination">
+  {{#if (eq page 1)}}
+        <a href="./projects?page= {{nextPage}}"> Next </a>
+  {{else}}
+          <a href="./projects?page= {{previousPage}}"> Back </a>
+
+  {{#if hasNextPage}}
+            <a href="./projects?page= {{nextPage}}"> Next </a>
+{{/if}}
+
+{{/if}}
+  </div>
+</div>

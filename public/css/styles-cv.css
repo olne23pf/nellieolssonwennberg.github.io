@@ -1,0 +1,1292 @@
+@font-face {
+  font-family: "karla";
+  src: url("/fonts/Karla-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 100;
+  color: #ffa941;
+}
+h2 {
+  font-family: "karla";
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 100;
+  font-family: "karla";
+}
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 236);
+}*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(251, 248, 240);
+  font-family: "amandine";
+}
+
+/*HEADER*/
+
+/*--left--*/
+.header-icon {
+  left: 0;
+  justify-self: left;
+  z-index: 3;
+  background-color: transparent;
+}
+
+.header-icon img {
+  width: 2.5em;
+  background-color: transparent;
+}
+
+/*--middle--*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #ffa941;
+  font-size: 20px;
+  background-color: transparent;
+  padding-top: 0.2em;
+  z-index: 3;
+  background-color: transparent;
+}
+.title a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+.title a img {
+  width: 0.5em;
+  padding-bottom: 0.2em;
+  background-color: transparent;
+}
+
+/*-- right -- hamburger menu --*/
+
+header {
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  background-color: rgb(251, 248, 240);
+  z-index: 4;
+}
+
+header .nav-menu li {
+  list-style: none;
+  background-color: transparent;
+}
+
+.nav-item a,
+.nav-item2 a {
+  color: rgb(162, 124, 70);
+  text-decoration: none;
+  font-size: 1.4rem;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.navbar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #ffa941; /* Svart linje under headern */
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: fixed;
+  z-index: 3;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: #ffa941;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffa941;
+}
+
+.account {
+  padding-right: 1rem;
+}
+.accountimg {
+  width: 1.8rem;
+}
+.headerright {
+  display: flex;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  z-index: 4;
+  background-color: transparent;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background-color: rgb(233, 227, 213);
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  transition: top 2s ease-in-out;
+  padding-top: 7em;
+  z-index: 1;
+}
+
+.nav-item {
+  display: flex;
+  padding-top: 0;
+}
+.nav-item2 {
+  padding-top: 0;
+}
+
+.nav-menu.active {
+  left: 0;
+  top: 0;
+}
+
+/*----------------------------------------------------------------*/
+
+.pageLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tre kolumner */
+  margin-top: 0em;
+}
+
+.left {
+  border-right: 1px solid #ffa941; /* Svart linje under headern */
+  display: flex;
+  width: 8%;
+  height: 100%;
+  margin-top: 4.5em;
+  position: fixed;
+  background-color: transparent;
+  z-index: 3;
+}
+.left li a {
+  display: block;
+  color: #ffa941;
+  transform: rotate(-90deg); /* Roterar texten 90 grader */
+  transform-origin: left top; /* Valfri: Justerar rotationspunkten */
+  margin-left: 3.6rem;
+  margin-top: 22rem;
+  text-align: center;
+  text-decoration: none;
+  position: fixed;
+  background-color: transparent;
+}
+
+.right {
+  border-left: 1px solid #ffa941; /* Svart linje under headern */
+  display: flex;
+  position: fixed;
+  width: 8%;
+  height: 100%;
+  margin-top: 4.5em;
+  justify-self: right;
+  right: 0;
+  background-color: transparent;
+  z-index: 3;
+}
+
+/*---- HOME ----*/
+.welcomeadmin {
+  padding-top: 8rem;
+  text-align: center;
+}
+.showing-projects {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap; /* So all elements are in one row */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.projects-carousel {
+  display: inline-flex;
+  animation: scroll 20s linear infinite; /* The animation has a contunious movement */
+}
+.projects-carousel img {
+  width: 20rem;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+.projects-carousel img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/*---- ABOUT ----*/
+
+.about {
+  width: 84%;
+  padding-top: 4.5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #ffa941;
+}
+.aboutinformation {
+  padding-top: 8rem;
+}
+.aboutinformation h1 {
+  padding: 1rem;
+  text-align: center;
+}
+.aboutinformation p {
+  font-family: "karla";
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  height: 80%;
+  text-align: center;
+}
+.portrait-img {
+  width: 89%;
+  margin: 2rem;
+  padding: 0.5rem;
+  border: 1px solid #ffa941;
+  display: block;
+}
+.cv {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+.cv h1 {
+  padding-top: 9rem;
+  text-align: center;
+}
+.cv .skills {
+  width: 100%;
+}
+.cv .skilltable {
+  display: flex;
+  width: 80%;
+  padding-bottom: 10rem;
+}
+.cv .skilltable ul h4 {
+  font-family: "karla";
+  font-weight: 100;
+  font-size: 1.4rem;
+  padding-left: 0.8rem;
+  margin-bottom: 2rem;
+  text-decoration: underline #ffa941;
+}
+.cv .skilltable ul {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.cv .skilltable li {
+  padding: 10px 12px;
+  font-family: "karla";
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+#skilldot {
+  width: 1rem;
+}
+
+/*CONTACT*/
+.contactme {
+  margin: 14em auto 8em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+}
+.contactme h2 {
+  font-family: "amandine";
+  color: #ffa941;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2.4rem;
+}
+
+.formcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 2em;
+  margin: 0.5em;
+  height: 15em;
+  width: 60%;
+  margin: 0 auto;
+}
+.box1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-right: 0.2em;
+}
+.box2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-left: 0.2em;
+}
+.box3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.formcontainer label {
+  font-family: "karla";
+}
+.box1 input,
+.box2 input {
+  width: 100%;
+  height: 2em;
+  padding: 5px;
+  border-style: none;
+  background-color: rgba(222, 215, 204, 0.473);
+  font-size: 1.2rem;
+  font-family: "karla";
+}
+.box3 textarea {
+  width: 100%;
+  height: 10em;
+  padding: 5px;
+  font-size: 1.2rem;
+  border-style: none;
+  background-color: rgba(222, 215, 204, 0.473);
+  font-family: "karla";
+}
+
+.formcontainer #submitbtn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  margin-top: 1em;
+  height: 3em;
+  background-color: #ffa941;
+  border-style: none;
+  cursor: pointer;
+  font-family: "karla";
+}
+
+.information {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 14em;
+}
+.information h3 {
+  font-weight: 300;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2em;
+  color: #ffa941;
+}
+.information ul li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 1em;
+  font-family: "karla";
+}
+
+/*PROJECTS*/
+.projectpage {
+  width: 84%;
+  margin: 0 auto;
+}
+/*
+.projectpage .mytextcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}*/
+
+.projectpage a {
+  margin-top: 0em;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffa941;
+}
+.projectTop {
+  width: 100%;
+}
+.filter {
+  width: 100%;
+  height: 3rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 2em;
+  position: sticky;
+  top: 70px;
+  z-index: 3;
+  border-bottom: 1px solid #ffa941;
+}
+.filter a {
+  font-family: "karla";
+  font-size: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  left: 0;
+  color: #333;
+}
+.selectedcid {
+  color: #333;
+}
+.filter span {
+  width: 0;
+  height: 0;
+  border-right: 0.25rem solid #ffa941;
+  border-bottom: 0.25rem solid #ffa941;
+  border-left: 0.5rem solid transparent;
+  border-top: 0.5rem solid transparent;
+  transform: rotate(45deg);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.filter .categories {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 1rem;
+  font-size: 0;
+  opacity: 0;
+  font-family: "karla";
+  background-color: transparent;
+}
+
+.filter .active {
+  font-size: 1.2rem;
+  opacity: 1;
+}
+.filter .categories .option {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #ffa941;
+  font-family: "karla";
+  background-color: transparent;
+}
+
+.addproject {
+  padding-left: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  padding-right: 2em;
+}
+.addproject .add {
+  display: flex;
+  cursor: pointer;
+  color: #333;
+  padding: 0.2rem;
+  font-size: 1rem;
+
+  font-family: "karla";
+}
+.addproject .plus {
+  color: #ffa941;
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  font-family: "karla";
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.project-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-text ul {
+  margin: 0 auto;
+  list-style: none;
+}
+.project-text .titletext {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.project-text .runningtext {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "karla";
+}
+.project-text .datetext {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "karla";
+}
+.editproject {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.editproject > div {
+  padding: 2rem;
+}
+.editproject > div a {
+  font-family: "karla";
+}
+.project-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.project-img img {
+  width: 50rem;
+  height: auto;
+}
+.smallimage {
+  max-width: 100%;
+  height: auto;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+  display: flex;
+}
+.pagination {
+  display: flex;
+  padding: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+.pagination a {
+  padding: 1rem;
+  font-family: "karla";
+}
+
+/* ------ PROJECT PAGE ------*/
+
+.backbtn {
+  padding-top: 6rem;
+  width: 97%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+.backbtn a {
+  font-family: "karla";
+  text-decoration: none;
+  color: #ffa941;
+}
+.projecttitle {
+  text-align: center;
+  padding-top: 6rem;
+}
+.projectcard {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 0.5rem;
+}
+
+.projdate {
+  font-family: "karla";
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.projinfo {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.projinfo p {
+  font-family: "karla";
+}
+.divimage {
+  margin: 0 auto;
+}
+.divimage img {
+  width: 30rem;
+}
+
+/* ------ ADD A NEW PROJECT ------*/
+#principal {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+#principal h1 {
+  text-align: center;
+  padding-top: 3rem;
+}
+.createnewproject form {
+  display: flex;
+  flex-direction: column;
+  width: 52%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+}
+.createnewproject form label {
+  font-family: "karla";
+}
+.createnewproject form input {
+  padding: 0.5rem;
+  background-color: rgba(222, 215, 204, 0.473);
+  border: none;
+  font-family: "karla";
+}
+.createnewproject form textarea {
+  height: 5rem;
+  padding: 0.5rem;
+  font-family: "karla";
+}
+#choosecategorie {
+  width: 100%;
+}
+#projcid {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: rgba(222, 215, 204, 0.473);
+  font-family: "karla";
+}
+#projcid option {
+  font-family: "karla";
+}
+#submitproject {
+  background-color: #ffa941;
+}
+
+/* ------ ZONNE PROJECT ------*/
+/*
+.pagetitle {
+  width: 100%;
+  margin-top: 4rem;
+  justify-items: center;
+}
+.pagetitle h1 {
+  color: #ffa941;
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.video {
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  justify-content: center;
+}
+.video video {
+  width: 100%;
+}*/
+
+/*LOG IN*/
+.login {
+  width: 100%;
+  height: 100%;
+}
+.mytextcard {
+  padding: 2rem;
+  padding-top: 8rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button-box {
+  display: flex;
+  margin: 3.5rem auto;
+  position: relative;
+  box-shadow: 0 0 2rem 0.3rem blanchedalmond;
+  border-radius: 0rem;
+  justify-content: center;
+  width: 20rem;
+}
+.toggle-btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: #ffa941;
+  width: 10rem;
+}
+.toggle-btn-login {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: #ffa941;
+  background-color: #ffaa414a;
+  width: 10rem;
+}
+.toggle-btn-register {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: #ffa941;
+  background-color: #ffaa414a;
+  width: 10rem;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 11rem;
+  height: 100%;
+  background-color: #ffaa414a;
+  border-radius: 0rem;
+  transition: 0.5s;
+}
+#btn.register {
+  right: 0;
+}
+.input-group {
+  width: 28rem;
+  transition: 0.5s;
+}
+#login {
+  padding-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+}
+#register {
+  left: 15rem;
+  padding-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.registertitle {
+  text-align: center;
+  padding-top: 2rem;
+}
+.mytextcard #register input {
+  padding: 0.2rem 0.5rem;
+}
+.login .mytextcard form label {
+  font-family: "karla";
+}
+.login .mytextcard form input {
+  background-color: rgba(231, 231, 202, 0.473);
+  border-style: none;
+  height: 150%;
+  font-family: "karla";
+  padding: 0.2rem 0.5rem;
+}
+.login .mytextcard form #submitbtn {
+  background-color: #ffa941;
+  height: 100%;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin-top: 2em;
+}
+.error {
+  width: 60%;
+  padding-top: 2rem;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "karla";
+}
+
+/*-- ACCOUNT PAGE --*/
+.usertable {
+  width: 30%;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 15rem;
+}
+.usertitle {
+  padding-top: 10rem;
+  text-align: center;
+}
+.newUser {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.newUser a {
+  background-color: rgb(233, 227, 213);
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-family: "karla";
+}
+
+.tablerow {
+  width: 100%;
+  background-color: rgb(233, 227, 213);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: grid;
+  column-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.05rem solid #333;
+}
+.tablerow ul {
+  background-color: rgb(233, 227, 213);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tablerow ul li {
+  padding: 0 0.7rem;
+  list-style: none;
+  background-color: rgb(233, 227, 213);
+  font-family: "karla";
+}
+.tablerow ul li a {
+  text-decoration: none;
+  font-family: "karla";
+  background-color: rgb(233, 227, 213);
+  color: #ffa941;
+}
+#modifyuser img,
+#deleteuser img {
+  width: 2rem;
+  background-color: rgb(233, 227, 213);
+}
+#modifyuser,
+#deleteuser {
+  right: 0;
+}
+/*--------------------------------------------------------------------------------------------------*/
+/*------------------------------------------  TABLETS  ---------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  /*
+  .title {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .burger-menu {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    align-content: center;
+  }
+  .burger-menu li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(250, 250, 226);
+  }
+  .burger-menu li a {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    padding-left: 0;
+  }*/
+
+  .navbar {
+    width: 100%;
+    padding: 0 30px;
+  }
+  /*----------------------------------*/
+
+  .left,
+  .left ul,
+  .left li {
+    background-color: transparent;
+    width: 9%;
+  }
+  .left li a {
+    margin-left: 1.7rem;
+    margin-top: 30em;
+  }
+  .right {
+    width: 9%;
+  }
+  .pageLayout {
+    grid-template-columns: 1fr;
+  }
+
+  /*----------------------------------*/
+
+  .projectpage {
+    width: 82%;
+    margin: 0 auto;
+    padding-top: 6rem;
+  }
+  .projectpage h1 {
+    margin: 2em 0 1em 0;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  .projectpage img {
+    width: 100%;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+  .project:nth-child(even) {
+    flex-direction: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .project-text .titletext {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .project-text .runningtext {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .project-text .datetext {
+    font-size: 0.8rem;
+  }
+
+  /*-----------------------------------*/
+  #skills {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .skills ul {
+    width: 90%;
+  }
+  /*-----------------------------------*/
+  .about {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .about h1 {
+    padding: 2rem 0;
+  }
+  /*-----------------------------------*/
+  .contactme {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    font-size: 1.4rem;
+  }
+
+  .formcontainer {
+    width: 74%;
+    margin: 0 auto;
+  }
+  .formcontainer label {
+    font-size: 1.4rem;
+  }
+  .formcontainer input {
+    font-size: 1.4rem;
+  }
+  .information {
+    padding-top: 30rem;
+  }
+  /*-----------------------------------*/
+  .login .mytextcard {
+    padding-top: 10rem;
+  }
+  #login,
+  #register {
+    width: 90%;
+  }
+  .login .mytextcard form label {
+    font-size: 1.6rem;
+  }
+  #login .mytextcard form input {
+    font-size: 1.6rem;
+  }
+  #login .mytextcard form #submitbtn {
+    font-size: 1.6rem;
+  }
+  /*-----------------------------------*/
+
+  .usertable {
+    width: 70%;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*------------------------------------------  MEDIA  ---------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 1rem;
+  }
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  /*--------------------------------*/
+  .pageLayout {
+    margin: 0 auto;
+  }
+
+  .left,
+  .left ul,
+  .left li {
+    background-color: transparent;
+    width: 10%;
+  }
+  .left li a {
+    margin-left: 0.8rem;
+    margin-top: 21em;
+  }
+  .right {
+    width: 10%;
+  }
+  /*------------------------------*/
+  .showing-projects {
+    width: 80%;
+  }
+
+  /*------------------------------*/
+
+  .projectpage {
+    display: grid;
+    grid-template-columns: 2fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .projectpage h1 {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+  }
+  .projectpage img {
+    width: 100%;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+  .project-text .titletext {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .project-text .runningtext {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .project-text .datetext {
+    font-size: 0.8rem;
+  }
+
+  .createnewproject form {
+    width: 90%;
+  }
+  /*----------------------------each project--*/
+
+  #principal .projectcard {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #principal .projectcard .divimage img {
+    width: 100%;
+  }
+  /*------------------------------*/
+  #skills {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .skills ul {
+    width: 100%;
+  }
+  /*------------------------------*/
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .about h1 {
+    padding-top: 0;
+  }
+  .about img {
+    margin: 0.5rem auto;
+  }
+
+  .cv h1 {
+    padding-top: 3rem;
+  }
+  .skills .skilltable {
+    width: 100%;
+  }
+  .skills .skilltable ul {
+    padding-top: 2rem;
+  }
+  .skills .skilltable ul h4 {
+    font-size: 1.2rem;
+  }
+  .skills .skilltable ul li {
+    font-size: 0.8rem;
+  }
+
+  /*------------------------------*/
+
+  .contactme {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 8em;
+    padding-bottom: 3em;
+  }
+  .contactme h2 {
+    font-size: 1.7rem;
+  }
+  .formcontainer {
+    padding: 1em;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .formcontainer label {
+    font-size: 1.2rem;
+  }
+
+  .information {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20em;
+  }
+  .information h3 {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+  }
+  .information ul li {
+    padding-left: 0.1rem;
+    font-family: "karla";
+    font-size: 0.9rem;
+  }
+  .formcontainer #submitbtn {
+    font-size: 1rem;
+  }
+
+  /*------------------------------*/
+  .login {
+    padding-top: 0;
+  }
+  .login .button-box {
+    width: 100%;
+  }
+  .login .mytextcard {
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 6rem 0;
+  }
+
+  #login,
+  #register {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .login .mytextcard form label {
+    font-size: 1.4rem;
+  }
+  .submitbtn {
+    font-size: 1.4rem;
+  }
+  /*------------------------------*/
+
+  .usertable {
+    width: 70%;
+  }
+  .tablerow {
+    column-gap: 1rem;
+  }
+  .tablerow ul li {
+    font-size: 0.9rem;
+    left: 0;
+  }
+}

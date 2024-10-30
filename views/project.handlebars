@@ -1,0 +1,39 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> {{project.ptitle}} </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div id="principal">
+  <li class="backbtn">
+    <a href="/projects">back</a>
+  </li>
+
+  <h1 class="projecttitle">{{project.ptitle}}</h1>
+  <div class="projectcard">
+    <div class="projinfo">
+      <p>{{project.ctitle}}</p>
+      <div class="projdate">
+        {{project.pdate}}
+      </div>
+      <br />
+      <p>{{project.pdesc}}</p>
+
+      <br />
+
+    </div>
+    <div class="divimage">
+      <img
+        src="{{project.pimgURL}}"
+        alt="{{project.pimgURL}}"
+        class="bigimage"
+      />
+    </div>
+    <br />
+
+  </div>
+</div>
