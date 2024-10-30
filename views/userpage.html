@@ -1,0 +1,35 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> ACCOUNT </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div class="usertable">
+  <h1 class="usertitle">User Management</h1>
+  <div class="newUser">
+    <a href="/newuser">New User</a>
+  </div>
+  {{#each users}}
+
+  <div class="tablerow">
+    <ul id="one">
+      <li>{{uid}}</li>
+
+      <li>
+        <!--<a href="/userpage/{{id}}">{{username}}</a>-->
+        {{username}}
+      </li>
+    </ul>
+    <ul id="two">
+      <li id="modifyuser"><a href="/user/modify/{{uid}}" class="edit"><img src="/img/edit.png" /></a></li>
+
+      <li id="deleteuser"><a href="/user/delete/{{uid}}" class="delete"><img src="/img/delete.png" /></a></li>
+
+    </ul>
+  </div>
+  {{/each}}
+</div>
