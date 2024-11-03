@@ -542,6 +542,7 @@ app.listen(port, function () {
   //initTableProjects(db); //create the project table and populate it
   //initTableCateogrie(db);
   //initTableProjectsCategories(db);
+  initTableProjectImages(db);
   console.log("Server up and running, listening on port + " + port + "...");
 });
 
