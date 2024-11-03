@@ -35,6 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  //---- Modify Project add images ----//
+  function addImageField() {
+    const div = document.getElementById("image-urls");
+    const input = document.createElement("input");
+    input.type = "text";
+    input.name = "projurl[]";
+    input.placeholder = "/img/newimage.png";
+    div.appendChild(input);
+  }
+
   //---- LogIn or Register forms ----//
   const x = document.getElementById("login");
   const y = document.getElementById("register");

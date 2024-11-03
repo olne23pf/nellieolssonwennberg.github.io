@@ -151,6 +151,42 @@ app.get("/project/:projectid", function (req, res) {
   );
 });
 
+app.get("/project/:projectid", function (req, res) {
+  console.log(
+    "Project route parameter projectid: " + JSON.stringify(req.params.projectid)
+  );
+
+  const projectId = req.params.projectid;
+
+  db.get(
+    "SELECT * FROM projects WHERE pid=?",
+    [projectId],
+    (error, theProject) => {
+      if (error) {
+        console.log("ERROR: ", error);
+      } else {
+        db.all(
+          "SELECT image_url FROM project_images WHERE project_id=?",
+          [projectId],
+          (imgError, images) => {
+            if (imgError) {
+              console.log("ERROR fetching images: ", imgError);
+              res.redirect("/projects");
+            } else {
+              const model = {
+                project: theProject,
+                images: images.map((img) => img.image_url), // Skapar en array av bild-URL:er
+              };
+              res.render("project.handlebars", model);
+            }
+          }
+        );
+      }
+    }
+  );
+});
+
+//old
 app.get("/project/modify/:projid", function (req, res) {
   const id = req.params.projid;
   db.get("SELECT * FROM projects WHERE pid=?", [id], (error, theProject) => {
@@ -591,6 +627,13 @@ function initTableSkills(mydb) {
     }
   );
 }
+
+function initTableProjectImages(mydb) {
+  mydb.run(
+    "CREATE TABLE project_images (id INTEGER PRIMARY KEY AUTOINCREMENT,project_id INTEGER,image_url TEXT,FOREIGN KEY (project_id) REFERENCES projects(pid)"
+  );
+}
+
 function initTableCateogrie(mydb) {
   const categorie = [
     {

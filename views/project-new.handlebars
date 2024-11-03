@@ -65,7 +65,18 @@
         name="projurl"
         placeholder="/img/something.png"
         required="required" {{#if project.pimgURL}} value="{{project.pimgURL}}" {{/if}}
-      /><br />
+      />
+      <!--add more images-->
+      <label for="projurl">Add Images:</label>
+            <div id="image-urls">
+                {{#each project.images}}
+                    <input type="text" name="projurl[]" value="{{this}}" placeholder="/img/something.png" />
+                {{/each}}
+                <input type="text" name="projurl[]" placeholder="/img/newimage.png" />
+            </div>
+            <button type="button" onclick="addImageField()">Add More Images</button>
+      <br />
+
       <input id="submitproject" type="submit" value={{#if project.pid}}"Modify project"{{else}}"Create new project"{{/if}} />
     
     {{#if error}} <!-- Display error if there's one -->
