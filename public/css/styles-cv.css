@@ -683,6 +683,13 @@ header .nav-menu li {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
+#modifyproject-form {
+  padding: 1rem;
+  font-family: "karla";
+}
+#modifyproject-form input {
+  padding: 0.5rem;
+}
 
 /* ------ ADD A NEW PROJECT ------*/
 #principal {

@@ -520,7 +520,7 @@ app.post("/project/modify/:projid", function (req, res) {
         };
         res.status(400).render("project.handlebars", model);
       } else {
-        res.redirect("/project/pid");
+        res.redirect(`/project/${id}`);
       }
     }
   );
