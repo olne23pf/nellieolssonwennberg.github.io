@@ -496,32 +496,18 @@ app.post("/project/modify/:projid", function (req, res) {
   const desc = req.body.projdesc;
   const url = req.body.projurl;
   const cid = req.body.projcid;
+  let urls = req.body["projurl[]"];
 
-  // Hämta bild-URL-arrayen från req.body
-  let imageUrls = req.body["projurl[]"];
-
-  // Se till att det är en array (om bara en bild skickas blir det inte automatiskt en array)
-  if (!Array.isArray(imageUrls)) {
-    imageUrls = [imageUrls];
+  // Om endast en bild är skickad, gör den till en array
+  if (!Array.isArray(urls)) {
+    urls = [urls];
   }
-
-  // Uppdatera projektet med nya bilder i databasen
-  db.run(
-    "UPDATE projects SET images = ? WHERE pid = ?",
-    [JSON.stringify(imageUrls), projectId],
-    function (error) {
-      if (error) {
-        console.log("ERROR: ", error);
-        res.render("project-new", { error: true });
-      } else {
-        res.redirect("/projects");
-      }
-    }
-  );
+  // Konvertera bild-URL:erna till JSON-sträng för att spara i databasen
+  const imagesJson = JSON.stringify(urls);
 
   db.run(
-    `UPDATE projects SET ptitle=?, pdate=?, pimgURL=?, pdesc=?, cid=? WHERE pid=?`,
-    [title, date, url, desc, cid, id],
+    `UPDATE projects SET ptitle=?, pdate=?, pimgURL=?, pdesc=?, cid=?, images=? WHERE pid=?`,
+    [title, date, url, desc, cid, imagesJson, id],
     (error) => {
       if (error) {
         console.log("ERROR: ", error);

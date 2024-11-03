@@ -35,10 +35,44 @@
     </div>
     <br />
     <div class="project-images">
-      {{#each images}}
+      {{#each project.images}}
         <img src="{{this}}" alt="Project Image" class="project-image" />
       {{/each}}
     </div>
+
+     <!-- Modify Project Section -->
+    <button onclick="toggleModifyForm()">Modify Project</button>
+    <form id="modify-form" action="/project/modify/{{project.pid}}" method="POST" style="display:none;">
+      <label for="projtitle">Title:</label>
+      <input type="text" id="projtitle" name="projtitle" value="{{project.ptitle}}" required /><br />
+
+      <label for="projdate">Date:</label>
+      <input type="number" id="projdate" name="projdate" min="2019" max="2026" value="{{project.pdate}}" required /><br />
+
+      <label for="projdesc">Description:</label>
+      <textarea id="projdesc" name="projdesc" required>{{project.pdesc}}</textarea><br />
+
+      <label for="projcid">Categorie:</label>
+      <select name="projcid" id="projcid" required>
+        <option value="1" {{#if (eq project.cid "1")}}selected{{/if}}>Branding</option>
+        <option value="2" {{#if (eq project.cid "2")}}selected{{/if}}>Illustration</option>
+        <option value="3" {{#if (eq project.cid "3")}}selected{{/if}}>Programming</option>
+        <option value="4" {{#if (eq project.cid "4")}}selected{{/if}}>Print ads</option>
+        <option value="5" {{#if (eq project.cid "5")}}selected{{/if}}>Posters</option>
+      </select><br />
+
+      <!-- Bild-URL-fält för varje befintlig bild -->
+      <label for="projurl">Add Images:</label>
+      <div id="image-urls">
+        {{#each project.images}}
+          <input type="text" name="projurl[]" value="{{this}}" placeholder="/img/something.png" />
+        {{/each}}
+        <input type="text" name="projurl[]" placeholder="/img/newimage.png" />
+      </div>
+      <button type="button" onclick="addImageField()">Add More Images</button><br />
+
+      <input type="submit" value="Save Changes" />
+    </form>
 
   </div>
 </div>
