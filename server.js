@@ -498,6 +498,10 @@ app.post("/project/modify/:projid", function (req, res) {
   const cid = req.body.projcid;
   let urls = req.body["projurl[]"];
 
+  // Logga inkommande data för felsökning
+  console.log("Modifying project with ID:", id);
+  console.log("Form data received:", req.body);
+
   // Om endast en bild är skickad, gör den till en array
   if (!Array.isArray(urls)) {
     urls = [urls];
@@ -506,8 +510,8 @@ app.post("/project/modify/:projid", function (req, res) {
   const imagesJson = JSON.stringify(urls);
 
   db.run(
-    `UPDATE projects SET ptitle=?, pdate=?, pimgURL=?, pdesc=?, cid=?, images=? WHERE pid=?`,
-    [title, date, url, desc, cid, imagesJson, id],
+    `UPDATE projects SET ptitle=?, pdate=?, pdesc=?, cid=?, images=? WHERE pid=?`,
+    [title, date, desc, cid, imagesJson, id],
     (error) => {
       if (error) {
         console.log("ERROR: ", error);
@@ -515,9 +519,9 @@ app.post("/project/modify/:projid", function (req, res) {
           error: "Failed with modifying the project",
           message: "",
         };
-        res.status(400).render("project-new.handlebars", model);
+        res.status(400).render("project.handlebars", model);
       } else {
-        res.redirect("/projects");
+        res.redirect("/project");
       }
     }
   );
