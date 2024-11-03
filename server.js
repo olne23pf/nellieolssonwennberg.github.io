@@ -497,6 +497,28 @@ app.post("/project/modify/:projid", function (req, res) {
   const url = req.body.projurl;
   const cid = req.body.projcid;
 
+  // Hämta bild-URL-arrayen från req.body
+  let imageUrls = req.body["projurl[]"];
+
+  // Se till att det är en array (om bara en bild skickas blir det inte automatiskt en array)
+  if (!Array.isArray(imageUrls)) {
+    imageUrls = [imageUrls];
+  }
+
+  // Uppdatera projektet med nya bilder i databasen
+  db.run(
+    "UPDATE projects SET images = ? WHERE pid = ?",
+    [JSON.stringify(imageUrls), projectId],
+    function (error) {
+      if (error) {
+        console.log("ERROR: ", error);
+        res.render("project-new", { error: true });
+      } else {
+        res.redirect("/projects");
+      }
+    }
+  );
+
   db.run(
     `UPDATE projects SET ptitle=?, pdate=?, pimgURL=?, pdesc=?, cid=? WHERE pid=?`,
     [title, date, url, desc, cid, id],
@@ -542,7 +564,7 @@ app.listen(port, function () {
   //initTableProjects(db); //create the project table and populate it
   //initTableCateogrie(db);
   //initTableProjectsCategories(db);
-  initTableProjectImages(db);
+  //initTableProjectImages(db);
   console.log("Server up and running, listening on port + " + port + "...");
 });
 
