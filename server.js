@@ -515,8 +515,15 @@ app.post("/project/modify/:projid", function (req, res) {
       if (error) {
         console.log("ERROR: ", error);
         const model = {
-          error: "Failed with modifying the project",
-          message: "",
+          error: "Failed to modify the project",
+          project: {
+            pid: id,
+            ptitle: title,
+            pdate: date,
+            pdesc: desc,
+            cid: cid,
+            images: urls,
+          },
         };
         res.status(400).render("project.handlebars", model);
       } else {
