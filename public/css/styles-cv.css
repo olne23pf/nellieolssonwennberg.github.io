@@ -679,6 +679,8 @@ header .nav-menu li {
   color: #ffa941;
   border: none;
   background-color: #ffaa412a;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
 

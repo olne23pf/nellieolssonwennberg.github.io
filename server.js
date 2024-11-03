@@ -494,7 +494,6 @@ app.post("/project/modify/:projid", function (req, res) {
   const title = req.body.projtitle;
   const date = req.body.projdate;
   const desc = req.body.projdesc;
-  const url = req.body.projurl;
   const cid = req.body.projcid;
   let urls = req.body["projurl[]"];
 
@@ -521,7 +520,7 @@ app.post("/project/modify/:projid", function (req, res) {
         };
         res.status(400).render("project.handlebars", model);
       } else {
-        res.redirect("/project");
+        res.redirect("/project/pid");
       }
     }
   );
