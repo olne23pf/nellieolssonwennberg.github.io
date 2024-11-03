@@ -36,21 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //---- Modify Project add images ----//
-  // Visa och dölj redigeringsformuläret
-  function toggleModifyForm() {
-    const form = document.getElementById("modify-form");
-    form.style.display = form.style.display === "none" ? "block" : "none";
-  }
-
-  // Lägg till fler inmatningsfält för bilder
-  function addImageField() {
-    const div = document.getElementById("image-urls");
-    const input = document.createElement("input");
-    input.type = "text";
-    input.name = "projurl[]";
-    input.placeholder = "/img/newimage.png";
-    div.appendChild(input);
-  }
 
   //---- LogIn or Register forms ----//
   const x = document.getElementById("login");

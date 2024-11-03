@@ -674,6 +674,14 @@ header .nav-menu li {
   width: 30rem;
 }
 
+.modifyproject {
+  font-family: "karla";
+  color: #ffa941;
+  border: none;
+  background-color: #ffaa412a;
+  margin-bottom: 2rem;
+}
+
 /* ------ ADD A NEW PROJECT ------*/
 #principal {
   display: flex;

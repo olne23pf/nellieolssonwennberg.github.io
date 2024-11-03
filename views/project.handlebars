@@ -41,8 +41,8 @@
     </div>
 
      <!-- Modify Project Section -->
-    <button onclick="toggleModifyForm()">Modify Project</button>
-    <form id="modify-form" action="/project/modify/{{project.pid}}" method="POST" style="display:none;">
+    <button class="modifyproject" onclick="toggleModifyForm()">Modify Project</button>
+    <form id="modifyproject-form" action="/project/modify/{{project.pid}}" method="POST" style="display:none;">
       <label for="projtitle">Title:</label>
       <input type="text" id="projtitle" name="projtitle" value="{{project.ptitle}}" required /><br />
 
@@ -80,7 +80,7 @@
 <script>
   // Visa och dölj redigeringsformuläret
   function toggleModifyForm() {
-    const form = document.getElementById("modify-form");
+    const form = document.getElementById("modifyproject-form");
     form.style.display = form.style.display === "none" ? "block" : "none";
   }
 
