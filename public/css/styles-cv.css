@@ -684,7 +684,7 @@ header .nav-menu li {
   margin-bottom: 2rem;
 }
 .projectcard .images {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-bottom: 3rem;
@@ -696,12 +696,13 @@ header .nav-menu li {
 }
 .proj3 {
   margin: 0 auto;
+  width: 60%;
 }
 .proj3 a {
   margin: 0 auto;
 }
 .proj3 a img {
-  width: 60%;
+  width: 100%;
   cursor: pointer;
 }
 /*
