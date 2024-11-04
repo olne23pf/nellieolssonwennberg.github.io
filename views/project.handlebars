@@ -35,17 +35,13 @@
     </div>
     <br />
     <div class="images">
+      <img src="{{project.images}}" alt="{{project.images}}" class="bigimage" />
       <img
-        src="{{project.images}}"
-        alt="{{project.images}}"
-        class="bigimage"
-      />
-        <img
         src="{{project.images2}}"
         alt="{{project.images2}}"
         class="bigimage"
       />
-        <img
+      <img
         src="{{project.images3}}"
         alt="{{project.images3}}"
         class="bigimage"
@@ -58,7 +54,8 @@
       {{/each}}
     </div>-->
 
-     <!-- Modify Project Section -->
+    <!-- Modify Project Section -->
+    <!--
     <button class="modifyproject" onclick="toggleModifyForm()">Modify Project</button>
     <form id="modifyproject-form" action="/project/modify/{{project.pid}}" method="POST" style="display:none;">
       <label for="projtitle">Title:</label>
@@ -77,10 +74,10 @@
         <option value="3" {{#if (eq project.cid "3")}}selected{{/if}}>Programming</option>
         <option value="4" {{#if (eq project.cid "4")}}selected{{/if}}>Print ads</option>
         <option value="5" {{#if (eq project.cid "5")}}selected{{/if}}>Posters</option>
-      </select><br />
+      </select><br />-->
 
-      <!-- Bild-URL-fält för varje befintlig bild -->
-      <label for="projurl">Add Images:</label>
+    <!-- Bild-URL-fält för varje befintlig bild -->
+    <!--<label for="projurl">Add Images:</label>
       <div id="image-urls">
         {{#each project.images}}
           <input type="text" name="projurl[]" value="{{this}}" placeholder="/img/something.png" />
@@ -90,25 +87,18 @@
       <button type="button" onclick="addImageField()">Add More Images</button><br />
 
       <input type="submit" value="Save Changes" />
-    </form>
+    </form>-->
 
   </div>
 </div>
 
 <script>
-  // Visa och dölj redigeringsformuläret
-  function toggleModifyForm() {
-    const form = document.getElementById("modifyproject-form");
-    form.style.display = form.style.display === "none" ? "block" : "none";
-  }
-
-  // Lägg till fler inmatningsfält för bilder
-  function addImageField() {
-    const div = document.getElementById("image-urls");
-    const input = document.createElement("input");
-    input.type = "text";
-    input.name = "projurl[]";
-    input.placeholder = "/img/newimage.png";
-    div.appendChild(input);
+  // Visa och dölj redigeringsformuläret function toggleModifyForm() { const
+  form = document.getElementById("modifyproject-form"); form.style.display =
+  form.style.display === "none" ? "block" : "none"; } // Lägg till fler
+  inmatningsfält för bilder function addImageField() { const div =
+  document.getElementById("image-urls"); const input =
+  document.createElement("input"); input.type = "text"; input.name =
+  "projurl[]"; input.placeholder = "/img/newimage.png"; div.appendChild(input);
   }
 </script>

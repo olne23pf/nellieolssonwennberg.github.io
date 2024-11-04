@@ -684,6 +684,7 @@ header .nav-menu li {
   margin-bottom: 2rem;
 }
 .images {
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
