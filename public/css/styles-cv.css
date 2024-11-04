@@ -704,12 +704,12 @@ header .nav-menu li {
 }
 .proj2images {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0 auto;
   width: 100%;
 }
 .proj2images img {
-  width: 100%;
+  width: 50%;
 }
 
 .proj3 {
