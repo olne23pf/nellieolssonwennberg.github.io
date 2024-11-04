@@ -671,7 +671,7 @@ header .nav-menu li {
   margin: 0 auto;
 }
 .divimage img {
-  width: 30rem;
+  width: 100%;
 }
 
 .modifyproject {
@@ -684,14 +684,13 @@ header .nav-menu li {
   margin-bottom: 2rem;
 }
 .images {
-  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-bottom: 2rem;
 }
 .images img {
-  width: 25rem;
+  width: 15rem;
   padding: 0.2rem;
 }
 #modifyproject-form {
