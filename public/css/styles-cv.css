@@ -694,6 +694,13 @@ header .nav-menu li {
   padding: 0.1rem;
   width: 100%;
 }
+.proj3 {
+  margin: 0 auto;
+}
+.proj3 img {
+  width: 70%;
+  cursor: pointer;
+}
 /*
 #modifyproject-form {
   padding: 1rem;
