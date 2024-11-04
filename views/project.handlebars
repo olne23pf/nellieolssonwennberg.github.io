@@ -26,8 +26,14 @@
       <br />
 
     </div>
-
-    {{#if (eq project.pid 3)}}
+    {{#if (eq project.pid 2)}}
+      <div class="proj2">
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+          Din webbläsare stödjer inte videouppspelning.
+        </video>
+      </div>
+    {{else if (eq project.pid 3)}}
       <div class="proj3">
         <a
           href="https://ju-nmd2023.github.io/fop-final-project-group-53/"
