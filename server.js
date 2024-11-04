@@ -496,8 +496,9 @@ app.post("/project/modify/:projid", function (req, res) {
   const date = req.body.projdate;
   const desc = req.body.projdesc;
   const cid = req.body.projcid;
-  let urls = req.body["projurl[]"];
+  // let urls = req.body["projurl[]"];
 
+  /*
   // Logga inkommande data för felsökning
   console.log("Modifying project with ID:", id);
   console.log("Form data received:", req.body);
@@ -507,28 +508,21 @@ app.post("/project/modify/:projid", function (req, res) {
     urls = [urls];
   }
   // Konvertera bild-URL:erna till JSON-sträng för att spara i databasen
-  const imagesJson = JSON.stringify(urls);
+  const imagesJson = JSON.stringify(urls);*/
 
   db.run(
-    `UPDATE projects SET ptitle=?, pdate=?, pdesc=?, cid=?, images=? WHERE pid=?`,
-    [title, date, desc, cid, imagesJson, id],
+    `UPDATE projects SET ptitle=?, pdate=?, pimgURL=?, pdesc=?, cid=? WHERE pid=?`,
+    [title, date, url, desc, cid, id],
     (error) => {
       if (error) {
         console.log("ERROR: ", error);
         const model = {
-          error: "Failed to modify the project",
-          project: {
-            pid: id,
-            ptitle: title,
-            pdate: date,
-            pdesc: desc,
-            cid: cid,
-            images: urls,
-          },
+          error: "Failed with modifying the project",
+          message: "",
         };
         res.status(400).render("project.handlebars", model);
       } else {
-        // res.redirect(`/project/${id}`);
+        res.redirect("/projects");
       }
     }
   );
