@@ -703,8 +703,9 @@ header .nav-menu li {
   width: 100%;
 }
 .proj2images {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 .proj2images img {
   width: 100%;
