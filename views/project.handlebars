@@ -34,32 +34,41 @@
       />
     </div>
     <br />
-   
-   {{#if (eq pid 2)}}
-<div>
-      <a href="https://ju-nmd2023.github.io/fop-final-project-group-53/" target="_blank">
 
-    <img src="{{project.images}}" alt="{{project.images}}" class="bigimage" />
-  </a>
-  </div>
-   {{else}}
-    <div class="images">
-      <img 
-        src="{{project.images}}" 
-        alt="{{project.images}}" 
-        class="bigimage" 
-      />
-      <img
-        src="{{project.images2}}"
-        alt="{{project.images2}}"
-        class="bigimage"
-      />
-      <img
-        src="{{project.images3}}"
-        alt="{{project.images3}}"
-        class="bigimage"
-      />
-    </div>
+    {{#if (eq project.pid 3)}}
+      <div>
+        <a
+          href="https://ju-nmd2023.github.io/fop-final-project-group-53/"
+          target="_blank"
+        >
+
+          <img
+            src="{{project.images}}"
+            alt="{{project.images}}"
+            class="bigimage"
+          />
+        </a>
+      </div>
+    {{else}}
+      <div class="images">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+        <img
+          src="{{project.images3}}"
+          alt="{{project.images3}}"
+          class="bigimage"
+        />
+      </div>
+    {{/if}}
+
     <!--
     <div class="project-images">
       {{#each project.images}}
