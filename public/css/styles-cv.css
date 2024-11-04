@@ -686,6 +686,12 @@ header .nav-menu li {
 .images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.images img {
+  width: 25rem;
+  padding: 0.2rem;
 }
 #modifyproject-form {
   padding: 1rem;
