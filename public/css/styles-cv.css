@@ -687,12 +687,12 @@ header .nav-menu li {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   width: 100%;
 }
 .projectcard .images img {
   padding: 0.1rem;
-  width: 50%;
+  width: 100%;
 }
 /*
 #modifyproject-form {
