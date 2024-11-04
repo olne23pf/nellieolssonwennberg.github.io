@@ -683,6 +683,10 @@ header .nav-menu li {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
+.images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 #modifyproject-form {
   padding: 1rem;
   font-family: "karla";
