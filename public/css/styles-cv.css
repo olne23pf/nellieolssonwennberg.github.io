@@ -683,23 +683,23 @@ header .nav-menu li {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
 }
-.images {
+.project .images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-bottom: 2rem;
-  width: 100%;
 }
 .images img {
   padding: 0.1rem;
 }
+/*
 #modifyproject-form {
   padding: 1rem;
   font-family: "karla";
 }
 #modifyproject-form input {
   padding: 0.5rem;
-}
+}*/
 
 /* ------ ADD A NEW PROJECT ------*/
 #principal {
