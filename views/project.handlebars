@@ -34,8 +34,21 @@
       />
     </div>
     <br />
+   
+   {{#if (eq project.projid 2)}}
+<div>
+      <a href="https://ju-nmd2023.github.io/fop-final-project-group-53/" target="_blank">
+
+    <img src="{{project.images}}" alt="{{project.images}}" class="bigimage" />
+  </a>
+  </div>
+   {{else}}
     <div class="images">
-      <img src="{{project.images}}" alt="{{project.images}}" class="bigimage" />
+      <img 
+        src="{{project.images}}" 
+        alt="{{project.images}}" 
+        class="bigimage" 
+      />
       <img
         src="{{project.images2}}"
         alt="{{project.images2}}"
@@ -91,7 +104,7 @@
 
   </div>
 </div>
-
+<!--
 <script>
   // Visa och dölj redigeringsformuläret function toggleModifyForm() { const
   form = document.getElementById("modifyproject-form"); form.style.display =
@@ -101,4 +114,4 @@
   document.createElement("input"); input.type = "text"; input.name =
   "projurl[]"; input.placeholder = "/img/newimage.png"; div.appendChild(input);
   }
-</script>
+</script>-->
