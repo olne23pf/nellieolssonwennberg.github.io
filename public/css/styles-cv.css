@@ -704,8 +704,9 @@ header .nav-menu li {
 }
 .proj2images {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0 auto;
+  width: 100%;
 }
 .proj2images img {
   width: 100%;
