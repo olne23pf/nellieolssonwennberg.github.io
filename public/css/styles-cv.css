@@ -702,6 +702,14 @@ header .nav-menu li {
 .proj2 video {
   width: 100%;
 }
+.proj2images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.proj2images img {
+  width: 100%;
+}
+
 .proj3 {
   margin: 0 auto;
   width: 60%;
