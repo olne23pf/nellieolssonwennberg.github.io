@@ -707,6 +707,7 @@ header .nav-menu li {
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
+  padding-bottom: 2rem;
 }
 .proj2images img {
   width: 50%;
