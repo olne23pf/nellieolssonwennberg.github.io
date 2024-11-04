@@ -151,6 +151,7 @@ app.get("/project/:projectid", function (req, res) {
   );
 });
 
+/*
 app.get("/project/:projectid", function (req, res) {
   console.log(
     "Project route parameter projectid: " + JSON.stringify(req.params.projectid)
@@ -184,10 +185,10 @@ app.get("/project/:projectid", function (req, res) {
       }
     }
   );
-});
+});*/
 
 //old
-/*
+
 app.get("/project/modify/:projid", function (req, res) {
   const id = req.params.projid;
   db.get("SELECT * FROM projects WHERE pid=?", [id], (error, theProject) => {
@@ -199,7 +200,7 @@ app.get("/project/modify/:projid", function (req, res) {
       res.render("project-new.handlebars", model);
     }
   });
-});*/
+});
 
 app.get("/project/delete/:projid", function (req, res) {
   if (req.session.isAdmin) {
