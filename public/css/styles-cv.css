@@ -685,9 +685,10 @@ header .nav-menu li {
 }
 .projectcard .images {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-bottom: 2rem;
+  width: 100%;
 }
 .projectcard .images img {
   padding: 0.1rem;
