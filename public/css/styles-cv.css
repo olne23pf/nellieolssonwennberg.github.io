@@ -695,8 +695,9 @@ header .nav-menu li {
   width: 100%;
 }
 .proj2 {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 .proj2 video {
   width: 100%;
