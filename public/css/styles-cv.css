@@ -646,7 +646,7 @@ header .nav-menu li {
   padding-top: 6rem;
 }
 .projectcard {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
   display: grid;
@@ -685,7 +685,7 @@ header .nav-menu li {
 }
 .projectcard .images {
   display: flex;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-bottom: 3rem;
   width: 100%;
