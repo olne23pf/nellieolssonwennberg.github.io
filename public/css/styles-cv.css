@@ -697,8 +697,8 @@ header .nav-menu li {
 .proj3 {
   margin: 0 auto;
 }
-.proj3 img {
-  width: 70%;
+.proj3 a img {
+  width: 20rem;
   cursor: pointer;
 }
 /*
