@@ -688,10 +688,11 @@ header .nav-menu li {
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-bottom: 2rem;
+  width: 100%;
 }
 .images img {
-  width: 15rem;
-  padding: 0.2rem;
+  padding: 0.1rem;
+  width: auto;
 }
 #modifyproject-form {
   padding: 1rem;
