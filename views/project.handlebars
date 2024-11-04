@@ -26,14 +26,6 @@
       <br />
 
     </div>
-    <div class="divimage">
-      <img
-        src="{{project.pimgURL}}"
-        alt="{{project.pimgURL}}"
-        class="bigimage"
-      />
-    </div>
-    <br />
 
     {{#if (eq project.pid 3)}}
       <div class="proj3">
@@ -49,6 +41,14 @@
         </a>
       </div>
     {{else}}
+      <div class="divimage">
+        <img
+          src="{{project.pimgURL}}"
+          alt="{{project.pimgURL}}"
+          class="bigimage"
+        />
+      </div>
+      <br />
       <div class="images">
         <img
           src="{{project.images}}"
