@@ -671,7 +671,7 @@ header .nav-menu li {
   margin: 0 auto;
 }
 .projectcard .divimage img {
-  width: 20rem;
+  width: 100%;
 }
 
 .modifyproject {
@@ -692,7 +692,7 @@ header .nav-menu li {
 }
 .projectcard .images img {
   padding: 0.1rem;
-  width: 15rem;
+  width: 50%;
 }
 /*
 #modifyproject-form {
