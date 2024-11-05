@@ -658,7 +658,7 @@ header .nav-menu li {
 .projdate {
   font-family: "karla";
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 }
 
 .projinfo {
@@ -667,8 +667,9 @@ header .nav-menu li {
 }
 .projinfo p {
   font-family: "karla";
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-bottom: 2rem;
+  text-align: center;
 }
 .projectcard .divimage {
   margin: 0 auto;
@@ -714,7 +715,6 @@ header .nav-menu li {
 }
 .proj2images img {
   width: 50%;
-  gap: 0.5rem;
 }
 
 .proj3 {
