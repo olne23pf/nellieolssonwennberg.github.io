@@ -644,6 +644,7 @@ header .nav-menu li {
 .projecttitle {
   text-align: center;
   padding-top: 6rem;
+  padding-top: 4rem;
 }
 .projectcard {
   width: 100%;
@@ -710,7 +711,7 @@ header .nav-menu li {
   padding-bottom: 2rem;
 }
 .proj2images img {
-  width: 50%;
+  width: 15rem;
 }
 
 .proj3 {
