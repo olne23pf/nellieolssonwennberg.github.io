@@ -708,13 +708,13 @@ header .nav-menu li {
 .proj2images {
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
   margin: 0 auto;
   width: 100%;
   padding-bottom: 2rem;
 }
 .proj2images img {
   width: 50%;
+  gap: 0.5rem;
 }
 
 .proj3 {
