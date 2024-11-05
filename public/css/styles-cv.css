@@ -705,9 +705,9 @@ header .nav-menu li {
 .proj2 video {
   width: 100%;
 }
-.projectcard .proj2images {
-  display: grid;
-  grid-template-columns: 1fr;
+.proj2images {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 100%;
   padding-bottom: 2rem;
