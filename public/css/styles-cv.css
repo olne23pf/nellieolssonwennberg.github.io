@@ -667,6 +667,8 @@ header .nav-menu li {
 }
 .projinfo p {
   font-family: "karla";
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .projectcard .divimage {
   margin: 0 auto;
@@ -706,6 +708,7 @@ header .nav-menu li {
 .projectcard .proj2images {
   display: flex;
   flex-direction: column;
+  columns: 2 auto;
   margin: 0 auto;
   width: 100%;
   padding-bottom: 2rem;
