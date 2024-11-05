@@ -706,9 +706,6 @@ header .nav-menu li {
   width: 100%;
 }
 .projectcard .proj2images {
-  display: flex;
-  flex-direction: column;
-  columns: 2 auto;
   margin: 0 auto;
   width: 100%;
   padding-bottom: 2rem;
