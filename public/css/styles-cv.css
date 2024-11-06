@@ -719,14 +719,18 @@ header .nav-menu li {
 
 .proj3 {
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
 }
 .proj3 a {
   margin: 0 auto;
+  width: 40%;
 }
 .proj3 a img {
-  width: 100%;
+  width: 40%;
   cursor: pointer;
+}
+.proj3 .spritesimg {
+  width: 70%;
 }
 /*
 #modifyproject-form {
