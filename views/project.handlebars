@@ -39,27 +39,31 @@
     {{else if (eq project.pid 3)}}
       <p class="clickplay">Click to try out the game.</p>
       <div class="proj3">
-        <a
-          href="https://ju-nmd2023.github.io/fop-final-project-group-53/"
-          target="_blank"
-        >
-          <img
-            src="{{project.images}}"
-            alt="{{project.images}}"
-            class="bigimage"
-          />
-        </a>
+        <div class="startgame">
+          <a
+            href="https://ju-nmd2023.github.io/fop-final-project-group-53/"
+            target="_blank"
+          >
+            <img
+              src="{{project.images}}"
+              alt="{{project.images}}"
+              class="bigimage"
+            />
+          </a>
+        </div>
         <p>Cloudy with a chance of meatballs is a game that I created in P5.js
           Canvas
           <br />
-          Illustrations I made for the characters' animations:
+          Here are the illustrations I made for the rolling logs and characters'
+          sprite animations:
         </p>
-        <img
-          src="{{project.images2}}"
-          alt="{{project.images2}}"
-          class="spritesimg"
-        />
-
+        <div class="sprites">
+          <img
+            src="{{project.images2}}"
+            alt="{{project.images2}}"
+            class="spritesimg"
+          />
+        </div>
       </div>
     {{else}}
       <!--

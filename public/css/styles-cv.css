@@ -722,18 +722,21 @@ header .nav-menu li {
   width: 100%;
   justify-content: center;
 }
-.proj3 a {
+.startgame {
   margin: 0 auto;
   width: 40%;
 }
-.proj3 a img {
-  width: 40%;
+
+.startgame a img {
+  width: 100%;
   cursor: pointer;
-  margin: 0 auto;
 }
-.proj3 .spritesimg {
+.sprites {
   width: 70%;
   margin: 0 auto;
+}
+.sprites .spritesimg {
+  width: 100%;
 }
 /*
 #modifyproject-form {
