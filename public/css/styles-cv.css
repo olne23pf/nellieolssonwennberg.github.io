@@ -740,6 +740,9 @@ header .nav-menu li {
 }
 .proj4 {
   margin: 0 auto;
+  width: 80%;
+}
+.proj4 img {
   width: 100%;
 }
 /*
