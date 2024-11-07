@@ -738,6 +738,10 @@ header .nav-menu li {
 .sprites .spritesimg {
   width: 100%;
 }
+.proj4 {
+  margin: 0 auto;
+  width: 100%;
+}
 /*
 #modifyproject-form {
   padding: 1rem;
