@@ -743,6 +743,7 @@ header .nav-menu li {
   flex-direction: row;
   margin: 0 auto;
   width: 100%;
+  padding-top: 2rem;
 }
 .proj4 img {
   width: 100%;
