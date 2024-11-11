@@ -529,14 +529,15 @@ app.post("/project/modify/:projid", function (req, res) {
   );
 });
 
-app.post("/user/modify/:uid", function (req, res) {
+app.post("/user/modify/:uid", async function (req, res) {
   const id = req.params.uid;
   const username = req.body.username;
   const password = req.body.password;
+  var newpw = await bcrypt.hash(password, 12);
 
   db.run(
     `UPDATE users SET username=?, password=? WHERE uid=?`,
-    [username, password, id],
+    [username, newpw, id],
     (error) => {
       if (error) {
         console.log("ERROR: ", error);
