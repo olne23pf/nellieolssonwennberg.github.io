@@ -52,4 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
     y.style.left = "70rem";
     z.style.left = "0rem";
   }
+
+  //---- Projects ----//
+  const a = document.getElementById("project");
+  const b = document.getElementById("projectarkviz");
+  const c = document.getElementById("btn");
+
+  function projects1() {
+    a.style.left = "-30rem";
+    b.style.left = "15rem";
+    c.style.left = "15rem";
+  }
+  function projects2() {
+    a.style.left = "15rem";
+    b.style.left = "70rem";
+    c.style.left = "0rem";
+  }
 });

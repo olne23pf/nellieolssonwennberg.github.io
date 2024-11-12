@@ -84,6 +84,59 @@ app.get("/contact", function (req, res) {
   res.render("contact.handlebars");
 });
 
+app.get("/projectsarkviz", function (req, res) {
+  const page = req.query.page || 1;
+  const limit = 3;
+  const offset = (page - 1) * limit;
+  //ChatGPT
+  //source: (ChatGPT, 2024, "help with creating next and previous page", https://chatgpt.com/share/66ffc07f-3fe4-800f-b7b8-0a2f0dfeeef1)
+  const nextPage = parseInt(page) + 1;
+  const previousPage = page > 1 ? page - 1 : null; // Set previousPage if not on the first page
+
+  const query = `
+  SELECT * FROM projectsarkviz
+  LIMIT ? OFFSET ?;
+`;
+  // Execute the query
+  const queryParams = [limit, offset];
+
+  db.all(query, queryParams, (err, projectsarkviz = []) => {
+    if (err) {
+      console.error("Error fetching projects:", err);
+      return res.status(500).send("Error retrieving projects.");
+    }
+    const hasNextPage = projectsarkviz.length === limit;
+
+    res.render("projectsarkviz.handlebars", {
+      projectsarkviz,
+      page,
+      nextPage,
+      previousPage,
+      hasNextPage,
+    });
+  });
+});
+
+app.get("/projectsarkviz/:projectid", function (req, res) {
+  console.log(
+    "Project route parameter projectid: " + JSON.stringify(req.params.projectid)
+  );
+  db.get(
+    "SELECT * FROM projectsarkviz WHERE paid=?",
+    [req.params.projectid],
+    (error, theProject) => {
+      if (error) {
+        console.log("ERROR: ", error);
+      } else {
+        const model = {
+          project: theProject,
+        };
+        res.render("projectav.handlebars", model);
+      }
+    }
+  );
+});
+
 app.get("/projects", function (req, res) {
   const page = req.query.page || 1;
   const limit = 3;
@@ -150,44 +203,6 @@ app.get("/project/:projectid", function (req, res) {
     }
   );
 });
-
-/*
-app.get("/project/:projectid", function (req, res) {
-  console.log(
-    "Project route parameter projectid: " + JSON.stringify(req.params.projectid)
-  );
-
-  const projectId = req.params.projectid;
-
-  db.get(
-    "SELECT * FROM projects WHERE pid=?",
-    [projectId],
-    (error, theProject) => {
-      if (error) {
-        console.log("ERROR: ", error);
-      } else {
-        db.all(
-          "SELECT image_url FROM project_images WHERE project_id=?",
-          [projectId],
-          (imgError, images) => {
-            if (imgError) {
-              console.log("ERROR fetching images: ", imgError);
-              res.redirect("/projects");
-            } else {
-              const model = {
-                project: theProject,
-                images: images.map((img) => img.image_url), // Skapar en array av bild-URL:er
-              };
-              res.render("project.handlebars", model);
-            }
-          }
-        );
-      }
-    }
-  );
-});*/
-
-//old
 
 app.get("/project/modify/:projid", function (req, res) {
   const id = req.params.projid;

@@ -531,6 +531,28 @@ header .nav-menu li {
   background-color: transparent;
 }
 
+.filter .schools {
+  display: flex;
+  margin: 0 auto;
+  padding-right: 6rem;
+}
+.btn {
+  cursor: pointer;
+  padding: 0.2rem;
+  font-family: "karla";
+  border: none;
+}
+.btn-selected {
+  cursor: pointer;
+  border: none;
+  background-color: #ffaa41bc;
+  padding: 0.2rem;
+  font-family: "karla";
+}
+.schools a {
+  font-family: "karla";
+}
+
 .addproject {
   padding-left: 5rem;
   display: flex;
@@ -558,6 +580,13 @@ header .nav-menu li {
 }
 
 .project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.projectarkviz {
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
@@ -607,15 +636,19 @@ header .nav-menu li {
   justify-content: center;
 }
 .project-img img {
-  width: 50rem;
+  width: 100%;
   height: auto;
 }
-.smallimage {
+.projectarkviz img .smallimage {
   max-width: 100%;
   height: auto;
 }
 
 .project:nth-child(even) {
+  flex-direction: row-reverse;
+  display: flex;
+}
+.projectarkviz:nth-child(even) {
   flex-direction: row-reverse;
   display: flex;
 }
@@ -754,14 +787,43 @@ header .nav-menu li {
 .proj4 img {
   width: 100%;
 }
-/*
-#modifyproject-form {
-  padding: 1rem;
-  font-family: "karla";
+
+.projav1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-#modifyproject-form input {
-  padding: 0.5rem;
-}*/
+.projav1 img {
+  width: 100%;
+}
+.projectcard .photodesc {
+  text-align: left;
+  width: 20%;
+}
+.projav2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 1rem;
+}
+.projav2 img {
+  width: 100%;
+}
+.proj4 {
+  width: 100%;
+}
+.proj4images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 0.5rem;
+}
+.proj4images img {
+  width: 100%;
+}
+.proj5 img {
+  width: 100%;
+}
 
 /* ------ ADD A NEW PROJECT ------*/
 #principal {
@@ -1095,6 +1157,16 @@ header .nav-menu li {
     margin-top: 4rem;
   }
   .project:nth-child(even) {
+    flex-direction: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .projectarkviz {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+  .projectarkviz:nth-child(even) {
     flex-direction: none;
     display: grid;
     grid-template-columns: 1fr;

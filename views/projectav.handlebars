@@ -1,0 +1,114 @@
+<div class="pageLayout">
+  <div class="left">
+    <ul>
+      <li><a> {{project.patitle}} </a></li>
+    </ul>
+  </div>
+  <div></div>
+  <div class="right"></div>
+</div>
+
+<div id="principal">
+  <li class="backbtn">
+    <a href="/projectsarkviz">back</a>
+  </li>
+
+  <h1 class="projecttitle">{{project.patitle}}</h1>
+  <div class="projectcard">
+    <div class="projinfo">
+    </div>
+    {{#if (eq project.paid 1)}}
+      <div class="projav1">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <p class="photodesc">↑ Original photo from Flickr<br />↓ Photomatching
+          by me</p>
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+      </div>
+
+    {{else if (eq project.paid 2)}}
+      <div class="projav2">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+      </div>
+      <p> ← The original image | Photomatching by me →</p>
+    {{else if (eq project.paid 3)}}
+      <div class="proj2">
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+        </video>
+      </div>
+    {{else if (eq project.paid 4)}}
+      <p>This is a project where we built a villa and its garden in 3dsMax
+        <br />and then added the background photo and did all the adjustments in
+        Photoshop.</p>
+      <div class="proj4">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <div class="proj4images">
+          <img
+            src="{{project.images2}}"
+            alt="{{project.images2}}"
+            class="bigimage"
+          />
+          <img
+            src="{{project.images3}}"
+            alt="{{project.images3}}"
+            class="bigimage"
+          />
+        </div>
+      </div>
+      <p>Here is two pictures taken during the process.
+        <br />
+        The left one is the render picture from 3ds Max and the right one is
+        with only the background picture added.</p>
+    {{else if (eq project.paid 5)}}
+      <div class="proj5">
+        <img
+          src="{{project.paimgURL}}"
+          alt="{{project.paimgURL}}"
+          class="bigimage"
+        />
+        <p>
+          My picture of the new buildings in fotsaken, a project for
+          Stockholmshem.
+          <br />
+          I made this image during my internship at Nyréns Arkitektkontor. I
+          worked with this one while my supervisor made the one that was sent to
+          the customer.
+          <br />
+          After imported the cad file of the buildings I added all the
+          materials, build the environment and created shadows in 3ds max. Then
+          I added 2d people, trees, background and made the finish adjustments
+          in Photoshop.
+        </p>
+      </div>
+
+    {{/if}}
+
+    <br />
+    <p>{{project.padesc}}</p>
+    <br />
+    <div class="projdate">
+      {{project.padate}}
+    </div>
+  </div>
+</div>

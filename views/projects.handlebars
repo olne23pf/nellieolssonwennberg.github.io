@@ -23,6 +23,18 @@
     <p class="option" {{#if (eq ../selectedCid this.cid)}} selected="selected"{{/if}} data-cid="{{this.cid}}">{{this.ctitle}}</p>
   {{/each}}
     </div>  
+     <div class="schools">
+         <a><button
+          type="button"
+          class="btn-selected"
+          onclick="projects1()"
+        >Graphic Design</button></a>
+         <a href="/projectsarkviz"><button
+        type="button"
+        class="btn"
+        onclick="projects2()"
+      >Archviz</button></a>
+    </div>  
     {{#if session.isAdmin}}
     <div class="addproject">
   <a class="plus" href="/project-new">+</a>
