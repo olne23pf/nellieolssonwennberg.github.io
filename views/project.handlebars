@@ -91,6 +91,20 @@
         />
 
       </div>
+    {{else if (eq project.pid 3)}}
+      <div class="images">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <br />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+      </div>
 
     {{else if (eq project.pid 4)}}
 
