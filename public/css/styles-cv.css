@@ -740,6 +740,10 @@ header .nav-menu li {
   width: 70%;
   margin: 0 auto;
   padding-bottom: 2rem;
+  text-align: center;
+}
+.proj2 h2 {
+  padding-bottom: 3rem;
 }
 .proj2 video {
   width: 100%;
@@ -753,6 +757,26 @@ header .nav-menu li {
 }
 .proj2images img {
   width: 50%;
+}
+.motion_content {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.motion_content h2 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.motion_content h3 {
+  color: #ffa941;
+  padding-top: 1rem;
+}
+.motion_content p {
+  padding: 1rem;
+}
+.motion_content img {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .proj3 {
@@ -824,7 +848,28 @@ header .nav-menu li {
 .proj5 img {
   width: 100%;
 }
-
+.proj6 {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.proj6 img {
+  width: 100%;
+}
+.proj9 {
+  display: flex;
+}
+.proj9 img {
+  width: 100%;
+}
+.proj9_2 {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.proj9_2 img {
+  width: 100%;
+}
 /* ------ ADD A NEW PROJECT ------*/
 #principal {
   display: flex;

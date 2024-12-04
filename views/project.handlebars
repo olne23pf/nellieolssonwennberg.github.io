@@ -17,26 +17,117 @@
   <div class="projectcard">
     <div class="projinfo">
     </div>
-    {{#if (eq project.pid 2)}}
-      <div class="proj2">
-        <video controls class="bigvideo">
-          <source src="{{project.video}}" type="video/mp4" />
-        </video>
-      </div>
-      <div class="proj2images">
+    {{#if (eq project.pid 1)}}
+
+      <div class="proj6">
         <img
           src="{{project.images}}"
           alt="{{project.images}}"
           class="bigimage"
         />
-        <br />
+        <img src="{{project.video}}" alt="GIF-beskrivning" class="bigvideo" />
+
         <img
           src="{{project.images2}}"
           alt="{{project.images2}}"
           class="bigimage"
         />
       </div>
-    {{else if (eq project.pid 3)}}
+    {{else if (eq project.pid 2)}}
+      <div class="proj2">
+        <h2>Commercial Video for Ahlgrens Bilar </h2>
+
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="motion_content">
+        <h2>Concept Development</h2>
+        <h3>Message:</h3>
+        <p>Ahlgrens bilar bring a burst of fun, flavor, and playfulness to every
+          moment.
+        </p>
+        <h3>Story:</h3>
+        <p>
+          Ahlgrens bilar come alive, turning an ordinary day into a high-speed
+          adventure full of flavor and excitement. The animated candy cars
+          embody energy and joy, inspiring everyone to embrace the fun and share
+          the sweetness.</p>
+        <h3>Target Audience:</h3>
+        <p>
+          Families, children, and young adults seeking a playful, energetic
+          candy experience that brings people together.
+        </p>
+        <h3>Visual Style:</h3>
+        <p>
+          Vivid, dynamic, and lively. The animation should feature smooth,
+          flowing motion with bright colors and special details, reinforcing the
+          fun and imaginative world of Ahlgrens bilar.
+        </p>
+        <h3>Tone:</h3>
+        <p>
+          Playful, energetic, and inclusive. The tone invites viewers to join
+          the candy car adventure and emphasizes the joy of sharing moments and
+          flavors with others.
+        </p>
+        <br />
+        <br />
+        <h2>Content Creation</h2>
+        <br />
+        <br />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+        <br />
+        <br />
+        <h2>Storyboard</h2>
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+
+      </div>
+
+    {{else if (eq project.pid 4)}}
+
+      <div class="proj9">
+        <p> Before <br /> click for prototype </p>
+        <p> After <br /> click for prototype </p>
+      </div>
+      <div class="proj9">
+        <a
+          href="https://www.figma.com/proto/zKaPOq5ORxRdQENXFXiry0/SushiYaki?node-id=3-30&node-type=frame&t=X9SXXuA1V8NKeOH7-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A30"
+        ><img
+            src="{{project.images}}"
+            alt="{{project.images}}"
+            class="bigimage"
+          />
+        </a>
+
+        <a
+          href="https://www.figma.com/proto/zKaPOq5ORxRdQENXFXiry0/SushiYaki?node-id=19-185&node-type=frame&t=TFstkWAjGyJoRrZK-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A30"
+        >
+          <img
+            src="{{project.images2}}"
+            alt="{{project.images2}}"
+            class="bigimage"
+          />
+        </a>
+      </div>
+      <br />
+      <div class="proj9_2">
+        <img
+          src="{{project.images3}}"
+          alt="{{project.images3}}"
+          class="bigimage"
+        />
+        <img src="{{project.video}}" alt="{{project.video}}" class="bigimage" />
+      </div>
+    {{else if (eq project.pid 6)}}
       <p class="clickplay">Click to try out the game.<br />
         Compatible on computers only</p>
       <div class="proj3">
@@ -66,7 +157,47 @@
           />
         </div>
       </div>
-    {{else if (eq project.pid 4)}}
+    {{else if (eq project.pid 7)}}
+      <div class="proj2">
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+        </video>
+      </div>
+      <div class="proj2images">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <br />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+      </div>
+
+    {{else if (eq project.pid 8)}}
+      <div class="images">
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+        <br />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+        <br />
+        <img
+          src="{{project.images3}}"
+          alt="{{project.images3}}"
+          class="bigimage"
+        />
+      </div>
+    {{else if (eq project.pid 9)}}
       <div class="proj4">
         <img
           src="{{project.images}}"
