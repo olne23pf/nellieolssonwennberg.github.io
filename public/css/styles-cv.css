@@ -858,6 +858,11 @@ header .nav-menu li {
 }
 .proj9 {
   display: flex;
+  text-align: center;
+}
+.proj9 h1 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 .proj9 img {
   width: 100%;
