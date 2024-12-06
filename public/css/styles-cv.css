@@ -833,6 +833,16 @@ header .nav-menu li {
 .projav2 img {
   width: 100%;
 }
+.project3 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.postertext {
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
 .proj4 {
   width: 100%;
 }
