@@ -840,8 +840,11 @@ header .nav-menu li {
 }
 .postertext {
   text-align: left;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+}
+.postertext p {
+  text-align: left;
 }
 .proj4 {
   width: 100%;
