@@ -848,7 +848,8 @@ header .nav-menu li {
   font-family: "karla";
   font-size: 1rem;
   font-weight: normal;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .proj4 {
   width: 100%;
