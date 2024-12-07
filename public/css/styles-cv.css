@@ -881,8 +881,9 @@ header .nav-menu li {
 .proj9title h2 {
   text-align: center;
   padding-top: 1rem;
+  /*
   font-family: "amandine";
-  color: #ffa941;
+  color: #ffa941;*/
 }
 .proj9 img {
   width: 100%;
