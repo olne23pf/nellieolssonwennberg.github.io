@@ -843,8 +843,10 @@ header .nav-menu li {
   width: 70%;
   margin: 0 auto;
 }
-.postertext p {
+.postertext h4 {
   text-align: left;
+  font-family: "karla";
+  font-size: 1.2rem;
 }
 .proj4 {
   width: 100%;
