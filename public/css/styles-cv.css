@@ -851,6 +851,33 @@ header .nav-menu li {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.posterde {
+  text-align: center;
+  width: 70%;
+  margin: 5rem auto 0 auto;
+  border: 1px solid #ffa941;
+  padding: 1rem;
+}
+.posterde .gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-columns: 10% 90%; /* Left column (images) takes 30%, right column (text) takes 70% */
+
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  /*row-gap: 10px; /* Adds space between the grid items */
+  column-gap: 0;
+  justify-content: space-between;
+}
+.posterde .gridcontainer img {
+  width: 50%;
+  justify-self: right;
+  padding-top: 1rem;
+}
+.posterde .gridcontainer p {
+  text-align: left;
+
+  padding: 1rem;
+}
 .proj4 {
   width: 100%;
 }
