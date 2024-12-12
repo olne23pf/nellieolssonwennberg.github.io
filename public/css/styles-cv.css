@@ -1363,7 +1363,9 @@ header .nav-menu li {
   .navbar {
     padding: 0 1rem;
   }
-
+  p {
+    font-size: 12px;
+  }
   /*--------------------------------*/
   .pageLayout {
     margin: 0 auto;
@@ -1388,6 +1390,19 @@ header .nav-menu li {
   }
 
   /*------------------------------*/
+
+  .filter .schools {
+    display: flex;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .btn {
+    cursor: pointer;
+    padding: 0.2rem;
+    font-family: "karla";
+    border: none;
+    font-size: 0.8rem;
+  }
 
   .projectpage {
     display: grid;
@@ -1424,15 +1439,42 @@ header .nav-menu li {
   .createnewproject form {
     width: 90%;
   }
+
   /*----------------------------each project--*/
 
   #principal .projectcard {
-    width: 100%;
+    width: 95.5%;
     margin: 0 auto;
   }
   #principal .projectcard .divimage img {
     width: 100%;
   }
+  .backbtn {
+    padding-left: 1rem;
+  }
+
+  .posterde {
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 80%;
+  }
+  .postertext {
+    width: 80%;
+  }
+  .postertext h3 {
+    font-size: 1rem;
+  }
+  .postertext h4 {
+    font-size: 0.9rem;
+  }
+  .posterde .gridcontainer p {
+    padding: 0.2rem;
+  }
+  .posterde .gridcontainer img {
+    padding-top: 0.3rem;
+  }
+
   /*------------------------------*/
   #skills {
     width: 75%;
@@ -1497,7 +1539,7 @@ header .nav-menu li {
   .information {
     width: 80%;
     margin: 0 auto;
-    padding-top: 20em;
+    padding-top: 1rem;
   }
   .information h3 {
     font-size: 1.6rem;
