@@ -1396,6 +1396,9 @@ header .nav-menu li {
     margin: 0 auto;
     padding-right: 0;
   }
+  .filter .schools a {
+    color: #333;
+  }
   .btn {
     cursor: pointer;
     padding: 0.2rem;
