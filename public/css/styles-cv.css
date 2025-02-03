@@ -536,6 +536,9 @@ header .nav-menu li {
   margin: 0 auto;
   padding-right: 6rem;
 }
+.filter .schools a .btn {
+  color: #333;
+}
 .btn {
   cursor: pointer;
   padding: 0.2rem;
@@ -1396,8 +1399,8 @@ header .nav-menu li {
     margin: 0 auto;
     padding-right: 0;
   }
-  .filter .schools a {
-    color: #ff0000;
+  .filter .schools a .btn {
+    color: #333;
   }
   .btn {
     cursor: pointer;
