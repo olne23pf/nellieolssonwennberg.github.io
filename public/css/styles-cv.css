@@ -1402,6 +1402,9 @@ header .nav-menu li {
   .filter .schools a .btn {
     color: #333;
   }
+  .filter .schools a .btn-selected {
+    color: #333;
+  }
   .btn {
     cursor: pointer;
     padding: 0.2rem;
