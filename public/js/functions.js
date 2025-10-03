@@ -1,7 +1,48 @@
+//---- start function ----//
+const heroTitle = document.querySelector(".hero-title");
+const header = document.querySelector(".navbar");
+const pagelayout = document.querySelector(".pageLayout");
+
+//--Hamburger--//
+const hamburgermenu = document.querySelector(".headerright");
+const hamburgermenuOther = document.querySelector(".headerright_other");
+
+const startFont = 6; // rem (startstorlek)
+const endFont = 4; // rem (målet när den blir fixed)
+const maxScroll = 300; // px scroll för krympning
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  if (scrollY < maxScroll) {
+    let progress = scrollY / maxScroll;
+    let newFont = startFont - (startFont - endFont) * progress;
+    heroTitle.style.fontSize = newFont + "rem";
+    heroTitle.classList.remove("fixed");
+
+    // Endast ta bort 'visible' om menyn inte är aktiv
+    if (!document.querySelector(".hamburger").classList.contains("active")) {
+      header.classList.remove("visible");
+      pagelayout.classList.remove("visible");
+      hamburgermenu.classList.remove("visible");
+    }
+  } else {
+    heroTitle.style.fontSize = endFont + "rem";
+    heroTitle.classList.add("fixed");
+
+    // Lägg till 'visible' alltid (så headern syns) utan att stänga menyn
+    header.classList.add("visible");
+    pagelayout.classList.add("visible");
+    hamburgermenu.classList.add("visible");
+  }
+});
+
+//---- HAMBURGER MENU ----//
 document.addEventListener("DOMContentLoaded", () => {
-  //---- Hamburger menu ----//
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
+
+  //---- Hamburger menu ----//
 
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");

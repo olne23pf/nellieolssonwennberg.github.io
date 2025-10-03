@@ -8,17 +8,24 @@
 h1 {
   font-size: 2.4rem;
   font-weight: 100;
-  color: #ffa941;
+  color: #77b9f3;
+  font-family: "korolev", sans-serif;
 }
 h2 {
-  font-family: "karla";
-  font-size: 1.6rem;
-  font-weight: 100;
+  font-size: 6rem;
+  font-family: "altesse-std-64pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #77b9f3;
 }
 h3 {
   font-size: 1.4rem;
   font-weight: 100;
-  font-family: "karla";
+  font-family: "korolev", sans-serif;
+  color: #77b9f3;
+}
+h4 {
+  color: rgb(233, 227, 213);
 }
 
 /*
@@ -31,13 +38,64 @@ h3 {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(251, 248, 240);
-  font-family: "amandine";
+  /* background-color: #6c2c25;*/
+  background-color: #391212;
+  font-family: "korolev", sans-serif;
 }
 
-/*HEADER*/
+/* ------------------------------------------Hero------------------------------------------ */
+.hero {
+  height: 80vh;
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-title {
+  width: 100%;
+  font-size: 6rem;
+  text-align: center;
+  color: #77b9f3;
+  position: relative;
+  z-index: 2;
+  transition: font-size 0.1s linear;
+  background-color: transparent;
+}
+.hero-title.fixed {
+  position: fixed;
+  top: 15px; /* justera så det matchar headerns mitt */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  opacity: 0;
+  /*  transform: translateY(-100%);
+  transition: all 0.8s ease; */
+}
+
+.navbar.visible {
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.8s ease;
+  background-color: #391212;
+}
+
+.pageLayout {
+  opacity: 0;
+}
+
+.pageLayout.visible {
+  opacity: 1;
+  transition: all 0.8s ease;
+}
+
+/*-----------------------------------------HEADER--------------------------------------------*/
 
 /*--left--*/
+/*
 .header-icon {
   left: 0;
   justify-self: left;
@@ -48,15 +106,14 @@ h3 {
 .header-icon img {
   width: 2.5em;
   background-color: transparent;
-}
+}*/
 
 /*--middle--*/
 .title {
   display: flex;
   justify-content: center;
   align-content: center;
-  color: #ffa941;
-  font-size: 20px;
+  color: #77b9f3;
   background-color: transparent;
   padding-top: 0.2em;
   z-index: 3;
@@ -66,44 +123,37 @@ h3 {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
-}
-.title a img {
-  width: 0.5em;
-  padding-bottom: 0.2em;
-  background-color: transparent;
+  font-size: 4rem;
 }
 
 /*-- right -- hamburger menu --*/
 
-header {
+.navbar {
   width: 100%;
-  z-index: 3;
+  top: 0;
   position: fixed;
-  background-color: rgb(251, 248, 240);
-  z-index: 4;
+
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
+  background-color: transparent;
 }
 
-header .nav-menu li {
+.nav-menu li {
   list-style: none;
   background-color: transparent;
 }
 
 .nav-item a,
 .nav-item2 a {
-  color: rgb(162, 124, 70);
+  color: #77b9f3;
   text-decoration: none;
   font-size: 1.4rem;
   background-color: transparent;
-  z-index: 2;
-}
-
-.navbar {
-  min-height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  border-bottom: 1px solid #ffa941; /* Svart linje under headern */
+  z-index: 3;
 }
 
 .nav-menu {
@@ -123,7 +173,7 @@ header .nav-menu li {
 }
 
 .nav-link:hover {
-  color: #ffa941;
+  color: #77b9f3;
 }
 
 .bar {
@@ -133,7 +183,7 @@ header .nav-menu li {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #ffa941;
+  background-color: #77b9f3;
 }
 
 .account {
@@ -143,12 +193,31 @@ header .nav-menu li {
   width: 1.8rem;
 }
 .headerright {
-  display: flex;
+  opacity: 0;
+  position: fixed;
+  top: 0.5rem;
+  right: 2rem;
+  flex-direction: row-reverse;
+  padding-right: 2rem;
+  padding-top: 2rem;
 }
+
+.headerright.visible {
+  opacity: 1;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.8s ease;
+  background-color: transparent;
+}
+.headerright_other {
+  z-index: 10;
+  background-color: transparent;
+}
+
 .hamburger {
   display: block;
   cursor: pointer;
-  z-index: 4;
+  z-index: 10;
   background-color: transparent;
 }
 
@@ -174,21 +243,24 @@ header .nav-menu li {
   flex-direction: column;
   text-align: center;
   transition: top 2s ease-in-out;
-  padding-top: 7em;
-  z-index: 1;
+  padding-top: 1em;
+  z-index: 3;
 }
 
 .nav-item {
   display: flex;
   padding-top: 0;
 }
-.nav-item2 {
-  padding-top: 0;
-}
 
 .nav-menu.active {
   left: 0;
   top: 0;
+  text-decoration: none;
+  z-index: 5;
+}
+
+.nav-menu.active li {
+  background-color: rgb(233, 227, 213);
 }
 
 /*----------------------------------------------------------------*/
@@ -200,18 +272,18 @@ header .nav-menu li {
 }
 
 .left {
-  border-right: 1px solid #ffa941; /* Svart linje under headern */
+  border-right: 1px solid #77b9f3; /* Svart linje under headern */
   display: flex;
   width: 8%;
   height: 100%;
   margin-top: 4.5em;
   position: fixed;
   background-color: transparent;
-  z-index: 3;
+  z-index: 1;
 }
 .left li a {
   display: block;
-  color: #ffa941;
+  color: #77b9f3;
   transform: rotate(-90deg); /* Roterar texten 90 grader */
   transform-origin: left top; /* Valfri: Justerar rotationspunkten */
   margin-left: 3.6rem;
@@ -223,7 +295,7 @@ header .nav-menu li {
 }
 
 .right {
-  border-left: 1px solid #ffa941; /* Svart linje under headern */
+  border-left: 1px solid #77b9f3; /* Svart linje under headern */
   display: flex;
   position: fixed;
   width: 8%;
@@ -232,10 +304,11 @@ header .nav-menu li {
   justify-self: right;
   right: 0;
   background-color: transparent;
-  z-index: 3;
+  z-index: 1;
 }
 
-/*---- HOME ----*/
+/*----------------------------------------- HOME -------------------------------------------------*/
+
 .welcomeadmin {
   padding-top: 8rem;
   text-align: center;
@@ -249,15 +322,149 @@ header .nav-menu li {
     transform: translateX(-100%);
   }
 }
-.showing-projects {
-  width: 80%;
-  height: 24rem;
+
+/*-------------------------HOME - BIOGRAFI---------------------------------------- */
+.biografi {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  padding: 0px;
+  padding-bottom: 3rem;
+}
+
+.biografi h2 {
+  text-align: left; /* titel till vänster */
+  padding-top: 5rem;
+  padding-bottom: 5px;
+}
+
+.bio-content {
+  display: flex;
+  flex-wrap: wrap; /* så den anpassar sig på mobil */
+  gap: 20px;
+}
+
+.bio-text {
+  flex: 1;
+  min-width: 250px;
+  color: rgb(233, 227, 213);
+  padding-top: 1rem;
+}
+.bio-text h2 {
+  padding-bottom: 1rem;
+}
+
+.bio-text p {
+  line-height: 1.6;
+  font-family: "karla";
+}
+
+.bio-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  padding-right: 0;
+  padding-top: 8rem;
+  margin: 0;
+}
+
+.bio-image img {
+  max-width: 100%;
+}
+/*------------------------------------HOME - SKILLS--------------------------------------------------*/
+.skills {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  padding: 0px;
+  border-top: 1px solid #77b9f3;
+}
+
+.skills h2 {
+  text-align: left; /* titel till vänster */
+  padding-top: 5rem;
+  padding-bottom: 5px;
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap; /* så den anpassar sig på mobil */
+  gap: 20px;
+}
+
+.skills-text {
+  flex: 1;
+  min-width: 250px;
+  color: rgb(233, 227, 213);
+  padding-top: 1rem;
+}
+.skills-text h2 {
+  padding-bottom: 1rem;
+}
+
+.photo-grid {
+  max-width: 1200px;
   margin: 0 auto;
+}
+.photo-grid .one {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 8 kolumner */
+  grid-template-rows: repeat(1, auto); /* 2 rader */
+  gap: 10px; /* mellanrum mellan bilderna */
+  padding: 1rem;
+}
+.photo-grid .two {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 8 kolumner */
+  grid-template-rows: repeat(1, auto); /* 2 rader */
+  gap: 10px; /* mellanrum mellan bilderna */
+  padding: 1rem;
+}
+.photo-grid .three {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 8 kolumner */
+  grid-template-rows: repeat(1, auto); /* 2 rader */
+  gap: 10px; /* mellanrum mellan bilderna */
+  padding: 1rem;
+}
+
+.photo-grid img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* rundade hörn */
+}
+/*------------------------------------HOME - PROJECTS---------------------------------------------*/
+.projects {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  border-top: 1px solid #77b9f3;
+  padding-bottom: 4rem;
+}
+
+.showing-projects {
   overflow: hidden;
   white-space: nowrap; /* So all elements are in one row */
-  margin-top: 13rem;
+  margin-top: 1rem;
   justify-content: center;
   align-content: center;
+}
+.showing-projects h2 {
+  padding-bottom: 1rem;
+}
+.allprojects {
+  text-align: center;
+  padding-top: 2rem;
+}
+.allprojects_link a {
+  font-family: "korolev", sans-serif;
+  text-decoration: none;
+  color: #391212;
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgb(233, 227, 213);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 .projects-carousel {
   display: inline-flex;
@@ -274,8 +481,84 @@ header .nav-menu li {
 .showing-projects:hover .projects-carousel {
   animation-play-state: paused;
 }
+/*------------------------------------HOME - KONTAKT---------------------------------------------*/
+.kontaktamig {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  padding: 0px;
+  padding-bottom: 3rem;
+  border-top: 1px solid #77b9f3;
+}
 
-/*---- ABOUT ----*/
+.kontaktamig h2 {
+  text-align: left; /* titel till vänster */
+  padding-top: 5rem;
+  padding-bottom: 5px;
+}
+
+.kontakt-innehåll {
+  display: flex;
+  flex-wrap: wrap; /* så den anpassar sig på mobil */
+  gap: 20px;
+}
+
+.kontakt-text {
+  flex: 1;
+  min-width: 250px;
+  color: rgb(233, 227, 213);
+  padding-top: 1rem;
+}
+
+.kontakt-text p {
+  line-height: 1.6;
+  font-family: "karla";
+  padding-top: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* avstånd mellan kolumnerna */
+  margin-top: 5rem;
+}
+
+.kontakt-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kontakt-item img {
+  width: 40px; /* justera storlek på ikonerna */
+  margin-bottom: 2rem;
+}
+
+.kontakt-item a {
+  color: rgb(233, 227, 213); /* byt färg om du vill */
+  text-decoration: none;
+}
+.kontakt-item a:hover {
+  text-decoration: underline;
+}
+
+.kontakt-image {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  padding-right: 0;
+  padding-top: 8rem;
+  margin: 0;
+}
+
+.kontakt-image img {
+  max-width: 80%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border: 1px solid #77b9f3;
+}
+
+/*------------------------------------- ABOUT ----------------------------------------------*/
 
 .about {
   width: 84%;
@@ -283,7 +566,7 @@ header .nav-menu li {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #ffa941;
+  border-bottom: 1px solid #77b9f3;
 }
 .aboutinformation {
   padding-top: 8rem;
@@ -299,12 +582,13 @@ header .nav-menu li {
   margin: 0 auto;
   height: 80%;
   text-align: center;
+  color: rgb(233, 227, 213);
 }
 .portrait-img {
-  width: 89%;
+  width: 85%;
   margin: 2rem;
   padding: 0.5rem;
-  border: 1px solid #ffa941;
+  border: 1px solid #77b9f3;
   display: block;
 }
 .cv {
@@ -330,7 +614,7 @@ header .nav-menu li {
   font-size: 1.4rem;
   padding-left: 0.8rem;
   margin-bottom: 2rem;
-  text-decoration: underline #ffa941;
+  text-decoration: underline #77b9f3;
 }
 .cv .skilltable ul {
   padding-top: 5rem;
@@ -348,7 +632,7 @@ header .nav-menu li {
   width: 1rem;
 }
 
-/*CONTACT*/
+/*------------------------------------------CONTACT-------------------------------------------*/
 .contactme {
   margin: 14em auto 8em;
   display: flex;
@@ -358,75 +642,10 @@ header .nav-menu li {
 }
 .contactme h2 {
   font-family: "amandine";
-  color: #ffa941;
+  color: #77b9f3;
   width: 80%;
   margin: 0 auto;
   font-size: 2.4rem;
-}
-
-.formcontainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  padding: 2em;
-  margin: 0.5em;
-  height: 15em;
-  width: 60%;
-  margin: 0 auto;
-}
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  padding-right: 0.2em;
-}
-.box2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  padding-left: 0.2em;
-}
-.box3 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.formcontainer label {
-  font-family: "karla";
-}
-.box1 input,
-.box2 input {
-  width: 100%;
-  height: 2em;
-  padding: 5px;
-  border-style: none;
-  background-color: rgba(222, 215, 204, 0.473);
-  font-size: 1.2rem;
-  font-family: "karla";
-}
-.box3 textarea {
-  width: 100%;
-  height: 10em;
-  padding: 5px;
-  font-size: 1.2rem;
-  border-style: none;
-  background-color: rgba(222, 215, 204, 0.473);
-  font-family: "karla";
-}
-
-.formcontainer #submitbtn {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  width: 100%;
-  margin-top: 1em;
-  height: 3em;
-  background-color: #ffa941;
-  border-style: none;
-  cursor: pointer;
-  font-family: "karla";
 }
 
 .information {
@@ -440,19 +659,54 @@ header .nav-menu li {
   justify-content: center;
   text-align: center;
   padding-bottom: 2em;
-  color: #ffa941;
+  color: #77b9f3;
 }
 .information ul li {
   text-decoration: none;
   list-style-type: none;
   margin: 1em;
   font-family: "karla";
+  color: rgb(233, 227, 213);
 }
 
-/*PROJECTS*/
+/*-------------------------------------------------PROJECTS------------------------------------------------------*/
+.pageLayoutprojects {
+  opacity: 1;
+  padding-top: 0.1rem;
+  z-index: 2;
+}
+
+.projectheader {
+  width: 100%;
+  top: 0;
+  position: fixed;
+
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
+  background-color: #391212;
+  z-index: 1;
+}
+.projectheader .nav-menu li {
+  list-style: none;
+  background-color: transparent;
+}
+.projectheader .nav-menu.active {
+  padding-top: 0rem;
+}
+
+.projectheader .title {
+  font-size: 4rem;
+  z-index: 1;
+}
+
 .projectpage {
   width: 84%;
   margin: 0 auto;
+  padding-top: 4rem;
 }
 /*
 .projectpage .mytextcard {
@@ -469,22 +723,28 @@ header .nav-menu li {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffa941;
+  color: #77b9f3;
 }
 .projectTop {
   width: 100%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  z-index: 2;
+}
+.projectTop h1 {
+  padding-left: 2rem;
 }
 .filter {
   width: 100%;
-  height: 3rem;
+  height: 2.5rem;
   left: 0;
   display: flex;
   align-items: center;
   padding-left: 2em;
   position: sticky;
-  top: 70px;
-  z-index: 3;
-  border-bottom: 1px solid #ffa941;
+  top: 94px;
+  border-bottom: 1px solid #77b9f3;
 }
 .filter a {
   font-family: "karla";
@@ -492,16 +752,16 @@ header .nav-menu li {
   padding-right: 1rem;
   cursor: pointer;
   left: 0;
-  color: #333;
+  color: rgb(233, 227, 213);
 }
 .selectedcid {
-  color: #333;
+  color: rgb(233, 227, 213);
 }
 .filter span {
   width: 0;
   height: 0;
-  border-right: 0.25rem solid #ffa941;
-  border-bottom: 0.25rem solid #ffa941;
+  border-right: 0.25rem solid #77b9f3;
+  border-bottom: 0.25rem solid #77b9f3;
   border-left: 0.5rem solid transparent;
   border-top: 0.5rem solid transparent;
   transform: rotate(45deg);
@@ -526,7 +786,7 @@ header .nav-menu li {
 .filter .categories .option {
   padding: 8px 12px;
   cursor: pointer;
-  color: #ffa941;
+  color: #77b9f3;
   font-family: "karla";
   background-color: transparent;
 }
@@ -537,7 +797,7 @@ header .nav-menu li {
   padding-right: 6rem;
 }
 .filter .schools a .btn {
-  color: #333;
+  color: rgb(233, 227, 213);
 }
 .btn {
   cursor: pointer;
@@ -548,10 +808,10 @@ header .nav-menu li {
 .btn-selected {
   cursor: pointer;
   border: none;
-  background-color: #ffaa41bc;
+  background-color: #77b9f3;
   padding: 0.2rem;
   font-family: "karla";
-  color: #333;
+  color: rgb(233, 227, 213);
 }
 .schools a {
   font-family: "karla";
@@ -568,14 +828,14 @@ header .nav-menu li {
 .addproject .add {
   display: flex;
   cursor: pointer;
-  color: #333;
+  color: rgb(233, 227, 213);
   padding: 0.2rem;
   font-size: 1rem;
 
   font-family: "karla";
 }
 .addproject .plus {
-  color: #ffa941;
+  color: #77b9f3;
   cursor: pointer;
   font-size: 1.7rem;
   padding-right: 0.5rem;
@@ -587,8 +847,6 @@ header .nav-menu li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 .projectarkviz {
   display: flex;
@@ -606,6 +864,9 @@ header .nav-menu li {
 .project-text ul {
   margin: 0 auto;
   list-style: none;
+}
+.project-text ul li {
+  color: rgb(233, 227, 213);
 }
 .project-text .titletext {
   margin-bottom: 1.5rem;
@@ -678,7 +939,7 @@ header .nav-menu li {
 .backbtn a {
   font-family: "karla";
   text-decoration: none;
-  color: #ffa941;
+  color: #77b9f3;
 }
 .projecttitle {
   text-align: center;
@@ -698,6 +959,7 @@ header .nav-menu li {
   font-family: "karla";
   text-align: center;
   padding-bottom: 3rem;
+  color: rgb(233, 227, 213);
 }
 
 .projinfo {
@@ -711,6 +973,7 @@ header .nav-menu li {
   text-align: center;
   width: 80%;
   margin: 0 auto;
+  color: rgb(233, 227, 213);
 }
 .projectcard .divimage {
   margin: 0 auto;
@@ -721,9 +984,9 @@ header .nav-menu li {
 
 .modifyproject {
   font-family: "karla";
-  color: #ffa941;
+  color: #77b9f3;
   border: none;
-  background-color: #ffaa412a;
+  background-color: rgb(233, 227, 213);
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -772,7 +1035,7 @@ header .nav-menu li {
   padding-bottom: 2rem;
 }
 .motion_content h3 {
-  color: #ffa941;
+  color: #77b9f3;
   padding-top: 1rem;
 }
 .motion_content p {
@@ -859,7 +1122,7 @@ header .nav-menu li {
   text-align: center;
   width: 70%;
   margin: 5rem auto 0 auto;
-  border: 1px solid #ffa941;
+  border: 1px solid #77b9f3;
   padding: 1rem;
 }
 .posterde .gridcontainer {
@@ -976,7 +1239,7 @@ header .nav-menu li {
   font-family: "karla";
 }
 #submitproject {
-  background-color: #ffa941;
+  background-color: #77b9f3;
 }
 
 /* ------ ZONNE PROJECT ------*/
@@ -1032,7 +1295,7 @@ header .nav-menu li {
   outline: none;
   position: relative;
   font-size: 1.4rem;
-  color: #ffa941;
+  color: #77b9f3;
   width: 10rem;
 }
 .toggle-btn-login {
@@ -1043,8 +1306,8 @@ header .nav-menu li {
   outline: none;
   position: relative;
   font-size: 1.4rem;
-  color: #ffa941;
-  background-color: #ffaa414a;
+  color: #77b9f3;
+  background-color: rgb(233, 227, 213);
   width: 10rem;
 }
 .toggle-btn-register {
@@ -1055,8 +1318,8 @@ header .nav-menu li {
   outline: none;
   position: relative;
   font-size: 1.4rem;
-  color: #ffa941;
-  background-color: #ffaa414a;
+  color: #77b9f3;
+  background-color: rgb(233, 227, 213);
   width: 10rem;
 }
 #btn {
@@ -1065,7 +1328,7 @@ header .nav-menu li {
   position: absolute;
   width: 11rem;
   height: 100%;
-  background-color: #ffaa414a;
+  background-color: rgb(233, 227, 213);
   border-radius: 0rem;
   transition: 0.5s;
 }
@@ -1101,14 +1364,14 @@ header .nav-menu li {
   font-family: "karla";
 }
 .login .mytextcard form input {
-  background-color: rgba(231, 231, 202, 0.473);
+  background-color: rgb(233, 227, 213);
   border-style: none;
   height: 150%;
   font-family: "karla";
   padding: 0.2rem 0.5rem;
 }
 .login .mytextcard form #submitbtn {
-  background-color: #ffa941;
+  background-color: #77b9f3;
   height: 100%;
   cursor: pointer;
   color: rgb(255, 255, 255);
@@ -1172,7 +1435,7 @@ header .nav-menu li {
   text-decoration: none;
   font-family: "karla";
   background-color: rgb(233, 227, 213);
-  color: #ffa941;
+  color: #77b9f3;
 }
 #modifyuser img,
 #deleteuser img {

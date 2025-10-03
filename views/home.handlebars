@@ -1,12 +1,22 @@
 <div class="pageLayout">
   <div class="left">
     <ul>
-      <li><a> HOME </a></li>
+      <li><a> PORTFOLIO </a></li>
     </ul>
   </div>
   <div></div>
   <div class="right"></div>
 </div>
+
+<section class="hero">
+  <h1 class="hero-title">NELLIE OLSSON WENNBERG</h1>
+</section>
+
+
+{{>header}}
+
+
+
 
 {{#if session.isAdmin}}
   <h2 class="welcomeadmin">Welcome nellie</h2>
@@ -14,6 +24,68 @@
 
 <!-- Source: https://chatgpt.com/share/66fbed52-31e4-8011-9d75-b818f0679540, 2024 -->
 <!-- how to create image carousel on startpage -->
+<div class="biografi">
+  <div class="bio-content"> 
+
+    <div class="bio-text">   
+        <h2>Biografi</h2>
+
+      <p>
+        Mitt namn är Nellie Olsson Wennberg, 26 år gammal och jag älskar design!
+        <br />
+      Jag gillar särskilt mycket att komma på idéer, skapa en röd tråd i det kreativa och förena planering med visuellt uttryck, 
+      arbetsmoment som ger mig energi och där jag känner mig hemma.
+       <br />
+      <br />
+       Jag trivs bäst i kreativa team där idéer får ta plats och där även de mest oväntade tankarna kan bli till något värdefullt. 
+       Mitt uttryck kännetecknas av en balans mellan stilren enkelhet och lekfull energi.
+      <br />
+      <br />
+      Även om jag just nu är baserad i Skövde har jag bott både i Barcelona, Stockholm och Göteborg under kortare perioder, vilket gett mig en öppenhet och 
+      nyfikenhet på nya miljöer. Det är i Stockholm jag vill bygga min framtid och bidra till stadens dynamiska designscen.
+      </p>
+    
+    </div>
+    <div class="bio-image">
+      <img src="/img/biografi-img_02.png" alt="Profilbild" />
+    </div>
+  </div>
+</div>
+<div class="skills">
+  <div class="skills-content"> 
+
+    <div class="skills-text">   
+        <h2>Skills</h2>
+
+  <section class="photo-grid">
+    <div class="one"> 
+  <img src="/img/photoshop.png" alt="Bild 1">
+  <img src="/img/illustrator.png" alt="Bild 2">
+  <img src="/img/indesign.png" alt="Bild 3">
+  <img src="/img/premierepro.png" alt="Bild 4">
+  <img src="/img/aftereffect.png" alt="Bild 5">
+  <img src="/img/canva.png" alt="Bild 6">
+  </div>
+ <div class="two"> 
+  <img src="/img/3dsmax.png" alt="Bild 7">
+  <img src="/img/blender.png" alt="Bild 8">
+  <img src="/img/revit.png" alt="Bild 9">
+</div>
+ <div class="three">
+  <img src="/img/figma.png" alt="Bild 10">
+  <img src="/img/html.png" alt="Bild 11">
+  <img src="/img/css.png" alt="Bild 12">
+  <img src="/img/javascript.png" alt="Bild 13">
+  <img src="/img/p5js.png" alt="Bild 14">
+  <img src="/img/sqlite.png" alt="Bild 15">
+ </div>
+
+</section>
+  </div>
+</div>
+<div class="projects">
+          <h2>Projekt</h2>
+        
 <div class="showing-projects">
   <div class="projects-carousel">
     <a href="/project/8">
@@ -52,5 +124,44 @@
     <a href="/project/7">
       <img src="/img/Mockup.jpg" alt="project4" /></a>
 
+  </div>
+  </div>
+    <ul class="allprojects">
+                <li class="allprojects_link"><a href="/projects" class="nav-link">GÅ TILL ALLA PROJEKT</a></li>
+
+          </ul>
+</div>
+<div class="kontaktamig">
+
+  <div class="kontakt-innehåll">
+    <div class="kontakt-text">
+      <h2>Kontakta mig</h2>
+
+      <div class="links">
+        <!-- Kolumn 1: Mail -->
+        <div class="kontakt-item">
+          <img src="/img/mail@300x.png" alt="Mail ikon" />
+          <a href="mailto:nellieolssonwennberg@gmail.com">
+            nellieolssonwennberg@gmail.com
+          </a>
+        </div>
+
+        <!-- Kolumn 2: LinkedIn -->
+        <div class="kontakt-item">
+          <img src="/img/linkedin@300x.png" alt="LinkedIn ikon" />
+          <a
+            href="https://www.linkedin.com/in/nellie-olsson-wennberg-046923240"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin: nellieolssonwennberg
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="kontakt-image">
+      <img src="/img/cv-img.png" alt="Profilbild" />
+    </div>
   </div>
 </div>

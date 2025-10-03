@@ -1,48 +1,57 @@
-<div class="pageLayout">
+<div class="pageLayoutprojects">
   <div class="left">
     <ul>
-      <li><a> ABOUT </a></li>
+      <li><a> OM MIG </a></li>
     </ul>
   </div>
   <div></div>
   <div class="right"></div>
 </div>
 
+<!--HEADER-->
+<nav class="projectheader">
+  <!--left...icon-->
+  <div class="header-icon"> </div>
+  <!--middle-->
+  <div class="title" id="title"> <a href="/">NELLIE OLSSON WENNBERG</a> </div>
+  <!--right (hamburger, account, osv.)-->
+  <div class="headerright_other">
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+  <ul class="nav-menu">
+    <div class="title" id="title"> <a href="/">NELLIE OLSSON WENNBERG</a> </div>
+
+    <li class="nav-item"><a href="/projects" class="nav-link">work</a></li>
+    <li class="nav-item2"><a href="/about" class="nav-link">about</a></li>
+    <li class="nav-item2"><a href="/contact" class="nav-link">contact</a></li>
+
+  </ul>
+</nav>
+<!---->
+
 <div class="about">
 
   <div class="aboutinformation">
-    <h1>Hi, I'm Nellie!</h1>
+    <h1>Lär känna mig bättre!</h1>
     <p>
-      I'm Nellie Olsson Wennberg, I'm a passionate graphic design and web
-      development student at JU, where I'm learning to combine my love for
-      creativity with technical skills. With a degree in architectural
-      visualization, I've developed a strong foundation in Photoshop and 3D
-      design, which has fueled my passion and shaped the way I approach my work
-      today. I'm always excited to learn, grow, and push creative boundaries.
-      Calm, curious, and driven by a desire to develop, I believe in dreaming
-      big and constantly evolving both personally and professionally.
+      Jag heter Nellie Olsson Wennberg och studerar grafisk design och
+      webbutveckling vid Jönköping University, där jag får kombinera min
+      kreativitet med tekniska färdigheter. Med en examen i
+      arkitekturvisualisering har jag byggt en stark grund i Photoshop och
+      3D-design, något som format mitt arbetssätt och förstärkt min passion för
+      design. Jag älskar att lära mig nya saker, utvecklas och utmana mina
+      kreativa gränser. Lugn, nyfiken och driven, med en vilja att växa, så tror
+      jag på att drömma stort och ständigt utvecklas både personligt och
+      professionellt.
     </p>
   </div>
   <img class="portrait-img" src="/img/cv-img.png" />
 </div>
 <div class="cv">
   <h1>Skills</h1>
-  <div class="skills">
 
-    <div class="skilltable">
-      <ul>
-        <h4>type of skill</h4>
-        <h4>description</h4>
-        {{#each skills}}
-          <li>
-            <img id="skilldot" src="/img/icon.png" />
-            {{sname}}
-          </li>
-          <li id="description">
-            {{sdesc}}
-          </li>
-        {{/each}}
-      </ul>
-    </div>
-  </div>
 </div>
