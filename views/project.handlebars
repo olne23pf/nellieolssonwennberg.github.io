@@ -43,21 +43,48 @@
     <div class="projinfo">
     </div>
     {{#if (eq project.pid 1)}}
-
-      <div class="proj6">
+      <div class="proj4">
+        <div class="text">
+          <p>GONA [-snuggle] is a café that is to be opened in Jönköping.
+            <br />Here is my proposal for branding and concept for this café.</p>
+        </div>
+        <h2>Moodboard</h2>
+        <div class="text">
+          <p>Mysigt,</p>
+          <p>inspirerande,</p>
+          <p>enkelt.</p>
+        </div>
         <img
           src="{{project.images}}"
           alt="{{project.images}}"
           class="bigimage"
         />
-        <img src="{{project.video}}" alt="GIF-beskrivning" class="bigvideo" />
 
         <img
           src="{{project.images2}}"
           alt="{{project.images2}}"
           class="bigimage"
         />
+        <h2>Ad Posters</h2>
+
+        <img
+          src="{{project.images3}}"
+          alt="{{project.images3}}"
+          class="bigimage"
+        />
+        <img src="/img/posters-04.png" alt="posters" class="bigimage" />
+        <h2>In Store</h2>
+        <div class="store">
+          <img
+            src="/img/store_moodboard-02.png"
+            alt="posters"
+            class="bigimage"
+          />
+        </div>
+        <h2>On Instagram</h2>
+        <img src="/img/instafeed.png" alt="posters" class="bigimage" />
       </div>
+
     {{else if (eq project.pid 2)}}
       <div class="proj2">
         <h2>Commercial Video for Ahlgrens Bilar </h2>
@@ -245,25 +272,21 @@
         </div>
       </div>
     {{else if (eq project.pid 7)}}
-      <div class="proj2">
-        <video controls class="bigvideo">
-          <source src="{{project.video}}" type="video/mp4" />
-        </video>
-      </div>
-      <div class="proj2images">
+      <div class="proj6">
         <img
           src="{{project.images}}"
           alt="{{project.images}}"
           class="bigimage"
         />
-        <br />
+        <img src="{{project.video}}" alt="GIF-beskrivning" class="bigvideo" />
+
         <img
           src="{{project.images2}}"
           alt="{{project.images2}}"
           class="bigimage"
         />
       </div>
-
+      <!--
     {{else if (eq project.pid 8)}}
       <div class="images">
         <img
@@ -285,23 +308,25 @@
         />
       </div>
     {{else if (eq project.pid 9)}}
-      <div class="proj4">
+      <div class="proj2">
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+        </video>
+      </div>
+      <div class="proj2images">
         <img
           src="{{project.images}}"
           alt="{{project.images}}"
           class="bigimage"
         />
+        <br />
         <img
           src="{{project.images2}}"
           alt="{{project.images2}}"
           class="bigimage"
         />
-        <img
-          src="{{project.images3}}"
-          alt="{{project.images3}}"
-          class="bigimage"
-        />
-      </div>
+      </div> -->
+
     {{else}}
       <div class="images">
         <img
