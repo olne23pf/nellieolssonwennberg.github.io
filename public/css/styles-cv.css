@@ -1681,14 +1681,14 @@ h4 {
     padding: 0 1rem;
   }
   .navbar .title a {
-    font-size: 1rem;
+    font-size: 0.2rem;
   }
   p {
     font-size: 12px;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 0.5rem;
   }
 
   .biografi {
