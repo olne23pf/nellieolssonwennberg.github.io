@@ -591,41 +591,69 @@ h4 {
   border: 1px solid #77b9f3;
   display: block;
 }
-.cv {
-  height: 100%;
-  width: 80%;
-  margin: 0 auto;
-}
-.cv h1 {
-  padding-top: 9rem;
+.cv-header {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   text-align: center;
+  color: #77b9f3;
+  font-family: "korolov";
+  font-size: 20px;
 }
-.cv .skills {
+.cv-header p {
   width: 100%;
 }
-.cv .skilltable {
-  display: flex;
-  width: 80%;
-  padding-bottom: 10rem;
-}
-.cv .skilltable ul h4 {
-  font-family: "karla";
-  font-weight: 100;
-  font-size: 1.4rem;
-  padding-left: 0.8rem;
-  margin-bottom: 2rem;
-  text-decoration: underline #77b9f3;
-}
-.cv .skilltable ul {
-  padding-top: 5rem;
+.cv-info {
+  height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-top: 3rem;
+  grid-template-columns: repeat(3, 1fr); /* tre lika stora kolumner */
+  gap: 12rem; /* mellanrum mellan kolumnerna */
+  text-align: left; /* all text till vänster */
+  width: 80%;
+  margin: 0 auto; /* centrerar hela blocket */
+  padding: 2rem;
 }
-.cv .skilltable li {
-  padding: 10px 12px;
+.cv-info h1 {
+  padding-bottom: 2rem;
+}
+.cv-info p {
   font-family: "karla";
-  font-size: 1rem;
-  list-style-type: none;
+  font-size: 14px;
+  color: rgba(218, 212, 199, 0.732);
+}
+.cv-info p2 {
+  font-family: "karla";
+  font-size: 18px;
+  color: rgb(233, 227, 213);
+  padding-bottom: 0.5rem;
+}
+.cv-info .p3 {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  color: rgb(68, 89, 194);
+}
+.cv-info .utbildning {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.cv-info .arbetserfarenhet {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.cv-info .kompetens {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 #skilldot {
@@ -1792,9 +1820,6 @@ h4 {
     margin: 0.5rem auto;
   }
 
-  .cv h1 {
-    padding-top: 3rem;
-  }
   .skills .skilltable {
     width: 100%;
   }
