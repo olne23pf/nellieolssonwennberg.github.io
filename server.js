@@ -1,12 +1,11 @@
 //LOGIN AS THE ADMIN:
 const adminName = "nellie";
 //const adminPassword = "1234";
-const adminPassword =
-  "$2b$12$GMh7liGIej8V1B4XHiZM4u/45htzmo/OfqHjCKzAko49qdxTLYwo.";
+//const adminPassword = "$2b$12$GMh7liGIej8V1B4XHiZM4u/45htzmo/OfqHjCKzAko49qdxTLYwo.";
 
 //const bcrypt = require("bcrypt");
 //salt round for bcrypt algorithm
-const saltRounds = 12;
+//const saltRounds = 12;
 
 //run this code ONLY ONCE
 /*
