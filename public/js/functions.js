@@ -1,3 +1,4 @@
+/*
 //---- start function ----//
 const heroTitle = document.querySelector(".hero-title");
 const header = document.querySelector(".navbar");
@@ -34,6 +35,63 @@ window.addEventListener("scroll", () => {
     header.classList.add("visible");
     pagelayout.classList.add("visible");
     hamburgermenu.classList.add("visible");
+  }
+});*/
+
+const heroTitle = document.querySelector(".hero-title");
+const header = document.querySelector(".navbar");
+const pagelayout = document.querySelector(".pageLayout");
+const hamburgermenu = document.querySelector(".headerright");
+
+// Desktop font sizes
+const startFontDesktop = 6; // rem
+const endFontDesktop = 4; // rem
+
+// Mobile font sizes
+const startFontMobile = 2; // rem (maximum starting font on mobile)
+const endFontMobile = 1; // rem (final font after scroll)
+
+// Scroll distance for shrinking
+const maxScroll = 300; // px
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+
+  // Detect if mobile
+  const isMobile = window.innerWidth <= 768;
+
+  // Pick appropriate font sizes
+  const startFont = isMobile ? startFontMobile : startFontDesktop;
+  const endFont = isMobile ? endFontMobile : endFontDesktop;
+
+  if (scrollY < maxScroll) {
+    const progress = scrollY / maxScroll;
+    const newFont = startFont - (startFont - endFont) * progress;
+    heroTitle.style.fontSize = newFont + "rem";
+    heroTitle.classList.remove("fixed");
+
+    // Hide navbar/page layout only if hamburger not active
+    if (!document.querySelector(".hamburger").classList.contains("active")) {
+      header.classList.remove("visible");
+      pagelayout.classList.remove("visible");
+      hamburgermenu.classList.remove("visible");
+    }
+  } else {
+    heroTitle.style.fontSize = endFont + "rem";
+    heroTitle.classList.add("fixed");
+
+    header.classList.add("visible");
+    pagelayout.classList.add("visible");
+    hamburgermenu.classList.add("visible");
+  }
+});
+
+// Update hero size if window is resized
+window.addEventListener("resize", () => {
+  const isMobile = window.innerWidth <= 768;
+  const startFont = isMobile ? startFontMobile : startFontDesktop;
+  if (!heroTitle.classList.contains("fixed")) {
+    heroTitle.style.fontSize = startFont + "rem";
   }
 });
 
