@@ -1670,12 +1670,18 @@ h4 {
     font-size: 1.5rem;
   }
 
-  h2,
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
   h3 {
     font-size: 1rem;
   }
   .navbar {
     padding: 0 1rem;
+  }
+  .navbar .title {
+    font-size: 1rem;
   }
   p {
     font-size: 12px;
@@ -1683,11 +1689,8 @@ h4 {
 
   .hero-title {
     font-size: 2rem;
-    transition: font-size 0.1s linear;
   }
-  .title {
-    font-size: 1rem;
-  }
+
   .biografi {
     width: 80%;
   }
@@ -1696,6 +1699,7 @@ h4 {
   }
   .photo-grid img {
     width: 50%;
+    border-radius: 1px; /* rundade hörn */
   }
 
   /*--------------------------------*/
