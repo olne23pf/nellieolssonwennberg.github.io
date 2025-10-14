@@ -49,7 +49,7 @@ const endFontDesktop = 4; // rem
 
 // Mobile font sizes
 const startFontMobile = 2; // rem (maximum starting font on mobile)
-const endFontMobile = 1; // rem (final font after scroll)
+const endFontMobile = 1.5; // rem (final font after scroll)
 
 // Scroll distance for shrinking
 const maxScroll = 300; // px
