@@ -4,7 +4,7 @@ const adminName = "nellie";
 const adminPassword =
   "$2b$12$GMh7liGIej8V1B4XHiZM4u/45htzmo/OfqHjCKzAko49qdxTLYwo.";
 
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 //salt round for bcrypt algorithm
 const saltRounds = 12;
 
@@ -262,11 +262,11 @@ app.get("/project/delete/:projid", function (req, res) {
 app.get("/project-new", function (req, res) {
   res.render("project-new.handlebars");
 });
-
+/*
 app.get("/login", (req, res) => {
   res.render("login.handlebars");
-});
-
+});*/
+/*
 app.get("/logout", (req, res) => {
   req.session.destroy((err) => {
     if (err) {
@@ -276,8 +276,8 @@ app.get("/logout", (req, res) => {
       res.redirect("/");
     }
   });
-});
-
+});*/
+/*
 app.get("/userpage", function (req, res) {
   db.all("SELECT * FROM users", (error, listOfUsers) => {
     if (error) {
@@ -365,7 +365,7 @@ db.serialize(() => {
 });
 app.get("/register", (req, res) => {
   res.render("register.handlebars");
-});
+});*/
 
 //HANDLEBARS
 //handlebars "ifeq" and "ifnoteq" from source: (Pablo, varando, https://stackoverflow.com/questions/34252817/handlebarsjs-check-if-a-string-is-equal-to-a-value, 2018)
@@ -381,7 +381,7 @@ app.engine(
 );
 app.set("view engine", "handlebars"); //set handlebars as the view engine
 app.set("views", "./views"); //define the views directory to be ./views
-
+/*
 app.post("/login", async (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
@@ -440,6 +440,7 @@ app.post("/register", async (req, res) => {
     }
   );
 });
+
 
 //add new user in user management
 app.post("/newuser", async (req, res) => {
@@ -525,7 +526,7 @@ app.post("/project/modify/:projid", function (req, res) {
   }
   // Konvertera bild-URL:erna till JSON-sträng för att spara i databasen
   const imagesJson = JSON.stringify(urls);*/
-
+/*
   db.run(
     `UPDATE projects SET ptitle=?, pdate=?, pimgURL=?, pdesc=?, cid=? WHERE pid=?`,
     [title, date, url, desc, cid, id],
@@ -563,7 +564,7 @@ app.post("/user/modify/:uid", async function (req, res) {
     }
   );
 });
-
+*/
 //-----------
 // LISTEN
 //-----------
