@@ -1682,7 +1682,6 @@ h4 {
   }
   .navbar .title a {
     font-size: 1.5rem;
-    padding-top: 2rem;
   }
   p {
     font-size: 12px;
@@ -1690,6 +1689,14 @@ h4 {
 
   .hero-title {
     font-size: 2rem;
+    padding-top: 1rem;
+  }
+  .headerright.visible {
+    justify-content: right;
+  }
+
+  .nav-menu.active .title {
+    font-size: 1.5rem;
   }
 
   .biografi {
@@ -1760,6 +1767,7 @@ h4 {
     flex-direction: column;
   }
   .kontakt-image {
+    padding-top: 0;
     justify-content: center;
     margin: 0 auto;
   }
