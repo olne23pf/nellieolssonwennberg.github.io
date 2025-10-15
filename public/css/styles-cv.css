@@ -1714,7 +1714,11 @@ h4 {
     width: 50%;
     border-radius: 1px; /* rundade hörn */
   }
-
+  .photo-grid .one,
+  .photo-grid .two,
+  .photo-grid .three {
+    padding: 0.2rem;
+  }
   /*--------------------------------*/
   .pageLayout {
     margin: 0 auto;
@@ -1742,7 +1746,19 @@ h4 {
     justify-content: center;
     margin: 0 auto;
   }
-
+  .kontakt-innehåll {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+  }
+  .kontakt-image {
+    justify-content: center;
+    margin: 0 auto;
+  }
   /*-------------PROJECTS-----------------*/
 
   .filter .schools {
