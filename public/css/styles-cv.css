@@ -1678,11 +1678,11 @@ h4 {
     font-size: 1rem;
   }
   .navbar {
-    padding: 0 1rem;
+    padding: 1rem;
   }
   .navbar .title a {
     font-size: 1.5rem;
-    padding-top: 1rem;
+    padding-top: 2rem;
   }
   p {
     font-size: 12px;
@@ -1710,6 +1710,9 @@ h4 {
   .skills {
     width: 80%;
   }
+  .photo-grid {
+    justify-content: center;
+  }
   .photo-grid img {
     width: 50%;
     border-radius: 1px; /* rundade hörn */
@@ -1718,6 +1721,7 @@ h4 {
   .photo-grid .two,
   .photo-grid .three {
     padding: 0.2rem;
+    gap: 3px;
   }
   /*--------------------------------*/
   .pageLayout {
@@ -1748,12 +1752,12 @@ h4 {
   }
   .kontakt-innehåll {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
   }
   .links {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   .kontakt-image {
     justify-content: center;
