@@ -1689,14 +1689,19 @@ h4 {
 
   .hero-title {
     font-size: 2rem;
-    padding-top: 1rem;
+    padding-top: 1.35rem;
   }
   .headerright.visible {
     justify-content: right;
+    right: 0;
   }
-
-  .nav-menu.active .title {
+  .nav-menu .title a {
     font-size: 1.5rem;
+    padding-top: 1.1rem;
+  }
+  .nav-menu.active .title a {
+    font-size: 1.5rem;
+    padding-top: 1.1rem;
   }
 
   .biografi {
@@ -1721,7 +1726,8 @@ h4 {
     justify-content: center;
   }
   .photo-grid img {
-    width: 50%;
+    width: 3.4rem;
+    height: auto;
     border-radius: 1px; /* rundade hörn */
   }
   .photo-grid .one,
@@ -1772,7 +1778,17 @@ h4 {
     margin: 0 auto;
   }
   /*-------------PROJECTS-----------------*/
+  .projectheader .title a {
+    font-size: 1.5rem;
+    padding-top: 0;
+  }
+  .headerright_other {
+    padding-top: 0.8rem;
+  }
 
+  .filter {
+    top: 90px;
+  }
   .filter .schools {
     display: flex;
     margin: 0 auto;
