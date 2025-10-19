@@ -4,17 +4,23 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node scripts/build.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "connect-sqlite3": "^0.9.0",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.1",
     "express-session": "^1.17.3",
-    "connect-sqlite3": "^0.9.0",
     "sqlite3": "^5.1.6"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "fs-extra": "^11.3.2",
+    "glob": "^11.0.3",
+    "handlebars": "^4.7.8"
+  }
 }

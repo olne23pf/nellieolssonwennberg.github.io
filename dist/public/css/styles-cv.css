@@ -1,0 +1,1986 @@
+@font-face {
+  font-family: "karla";
+  src: url("/fonts/Karla-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 100;
+  color: #77b9f3;
+  font-family: "korolev", sans-serif;
+}
+h2 {
+  font-size: 6rem;
+  font-family: "altesse-std-64pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #77b9f3;
+}
+h3 {
+  font-size: 1.4rem;
+  font-weight: 100;
+  font-family: "korolev", sans-serif;
+  color: #77b9f3;
+}
+h4 {
+  color: rgb(233, 227, 213);
+}
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(255, 255, 236);
+}*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* background-color: #6c2c25;*/
+  background-color: #391212;
+  font-family: "korolev", sans-serif;
+}
+
+/* ------------------------------------------Hero------------------------------------------ */
+.hero {
+  height: 80vh;
+  padding-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.hero-title {
+  width: 100%;
+  font-size: 6rem;
+  text-align: center;
+  color: #77b9f3;
+  position: relative;
+  z-index: 2;
+  transition: font-size 0.1s linear;
+  background-color: transparent;
+}
+.hero-title.fixed {
+  position: fixed;
+  top: 15px; /* justera så det matchar headerns mitt */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar {
+  opacity: 0;
+  /*  transform: translateY(-100%);
+  transition: all 0.8s ease; */
+}
+
+.navbar.visible {
+  opacity: 1;
+  z-index: 1;
+  transition: all 0.8s ease;
+  background-color: #391212;
+}
+
+.pageLayout {
+  opacity: 0;
+}
+
+.pageLayout.visible {
+  opacity: 1;
+  transition: all 0.8s ease;
+}
+
+/*-----------------------------------------HEADER--------------------------------------------*/
+
+/*--left--*/
+/*
+.header-icon {
+  left: 0;
+  justify-self: left;
+  z-index: 3;
+  background-color: transparent;
+}
+
+.header-icon img {
+  width: 2.5em;
+  background-color: transparent;
+}*/
+
+/*--middle--*/
+.title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #77b9f3;
+  background-color: transparent;
+  padding-top: 0.2em;
+  z-index: 3;
+  background-color: transparent;
+}
+.title a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  font-size: 4rem;
+}
+
+/*-- right -- hamburger menu --*/
+
+.navbar {
+  width: 100%;
+  top: 0;
+  position: fixed;
+
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
+  background-color: transparent;
+}
+
+.nav-menu li {
+  list-style: none;
+  background-color: transparent;
+}
+
+.nav-item a,
+.nav-item2 a {
+  color: #77b9f3;
+  text-decoration: none;
+  font-size: 1.4rem;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: fixed;
+  z-index: 3;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: #77b9f3;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #77b9f3;
+}
+
+.account {
+  padding-right: 1rem;
+}
+.accountimg {
+  width: 1.8rem;
+}
+.headerright {
+  opacity: 0;
+  position: fixed;
+  top: 0.5rem;
+  right: 2rem;
+  flex-direction: row-reverse;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.headerright.visible {
+  opacity: 1;
+  position: fixed;
+  z-index: 10;
+  transition: all 0.8s ease;
+  background-color: transparent;
+}
+.headerright_other {
+  z-index: 10;
+  background-color: transparent;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background-color: rgb(233, 227, 213);
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  transition: top 2s ease-in-out;
+  padding-top: 1em;
+  z-index: 3;
+}
+
+.nav-item {
+  display: flex;
+  padding-top: 0;
+}
+
+.nav-menu.active {
+  left: 0;
+  top: 0;
+  text-decoration: none;
+  z-index: 5;
+}
+
+.nav-menu.active li {
+  background-color: rgb(233, 227, 213);
+}
+
+/*----------------------------------------------------------------*/
+
+.pageLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tre kolumner */
+  margin-top: 0em;
+}
+
+.left {
+  border-right: 1px solid #77b9f3; /* Svart linje under headern */
+  display: flex;
+  width: 8%;
+  height: 100%;
+  margin-top: 4.5em;
+  position: fixed;
+  background-color: transparent;
+  z-index: 1;
+}
+.left li a {
+  display: block;
+  color: #77b9f3;
+  transform: rotate(-90deg); /* Roterar texten 90 grader */
+  transform-origin: left top; /* Valfri: Justerar rotationspunkten */
+  margin-left: 3.6rem;
+  margin-top: 22rem;
+  text-align: center;
+  text-decoration: none;
+  position: fixed;
+  background-color: transparent;
+}
+
+.right {
+  border-left: 1px solid #77b9f3; /* Svart linje under headern */
+  display: flex;
+  position: fixed;
+  width: 8%;
+  height: 100%;
+  margin-top: 4.5em;
+  justify-self: right;
+  right: 0;
+  background-color: transparent;
+  z-index: 1;
+}
+
+/*----------------------------------------- HOME -------------------------------------------------*/
+
+.welcomeadmin {
+  padding-top: 8rem;
+  text-align: center;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*-------------------------HOME - BIOGRAFI---------------------------------------- */
+.biografi {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  padding: 0px;
+  padding-bottom: 3rem;
+}
+
+.biografi h2 {
+  text-align: left; /* titel till vänster */
+  padding-top: 5rem;
+  padding-bottom: 5px;
+}
+
+.bio-content {
+  display: flex;
+  flex-wrap: wrap; /* så den anpassar sig på mobil */
+  gap: 20px;
+}
+
+.bio-text {
+  flex: 1;
+  min-width: 250px;
+  color: rgb(233, 227, 213);
+  padding-top: 1rem;
+}
+.bio-text h2 {
+  padding-bottom: 1rem;
+}
+
+.bio-text p {
+  line-height: 1.6;
+  font-family: "karla";
+}
+
+.bio-image {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  padding-right: 0;
+  padding-top: 8rem;
+  margin: 0;
+}
+
+.bio-image img {
+  max-width: 100%;
+}
+/*------------------------------------HOME - SKILLS--------------------------------------------------*/
+.skills {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  padding: 0px;
+  border-top: 1px solid #77b9f3;
+}
+
+.skills h2 {
+  text-align: left; /* titel till vänster */
+  padding-top: 5rem;
+  padding-bottom: 5px;
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap; /* så den anpassar sig på mobil */
+  gap: 20px;
+}
+
+.skills-text {
+  flex: 1;
+  min-width: 250px;
+  color: rgb(233, 227, 213);
+  padding-top: 1rem;
+}
+.skills-text h2 {
+  padding-bottom: 1rem;
+}
+
+.photo-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.photo-grid .one {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 8 kolumner */
+  grid-template-rows: repeat(1, auto); /* 2 rader */
+  gap: 10px; /* mellanrum mellan bilderna */
+  padding: 1rem;
+}
+.photo-grid .two {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 8 kolumner */
+  grid-template-rows: repeat(1, auto); /* 2 rader */
+  gap: 10px; /* mellanrum mellan bilderna */
+  padding: 1rem;
+}
+.photo-grid .three {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 8 kolumner */
+  grid-template-rows: repeat(1, auto); /* 2 rader */
+  gap: 10px; /* mellanrum mellan bilderna */
+  padding: 1rem;
+}
+
+.photo-grid img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px; /* rundade hörn */
+}
+/*------------------------------------HOME - PROJECTS---------------------------------------------*/
+.projects {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  border-top: 1px solid #77b9f3;
+  padding-bottom: 4rem;
+}
+
+.showing-projects {
+  overflow: hidden;
+  white-space: nowrap; /* So all elements are in one row */
+  margin-top: 1rem;
+  justify-content: center;
+  align-content: center;
+}
+.showing-projects h2 {
+  padding-bottom: 1rem;
+}
+.allprojects {
+  text-align: center;
+  padding-top: 2rem;
+}
+.allprojects_link a {
+  font-family: "korolev", sans-serif;
+  text-decoration: none;
+  color: #391212;
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgb(233, 227, 213);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+.projects-carousel {
+  display: inline-flex;
+  animation: scroll 20s linear infinite; /* The animation has a contunious movement */
+}
+.projects-carousel img {
+  width: 20rem;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+.projects-carousel img:hover {
+  transform: scale(1.1);
+}
+.showing-projects:hover .projects-carousel {
+  animation-play-state: paused;
+}
+/*------------------------------------HOME - KONTAKT---------------------------------------------*/
+.kontaktamig {
+  max-width: 1150px; /* så att allt inte blir för brett */
+  margin: 25px auto; /* centrerar sektionen på sidan */
+  padding: 0px;
+  padding-bottom: 3rem;
+  border-top: 1px solid #77b9f3;
+}
+
+.kontaktamig h2 {
+  text-align: left; /* titel till vänster */
+  padding-top: 5rem;
+  padding-bottom: 5px;
+}
+
+.kontakt-innehåll {
+  display: flex;
+  flex-wrap: wrap; /* så den anpassar sig på mobil */
+  gap: 20px;
+}
+
+.kontakt-text {
+  flex: 1;
+  min-width: 250px;
+  color: rgb(233, 227, 213);
+  padding-top: 1rem;
+}
+
+.kontakt-text p {
+  line-height: 1.6;
+  font-family: "karla";
+  padding-top: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* avstånd mellan kolumnerna */
+  margin-top: 5rem;
+}
+
+.kontakt-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kontakt-item img {
+  width: 40px; /* justera storlek på ikonerna */
+  margin-bottom: 2rem;
+}
+
+.kontakt-item a {
+  color: rgb(233, 227, 213); /* byt färg om du vill */
+  text-decoration: none;
+}
+.kontakt-item a:hover {
+  text-decoration: underline;
+}
+
+.kontakt-image {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  padding-right: 0;
+  padding-top: 8rem;
+  margin: 0;
+}
+
+.kontakt-image img {
+  max-width: 80%;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  border: 1px solid #77b9f3;
+}
+
+/*------------------------------------- ABOUT ----------------------------------------------*/
+
+.about {
+  width: 84%;
+  padding-top: 4.5rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #77b9f3;
+}
+.aboutinformation {
+  padding-top: 8rem;
+}
+.aboutinformation h1 {
+  padding: 1rem;
+  text-align: center;
+}
+.aboutinformation p {
+  font-family: "karla";
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  height: 80%;
+  text-align: center;
+  color: rgb(233, 227, 213);
+}
+.portrait-img {
+  width: 85%;
+  margin: 2rem;
+  padding: 0.5rem;
+  border: 1px solid #77b9f3;
+  display: block;
+}
+.cv-header {
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  color: #77b9f3;
+  font-family: "korolov";
+  font-size: 20px;
+}
+.cv-header p {
+  width: 100%;
+}
+.cv-info {
+  height: 100%;
+  display: grid;
+  padding-top: 3rem;
+  grid-template-columns: repeat(3, 1fr); /* tre lika stora kolumner */
+  gap: 12rem; /* mellanrum mellan kolumnerna */
+  text-align: left; /* all text till vänster */
+  width: 80%;
+  margin: 0 auto; /* centrerar hela blocket */
+  padding: 2rem;
+}
+.cv-info h1 {
+  padding-bottom: 2rem;
+}
+.cv-info p {
+  font-family: "karla";
+  font-size: 14px;
+  color: rgba(218, 212, 199, 0.732);
+}
+.cv-info p2 {
+  font-family: "karla";
+  font-size: 18px;
+  color: rgb(233, 227, 213);
+  padding-bottom: 0.5rem;
+}
+.cv-info .p3 {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  color: rgb(68, 89, 194);
+}
+.cv-info .utbildning {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.cv-info .arbetserfarenhet {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.cv-info .kompetens {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+#skilldot {
+  width: 1rem;
+}
+
+/*------------------------------------------CONTACT-------------------------------------------*/
+.contactme {
+  margin: 14em auto 8em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+}
+.contactme h2 {
+  font-family: "amandine";
+  color: #77b9f3;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2.4rem;
+}
+
+.information {
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 14em;
+}
+.information h3 {
+  font-weight: 300;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2em;
+  color: #77b9f3;
+}
+.information ul li {
+  text-decoration: none;
+  list-style-type: none;
+  margin: 1em;
+  font-family: "karla";
+  color: rgb(233, 227, 213);
+}
+
+/*-------------------------------------------------PROJECTS------------------------------------------------------*/
+.pageLayoutprojects {
+  opacity: 1;
+  padding-top: 0.1rem;
+  z-index: 2;
+}
+
+.projectheader {
+  width: 100%;
+  top: 0;
+  position: fixed;
+
+  min-height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
+  background-color: #391212;
+  z-index: 1;
+}
+.projectheader .nav-menu li {
+  list-style: none;
+  background-color: transparent;
+}
+.projectheader .nav-menu.active {
+  padding-top: 0rem;
+}
+
+.projectheader .title {
+  font-size: 4rem;
+  z-index: 1;
+}
+
+.projectpage {
+  width: 84%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+/*
+.projectpage .mytextcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+}*/
+
+.projectpage a {
+  margin-top: 0em;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #77b9f3;
+}
+.projectTop {
+  width: 100%;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.projectTop h1 {
+  padding-left: 2rem;
+}
+.filter {
+  width: 100%;
+  height: 2.5rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 2em;
+  position: sticky;
+  top: 94px;
+  border-bottom: 1px solid #77b9f3;
+}
+.filter a {
+  font-family: "karla";
+  font-size: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  left: 0;
+  color: rgb(233, 227, 213);
+}
+.selectedcid {
+  color: rgb(233, 227, 213);
+}
+.filter span {
+  width: 0;
+  height: 0;
+  border-right: 0.25rem solid #77b9f3;
+  border-bottom: 0.25rem solid #77b9f3;
+  border-left: 0.5rem solid transparent;
+  border-top: 0.5rem solid transparent;
+  transform: rotate(45deg);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.filter .categories {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 1rem;
+  font-size: 0;
+  opacity: 0;
+  font-family: "karla";
+  background-color: transparent;
+}
+
+.filter .active {
+  font-size: 1.2rem;
+  opacity: 1;
+}
+.filter .categories .option {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #77b9f3;
+  font-family: "karla";
+  background-color: transparent;
+}
+
+.filter .schools {
+  display: flex;
+  margin: 0 auto;
+  padding-right: 6rem;
+}
+.filter .schools a .btn {
+  color: rgb(233, 227, 213);
+}
+.btn {
+  cursor: pointer;
+  padding: 0.2rem;
+  font-family: "karla";
+  border: none;
+}
+.btn-selected {
+  cursor: pointer;
+  border: none;
+  background-color: #77b9f3;
+  padding: 0.2rem;
+  font-family: "karla";
+  color: rgb(233, 227, 213);
+}
+.schools a {
+  font-family: "karla";
+}
+
+.addproject {
+  padding-left: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  padding-right: 2em;
+}
+.addproject .add {
+  display: flex;
+  cursor: pointer;
+  color: rgb(233, 227, 213);
+  padding: 0.2rem;
+  font-size: 1rem;
+
+  font-family: "karla";
+}
+.addproject .plus {
+  color: #77b9f3;
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding-right: 0.5rem;
+  padding-bottom: 0.2rem;
+  font-family: "karla";
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.projectarkviz {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.project-text {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-text ul {
+  margin: 0 auto;
+  list-style: none;
+}
+.project-text ul li {
+  color: rgb(233, 227, 213);
+}
+.project-text .titletext {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.project-text .runningtext {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "karla";
+}
+.project-text .datetext {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "karla";
+}
+.editproject {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.editproject > div {
+  padding: 2rem;
+}
+.editproject > div a {
+  font-family: "karla";
+}
+.project-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.project-img img {
+  width: 100%;
+  height: auto;
+}
+.projectarkviz img .smallimage {
+  max-width: 100%;
+  height: auto;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+  display: flex;
+}
+.projectarkviz:nth-child(even) {
+  flex-direction: row-reverse;
+  display: flex;
+}
+.pagination {
+  display: flex;
+  padding: 4rem;
+  justify-content: center;
+  width: 100%;
+}
+.pagination a {
+  padding: 1rem;
+  font-family: "karla";
+}
+
+/* ------ PROJECT PAGE ------*/
+
+.backbtn {
+  padding-top: 6rem;
+  width: 97%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+.backbtn a {
+  font-family: "karla";
+  text-decoration: none;
+  color: #77b9f3;
+}
+.projecttitle {
+  text-align: center;
+  padding-top: 6rem;
+  padding-top: 4rem;
+}
+.projectcard {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 0.5rem;
+}
+
+.projdate {
+  font-family: "karla";
+  text-align: center;
+  padding-bottom: 3rem;
+  color: rgb(233, 227, 213);
+}
+
+.projinfo {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.projectcard p {
+  font-family: "karla";
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  color: rgb(233, 227, 213);
+}
+.projectcard .divimage {
+  margin: 0 auto;
+}
+.projectcard .divimage img {
+  width: 100%;
+}
+
+.modifyproject {
+  font-family: "karla";
+  color: #77b9f3;
+  border: none;
+  background-color: rgb(233, 227, 213);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.projectcard .images {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  width: 100%;
+}
+.projectcard .images img {
+  padding: 0.1rem;
+  width: 100%;
+}
+
+.proj2 {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.proj2 h2 {
+  padding-bottom: 3rem;
+}
+.proj2 video {
+  width: 100%;
+}
+.proj2images {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 2rem;
+}
+.proj2images img {
+  width: 50%;
+}
+.motion_content {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.motion_content h2 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.motion_content h3 {
+  color: #77b9f3;
+  padding-top: 1rem;
+}
+.motion_content p {
+  padding: 1rem;
+}
+.motion_content img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.proj3 {
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+.startgame {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.startgame a img {
+  width: 100%;
+  cursor: pointer;
+}
+.sprites {
+  width: 80%;
+  margin: 0 auto;
+}
+.sprites .spritesimg {
+  width: 100%;
+}
+.proj4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 4rem;
+}
+.proj4 h2 {
+  text-align: center;
+}
+.proj4 .text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(233, 227, 213);
+  font-family: "karla";
+  font-size: 18px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.proj4 img {
+  width: 100%;
+}
+.proj4 .store {
+  display: flex;
+  justify-content: center;
+}
+.proj4 .store img {
+  max-width: 700px;
+}
+.projav1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.projav1 img {
+  width: 100%;
+}
+.projectcard .photodesc {
+  text-align: left;
+  width: 20%;
+}
+.projav2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 1rem;
+}
+.projav2 img {
+  width: 100%;
+}
+.project3 {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.postertext {
+  text-align: left;
+  width: 70%;
+  margin: 0 auto;
+}
+.postertext h4 {
+  text-align: left;
+  font-family: "karla";
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.posterde {
+  text-align: center;
+  width: 70%;
+  margin: 5rem auto 0 auto;
+  border: 1px solid #77b9f3;
+  padding: 1rem;
+}
+.posterde .gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+  grid-template-columns: 10% 90%; /* Left column (images) takes 30%, right column (text) takes 70% */
+
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  /*row-gap: 10px; /* Adds space between the grid items */
+  column-gap: 0;
+  justify-content: space-between;
+}
+.posterde .gridcontainer img {
+  width: 50%;
+  justify-self: right;
+  padding-top: 1rem;
+}
+.posterde .gridcontainer p {
+  text-align: left;
+
+  padding: 1rem;
+}
+.proj4 {
+  width: 100%;
+}
+.proj4images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 0.5rem;
+}
+.proj4images img {
+  width: 100%;
+}
+.proj5 img {
+  width: 100%;
+}
+.proj6 {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.proj6 img {
+  width: 100%;
+}
+.proj9 {
+  display: flex;
+  text-align: center;
+  padding-top: 2rem;
+}
+.proj9title h2 {
+  text-align: center;
+  padding-top: 1rem;
+  /*
+  font-family: "amandine";
+  color: #ffa941;*/
+}
+.proj9 img {
+  width: 100%;
+}
+.proj9_2 {
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.proj9_2 img {
+  width: 100%;
+}
+/* ------ ADD A NEW PROJECT ------*/
+#principal {
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  height: 100%;
+  margin: 0 auto;
+}
+#principal h1 {
+  text-align: center;
+  padding-top: 3rem;
+}
+.createnewproject form {
+  display: flex;
+  flex-direction: column;
+  width: 52%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+}
+.createnewproject form label {
+  font-family: "karla";
+}
+.createnewproject form input {
+  padding: 0.5rem;
+  background-color: rgba(222, 215, 204, 0.473);
+  border: none;
+  font-family: "karla";
+}
+.createnewproject form textarea {
+  height: 5rem;
+  padding: 0.5rem;
+  font-family: "karla";
+}
+#choosecategorie {
+  width: 100%;
+}
+#projcid {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  background-color: rgba(222, 215, 204, 0.473);
+  font-family: "karla";
+}
+#projcid option {
+  font-family: "karla";
+}
+#submitproject {
+  background-color: #77b9f3;
+}
+
+/* ------ ZONNE PROJECT ------*/
+/*
+.pagetitle {
+  width: 100%;
+  margin-top: 4rem;
+  justify-items: center;
+}
+.pagetitle h1 {
+  color: #ffa941;
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.video {
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  justify-content: center;
+}
+.video video {
+  width: 100%;
+}*/
+
+/*LOG IN*/
+.login {
+  width: 100%;
+  height: 100%;
+}
+.mytextcard {
+  padding: 2rem;
+  padding-top: 8rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button-box {
+  display: flex;
+  margin: 3.5rem auto;
+  position: relative;
+  box-shadow: 0 0 2rem 0.3rem blanchedalmond;
+  border-radius: 0rem;
+  justify-content: center;
+  width: 20rem;
+}
+.toggle-btn {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: #77b9f3;
+  width: 10rem;
+}
+.toggle-btn-login {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: #77b9f3;
+  background-color: rgb(233, 227, 213);
+  width: 10rem;
+}
+.toggle-btn-register {
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+  font-size: 1.4rem;
+  color: #77b9f3;
+  background-color: rgb(233, 227, 213);
+  width: 10rem;
+}
+#btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 11rem;
+  height: 100%;
+  background-color: rgb(233, 227, 213);
+  border-radius: 0rem;
+  transition: 0.5s;
+}
+#btn.register {
+  right: 0;
+}
+.input-group {
+  width: 28rem;
+  transition: 0.5s;
+}
+#login {
+  padding-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+}
+#register {
+  left: 15rem;
+  padding-top: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.registertitle {
+  text-align: center;
+  padding-top: 2rem;
+}
+.mytextcard #register input {
+  padding: 0.2rem 0.5rem;
+}
+.login .mytextcard form label {
+  font-family: "karla";
+}
+.login .mytextcard form input {
+  background-color: rgb(233, 227, 213);
+  border-style: none;
+  height: 150%;
+  font-family: "karla";
+  padding: 0.2rem 0.5rem;
+}
+.login .mytextcard form #submitbtn {
+  background-color: #77b9f3;
+  height: 100%;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  margin-top: 2em;
+}
+.error {
+  width: 60%;
+  padding-top: 2rem;
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+  font-family: "karla";
+}
+
+/*-- ACCOUNT PAGE --*/
+.usertable {
+  width: 30%;
+  margin: 0 auto;
+  height: 100%;
+  margin-bottom: 15rem;
+}
+.usertitle {
+  padding-top: 10rem;
+  text-align: center;
+}
+.newUser {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.newUser a {
+  background-color: rgb(233, 227, 213);
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #333;
+  font-family: "karla";
+}
+
+.tablerow {
+  width: 100%;
+  background-color: rgb(233, 227, 213);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  display: grid;
+  column-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 0.05rem solid #333;
+}
+.tablerow ul {
+  background-color: rgb(233, 227, 213);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tablerow ul li {
+  padding: 0 0.7rem;
+  list-style: none;
+  background-color: rgb(233, 227, 213);
+  font-family: "karla";
+}
+.tablerow ul li a {
+  text-decoration: none;
+  font-family: "karla";
+  background-color: rgb(233, 227, 213);
+  color: #77b9f3;
+}
+#modifyuser img,
+#deleteuser img {
+  width: 2rem;
+  background-color: rgb(233, 227, 213);
+}
+#modifyuser,
+#deleteuser {
+  right: 0;
+}
+/*--------------------------------------------------------------------------------------------------*/
+/*------------------------------------------  TABLETS  ---------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  /*
+  .title {
+    font-size: 1.8rem;
+  }
+
+  nav {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .burger-menu {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+    align-content: center;
+  }
+  .burger-menu li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(250, 250, 226);
+  }
+  .burger-menu li a {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    padding-left: 0;
+  }*/
+
+  .navbar {
+    width: 100%;
+    padding: 0 30px;
+  }
+  /*----------------------------------*/
+
+  .left,
+  .left ul,
+  .left li {
+    background-color: transparent;
+    width: 9%;
+  }
+  .left li a {
+    margin-left: 1.7rem;
+    margin-top: 30em;
+  }
+  .right {
+    width: 9%;
+  }
+  .pageLayout {
+    grid-template-columns: 1fr;
+  }
+
+  /*----------------------------------*/
+
+  .projectpage {
+    width: 82%;
+    margin: 0 auto;
+    padding-top: 6rem;
+  }
+  .projectpage h1 {
+    margin: 2em 0 1em 0;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  .projectpage img {
+    width: 100%;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+  .project:nth-child(even) {
+    flex-direction: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .projectarkviz {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+  .projectarkviz:nth-child(even) {
+    flex-direction: none;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .project-text .titletext {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .project-text .runningtext {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .project-text .datetext {
+    font-size: 0.8rem;
+  }
+
+  /*-----------------------------------*/
+  #skills {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .skills ul {
+    width: 90%;
+  }
+  /*-----------------------------------*/
+  .about {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .about h1 {
+    padding: 2rem 0;
+  }
+  /*-----------------------------------*/
+  .contactme {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    font-size: 1.4rem;
+  }
+
+  .formcontainer {
+    width: 74%;
+    margin: 0 auto;
+  }
+  .formcontainer label {
+    font-size: 1.4rem;
+  }
+  .formcontainer input {
+    font-size: 1.4rem;
+  }
+  .information {
+    padding-top: 30rem;
+  }
+  /*-----------------------------------*/
+  .login .mytextcard {
+    padding-top: 10rem;
+  }
+  #login,
+  #register {
+    width: 90%;
+  }
+  .login .mytextcard form label {
+    font-size: 1.6rem;
+  }
+  #login .mytextcard form input {
+    font-size: 1.6rem;
+  }
+  #login .mytextcard form #submitbtn {
+    font-size: 1.6rem;
+  }
+  /*-----------------------------------*/
+
+  .usertable {
+    width: 70%;
+  }
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*------------------------------------------  MEDIA  ---------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .navbar {
+    padding: 1rem;
+  }
+  .navbar .title a {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    padding-top: 1.35rem;
+  }
+  .headerright.visible {
+    justify-content: right;
+    right: 0;
+  }
+  .nav-menu .title a {
+    font-size: 1.5rem;
+    padding-top: 1.1rem;
+  }
+  .nav-menu.active .title a {
+    font-size: 1.5rem;
+    padding-top: 1.1rem;
+  }
+
+  .biografi {
+    width: 80%;
+  }
+  .biografi h2,
+  .skills h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .bio-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .bio-image {
+    padding-top: 0;
+  }
+  .skills {
+    width: 80%;
+  }
+  .photo-grid {
+    justify-content: center;
+  }
+  .photo-grid img {
+    width: 3.4rem;
+    height: auto;
+    border-radius: 1px; /* rundade hörn */
+  }
+  .photo-grid .one,
+  .photo-grid .two,
+  .photo-grid .three {
+    padding: 0.2rem;
+    gap: 3px;
+  }
+  /*--------------------------------*/
+  .pageLayout {
+    margin: 0 auto;
+  }
+
+  .left,
+  .left ul,
+  .left li {
+    background-color: transparent;
+    width: 10%;
+  }
+  .left li a {
+    margin-left: 0.8rem;
+    margin-top: 21em;
+  }
+  .right {
+    width: 10%;
+  }
+  /*------------------------------*/
+  .showing-projects {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .allprojects {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .kontakt-innehåll {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .kontakt-image {
+    padding-top: 0;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  /*-------------PROJECTS-----------------*/
+  .projectheader .title a {
+    font-size: 1.5rem;
+    padding-top: 0;
+  }
+  .headerright_other {
+    padding-top: 0.8rem;
+  }
+
+  .filter {
+    top: 90px;
+  }
+  .filter .schools {
+    display: flex;
+    margin: 0 auto;
+    padding-right: 0;
+  }
+  .filter .schools a .btn {
+    color: #333;
+  }
+  .filter .schools a .btn-selected {
+    color: #333;
+  }
+  .btn {
+    cursor: pointer;
+    padding: 0.2rem;
+    font-family: "karla";
+    border: none;
+    font-size: 0.8rem;
+  }
+
+  .projectpage {
+    display: grid;
+    grid-template-columns: 2fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .projectpage h1 {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+  }
+  .projectpage img {
+    width: 100%;
+  }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+  }
+  .project-text .titletext {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .project-text .runningtext {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .project-text .datetext {
+    font-size: 0.8rem;
+  }
+
+  .createnewproject form {
+    width: 90%;
+  }
+
+  /*----------------------------each project--*/
+
+  #principal .projectcard {
+    width: 95.5%;
+    margin: 0 auto;
+  }
+  #principal .projectcard .divimage img {
+    width: 100%;
+  }
+  .backbtn {
+    padding-left: 1rem;
+  }
+
+  .posterde {
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 80%;
+  }
+  .postertext {
+    width: 80%;
+  }
+  .postertext h3 {
+    font-size: 1rem;
+  }
+  .postertext h4 {
+    font-size: 0.9rem;
+  }
+  .posterde .gridcontainer p {
+    padding: 0.2rem;
+  }
+  .posterde .gridcontainer img {
+    padding-top: 0.3rem;
+  }
+
+  /*------------------------------*/
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .about h1 {
+    padding-top: 0;
+  }
+  .about img {
+    margin: 0.5rem auto;
+  }
+
+  .skills .skilltable {
+    width: 100%;
+  }
+  .skills .skilltable ul {
+    padding-top: 2rem;
+  }
+  .skills .skilltable ul h4 {
+    font-size: 1.2rem;
+  }
+  .skills .skilltable ul li {
+    font-size: 0.8rem;
+  }
+
+  /*------------------------------*/
+
+  .contactme {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 8em;
+    padding-bottom: 3em;
+  }
+  .contactme h2 {
+    font-size: 1.7rem;
+  }
+  .formcontainer {
+    padding: 1em;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .formcontainer label {
+    font-size: 1.2rem;
+  }
+
+  .information {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
+  .information h3 {
+    font-size: 1.6rem;
+    padding-bottom: 2rem;
+  }
+  .information ul li {
+    padding-left: 0.1rem;
+    font-family: "karla";
+    font-size: 0.9rem;
+  }
+  .formcontainer #submitbtn {
+    font-size: 1rem;
+  }
+
+  /*------------------------------*/
+  .login {
+    padding-top: 0;
+  }
+  .login .button-box {
+    width: 100%;
+  }
+  .login .mytextcard {
+    width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 6rem 0;
+  }
+
+  #login,
+  #register {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .login .mytextcard form label {
+    font-size: 1.4rem;
+  }
+  .submitbtn {
+    font-size: 1.4rem;
+  }
+  /*------------------------------*/
+
+  .usertable {
+    width: 70%;
+  }
+  .tablerow {
+    column-gap: 1rem;
+  }
+  .tablerow ul li {
+    font-size: 0.9rem;
+    left: 0;
+  }
+}
