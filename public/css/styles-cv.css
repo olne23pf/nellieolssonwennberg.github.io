@@ -1685,6 +1685,9 @@ h4 {
   p {
     font-size: 12px;
   }
+  .hero {
+    padding-top: 2rem;
+  }
 
   .hero-title {
     font-size: 2rem;
