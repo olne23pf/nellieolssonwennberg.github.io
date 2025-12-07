@@ -1034,6 +1034,15 @@ h4 {
   width: 100%;
 }
 
+.projoatly li {
+  justify-content: center;
+  margin: 0 auto;
+}
+.projoatly li a {
+  color: rgb(233, 227, 213);
+  text-align: center;
+}
+
 .proj2 {
   width: 70%;
   margin: 0 auto;
@@ -1679,6 +1688,7 @@ h4 {
   }
   h3 {
     font-size: 1rem;
+    justify-content: center;
   }
   .navbar {
     padding: 1rem;
