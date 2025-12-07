@@ -1034,6 +1034,16 @@ h4 {
   width: 100%;
 }
 
+.projoatly {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.prokoatly h3 {
+  text-align: center;
+  justify-content: center;
+}
 .projoatly li {
   justify-content: center;
   margin: 0 auto;
@@ -1041,6 +1051,12 @@ h4 {
 .projoatly li a {
   color: rgb(233, 227, 213);
   text-align: center;
+}
+.oatlyimgs {
+  width: 100%;
+}
+.oatlyad {
+  width: 100%;
 }
 
 .proj2 {
