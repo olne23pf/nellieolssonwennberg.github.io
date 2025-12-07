@@ -1034,10 +1034,9 @@ h4 {
   width: 100%;
 }
 
-.projoatly {
-  width: 70%;
-  margin: 0 auto;
-  padding-bottom: 2rem;
+.oatly_content {
+  display: grid;
+  grid-template-columns: 1fr;
   text-align: center;
 }
 .prokoatly h3 {
@@ -1047,15 +1046,18 @@ h4 {
 .projoatly li {
   justify-content: center;
   margin: 0 auto;
+  width: 50%;
 }
 .projoatly li a {
   color: rgb(233, 227, 213);
-  text-align: center;
+  text-align: left;
 }
 .oatlyimgs {
+  display: flex;
   width: 100%;
 }
 .oatlyad {
+  display: flex;
   width: 100%;
 }
 
