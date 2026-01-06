@@ -460,6 +460,9 @@ h4 {
   text-align: center;
   padding-top: 2rem;
 }
+.allprojects_link {
+  text-decoration: none;
+}
 .allprojects_link a {
   font-family: "korolev", sans-serif;
   text-decoration: none;
