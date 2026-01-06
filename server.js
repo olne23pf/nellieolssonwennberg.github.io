@@ -38,11 +38,11 @@ const connectSqlite3 = require("connect-sqlite3"); //store the sessions in a SQl
 // SESSIONS
 //-----------
 const SQliteStore = connectSqlite3(session); //store sessions in the database
-
+/*
 projects.sort((a, b) => {
   const order = { 1: 1, 8: 2, 2: 3, 3: 4, 4: 5, 6: 6, 7: 7 };
   return order[a.pid] - order[b.pid];
-});
+});*/
 
 app.use(
   session({
@@ -171,7 +171,7 @@ app.get("/projects", function (req, res) {
     : [limit, offset];
 
   const categoriesQuery = `SELECT * FROM categorie`;
-
+  /*
   db.all(query, queryParams, (err, projects = []) => {
     db.all(categoriesQuery, [], (err, categories = []) => {
       const hasNextPage = projects.length === limit;
@@ -185,7 +185,7 @@ app.get("/projects", function (req, res) {
         selectedCid,
       });
     });
-  });
+  });*/
 });
 
 app.get("/project/:projectid", function (req, res) {
