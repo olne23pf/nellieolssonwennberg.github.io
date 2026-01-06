@@ -187,7 +187,7 @@ app.get("/projects", function (req, res) {
     });
   });
 });
-
+/*
 app.get("/project/:projectid", function (req, res) {
   console.log(
     "Project route parameter projectid: " + JSON.stringify(req.params.projectid)
@@ -261,7 +261,7 @@ app.get("/project/delete/:projid", function (req, res) {
   } else {
     res.redirect("/login");
   }
-});
+});*/
 
 app.get("/project-new", function (req, res) {
   res.render("project-new.handlebars");
