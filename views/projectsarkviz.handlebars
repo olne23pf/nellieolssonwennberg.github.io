@@ -28,14 +28,13 @@
     <li class="nav-item"><a href="/projects" class="nav-link">work</a></li>
     <li class="nav-item2"><a href="/about" class="nav-link">about</a></li>
     <li class="nav-item2"><a href="/contact" class="nav-link">contact</a></li>
-   
-  
+
   </ul>
 </nav>
 <!---->
 
 <div class="projectpage">
-  
+
   <!--Source: https://www.youtube.com/watch?v=KG8Pt1iskts, 2023-->
   <!--How to create the filter "function" -->
   <div class="filter">
@@ -47,7 +46,7 @@
     </div>
     -->
     <div class="schools">
-         <a href="/projects"><button
+      <a href="/projects"><button
           type="button"
           class="btn"
           onclick="projects1()"
@@ -57,22 +56,23 @@
         class="btn-selected"
         onclick="projects2()"
       >Archviz</button>
-    </div>  
+    </div>
+    <!--
     {{#if session.isAdmin}}
     <div class="addproject">
   <a class="plus" href="/project-new">+</a>
 <a class="add" href="/project-new">Add New Project</a>
     </div>
-  {{/if}}
+  {{/if}}-->
   </div>
-    <div class="projectTop">
+  <div class="projectTop">
     <h2>Alla Projekt</h2>
   </div>
-    
-    {{#each projectsarkviz}}
 
-  <div class="projectarkviz">
-    <div class="project-text">
+  {{#each projectsarkviz}}
+
+    <div class="projectarkviz">
+      <div class="project-text">
         <ul>
           <li class="titletext">
             <a href="/projectsarkviz/{{paid}}">{{this.patitle}}</a>
@@ -80,6 +80,7 @@
           <li class="datetext">
             {{this.padate}}
           </li>
+          <!--
 {{#if ../session.isAdmin}}
       <div class="editproject">
         <div><a href="/project/modify/{{paid}}" class="modify">modify</a>
@@ -87,18 +88,18 @@
         <div><a href="/project/delete/{{paid}}" class="delete">delete</a>
         </div>
       </div>
-{{/if}}
+{{/if}}-->
         </ul>
-    </div>
-    <div class="project-img">
+      </div>
+      <div class="project-img">
         <a href="/projectsarkviz/{{paid}}">
           <img src="{{this.paimgURL}}" alt="{{paimgURL}}" class="smallimage" />
         </a>
+      </div>
     </div>
-  </div>
-  
-  {{/each}}
 
+  {{/each}}
+  <!--
   <div class="pagination">
   {{#if (eq page 1)}}
         <a href="./projectsarkviz?page= {{nextPage}}"> Next </a>
@@ -110,5 +111,5 @@
 {{/if}}
 
 {{/if}}
-  </div>
+  </div>-->
 </div>
