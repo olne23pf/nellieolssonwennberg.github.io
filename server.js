@@ -187,7 +187,7 @@ app.get("/projects", function (req, res) {
     });
   });
 });
-/*
+
 app.get("/project/:projectid", function (req, res) {
   console.log(
     "Project route parameter projectid: " + JSON.stringify(req.params.projectid)
@@ -207,7 +207,7 @@ app.get("/project/:projectid", function (req, res) {
     }
   );
 });
-
+/*
 app.get("/project/modify/:projid", function (req, res) {
   const id = req.params.projid;
   db.get("SELECT * FROM projects WHERE pid=?", [id], (error, theProject) => {
