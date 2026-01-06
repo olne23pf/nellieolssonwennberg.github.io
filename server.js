@@ -171,7 +171,7 @@ app.get("/projects", function (req, res) {
     : [limit, offset];
 
   const categoriesQuery = `SELECT * FROM categorie`;
-  /*
+
   db.all(query, queryParams, (err, projects = []) => {
     db.all(categoriesQuery, [], (err, categories = []) => {
       const hasNextPage = projects.length === limit;
@@ -185,7 +185,7 @@ app.get("/projects", function (req, res) {
         selectedCid,
       });
     });
-  });*/
+  });
 });
 
 app.get("/project/:projectid", function (req, res) {
