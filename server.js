@@ -98,8 +98,7 @@ app.get("/projectsarkviz", function (req, res) {
   const previousPage = page > 1 ? page - 1 : null; // Set previousPage if not on the first page
 
   const query = `
-  SELECT * FROM projectsarkviz
-  LIMIT ? OFFSET ?;
+  SELECT * FROM projectsarkviz;
 `;
   // Execute the query
   const queryParams = [limit, offset];
@@ -163,7 +162,7 @@ app.get("/projects", function (req, res) {
     INNER JOIN categorie ON categorie.cid = projects_categories.cid
     ${selectedCid ? `WHERE categorie.cid = ?` : ""} 
     GROUP BY projects.pid
-    LIMIT ? OFFSET ?;
+     ORDER BY projects.pid;
 `;
 
   const queryParams = selectedCid
