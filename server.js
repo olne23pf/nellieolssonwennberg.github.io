@@ -87,7 +87,7 @@ app.get("/about", function (req, res) {
 app.get("/contact", function (req, res) {
   res.render("contact.handlebars");
 });
-/*
+
 app.get("/projectsarkviz", function (req, res) {
   const page = req.query.page || 1;
   const limit = 3;
@@ -119,7 +119,7 @@ app.get("/projectsarkviz", function (req, res) {
       hasNextPage,
     });
   });
-});*/
+});
 
 app.get("/projectsarkviz/:projectid", function (req, res) {
   console.log(
@@ -142,13 +142,13 @@ app.get("/projectsarkviz/:projectid", function (req, res) {
 });
 
 app.get("/projects", function (req, res) {
-  //const page = req.query.page || 1;
-  //const limit = 3;
-  //const offset = (page - 1) * limit;
+  const page = req.query.page || 1;
+  const limit = 3;
+  const offset = (page - 1) * limit;
   //ChatGPT
   //source: (ChatGPT, 2024, "help with creating next and previous page", https://chatgpt.com/share/66ffc07f-3fe4-800f-b7b8-0a2f0dfeeef1)
-  //const nextPage = parseInt(page) + 1;
-  // const previousPage = page > 1 ? page - 1 : null; // Set previousPage if not on the first page
+  const nextPage = parseInt(page) + 1;
+  const previousPage = page > 1 ? page - 1 : null; // Set previousPage if not on the first page
 
   //ChatGPT
   //source: (ChatGPT, 2024, "How i created the filter function with categories", https://chatgpt.com/share/6704fe69-c440-8011-bf39-2b8e869ba1ed)
@@ -171,7 +171,7 @@ app.get("/projects", function (req, res) {
     : [limit, offset];
 
   const categoriesQuery = `SELECT * FROM categorie`;
-  /*
+
   db.all(query, queryParams, (err, projects = []) => {
     db.all(categoriesQuery, [], (err, categories = []) => {
       const hasNextPage = projects.length === limit;
@@ -185,7 +185,7 @@ app.get("/projects", function (req, res) {
         selectedCid,
       });
     });
-  });*/
+  });
 });
 /*
 app.get("/project/:projectid", function (req, res) {
