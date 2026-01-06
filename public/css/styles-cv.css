@@ -1054,7 +1054,7 @@ h4 {
   text-align: left;
   font-family: "karla";
 }
-li::marker {
+::marker {
   color: #77b9f3;
 }
 .oatly_content p {
