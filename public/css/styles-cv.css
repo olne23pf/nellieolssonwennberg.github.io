@@ -459,6 +459,7 @@ h4 {
 .allprojects {
   text-align: center;
   padding-top: 2rem;
+  list-style: none;
 }
 .allprojects_link {
   text-decoration: none;
