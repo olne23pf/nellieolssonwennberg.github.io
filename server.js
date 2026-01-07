@@ -140,7 +140,7 @@ app.get("/projectsarkviz/:projectid", function (req, res) {
     }
   );
 });
-
+/*
 app.get("/projects", function (req, res) {
   //const page = req.query.page || 1;
   // const limit = 3;
@@ -181,6 +181,31 @@ app.get("/projects", function (req, res) {
         previousPage,
         hasNextPage,
         categories, // Pass categories to template
+        selectedCid,
+      });
+    });
+  });
+});*/
+
+app.get("/projects", function (req, res) {
+  const selectedCid = req.query.cid;
+
+  const query = `
+    SELECT projects.*, GROUP_CONCAT(categorie.ctitle) AS categories
+    FROM projects
+    INNER JOIN projects_categories ON projects.pid = projects_categories.pid
+    INNER JOIN categorie ON categorie.cid = projects_categories.cid
+    ${selectedCid ? `WHERE categorie.cid = ?` : ""}
+    GROUP BY projects.pid;
+  `;
+
+  const categoriesQuery = `SELECT * FROM categorie`;
+
+  db.all(query, selectedCid ? [selectedCid] : [], (err, projects = []) => {
+    db.all(categoriesQuery, [], (err, categories = []) => {
+      res.render("projects.handlebars", {
+        projects,
+        categories,
         selectedCid,
       });
     });
