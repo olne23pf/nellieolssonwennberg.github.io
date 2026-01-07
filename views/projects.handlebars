@@ -75,7 +75,7 @@
     
     
     {{#each projects}}
-    {{if this.pimgURL}}
+    
 
   <div class="project">
     <div class="project-text">
@@ -89,6 +89,7 @@
           <li class="datetext">
             {{this.pdate}}
           </li>
+          <!--
 {{#if ../session.isAdmin}}
       <div class="editproject">
         <div><a href="/project/modify/{{pid}}" class="modify">modify</a>
@@ -96,7 +97,7 @@
         <div><a href="/project/delete/{{pid}}" class="delete">delete</a>
         </div>
       </div>
-{{/if}}
+{{/if}}-->
         </ul>
     </div>
     <div class="project-img">
@@ -105,7 +106,6 @@
         </a>
     </div>
   </div>
-  {{/if}}
   {{/each}}
 <!--
   <div class="pagination">
