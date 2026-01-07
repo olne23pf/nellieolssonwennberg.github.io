@@ -75,6 +75,7 @@
     
     
     {{#each projects}}
+    {{if this.pimgURL}}
 
   <div class="project">
     <div class="project-text">
@@ -104,7 +105,7 @@
         </a>
     </div>
   </div>
-  
+  {{/if}}
   {{/each}}
 <!--
   <div class="pagination">
