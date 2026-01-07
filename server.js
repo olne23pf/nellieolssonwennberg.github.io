@@ -88,6 +88,7 @@ app.get("/contact", function (req, res) {
   res.render("contact.handlebars");
 });
 
+/*
 app.get("/projectsarkviz", function (req, res) {
   const page = req.query.page || 1;
   const limit = 3;
@@ -117,6 +118,23 @@ app.get("/projectsarkviz", function (req, res) {
       nextPage,
       previousPage,
       hasNextPage,
+    });
+  });
+});
+*/
+app.get("/projectsarkviz", function (req, res) {
+  const query = `
+    SELECT * FROM projectsarkviz;
+  `;
+
+  db.all(query, [], (err, projectsarkviz = []) => {
+    if (err) {
+      console.error("Error fetching projects:", err);
+      return res.status(500).send("Error retrieving projects.");
+    }
+
+    res.render("projectsarkviz.handlebars", {
+      projectsarkviz,
     });
   });
 });
