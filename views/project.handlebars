@@ -341,7 +341,7 @@
           />
         </div>
       </div>
-    {{else if (eq project.pid 7)}}
+    {{else (eq project.pid 7)}}
       <div class="proj6">
         <img
           src="{{project.images}}"
@@ -356,7 +356,7 @@
           class="bigimage"
         />
       </div>
-    {{else}}<!--
+<!--    {{else}}
     
       <div class="images">
         <img
@@ -378,12 +378,12 @@
         />
       </div>-->
     {{/if}}
-
+    <!--
     <br />
     <p>{{project.pdesc}}</p>
     <br />
     <div class="projdate">
       {{project.pdate}}
-    </div>
+    </div>-->
   </div>
 </div>
