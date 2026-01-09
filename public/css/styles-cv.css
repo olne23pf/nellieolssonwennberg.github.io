@@ -456,6 +456,23 @@ h4 {
 .showing-projects h2 {
   padding-bottom: 1rem;
 }
+
+.projects-carousel {
+  display: inline-flex;
+  animation: scroll 20s linear infinite; /* The animation has a contunious movement */
+}
+.projects-carousel img {
+  width: 20rem;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+.projects-carousel img:hover {
+  transform: scale(1.1);
+}
+.showing-projects:hover .projects-carousel {
+  animation-play-state: paused;
+}
+
 .allprojects {
   text-align: center;
   padding-top: 2rem;
@@ -473,21 +490,6 @@ h4 {
   background-color: rgb(233, 227, 213);
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
-}
-.projects-carousel {
-  display: inline-flex;
-  animation: scroll 20s linear infinite; /* The animation has a contunious movement */
-}
-.projects-carousel img {
-  width: 20rem;
-  margin: 0 0.5rem;
-  transition: transform 0.3s ease;
-}
-.projects-carousel img:hover {
-  transform: scale(1.1);
-}
-.showing-projects:hover .projects-carousel {
-  animation-play-state: paused;
 }
 /*------------------------------------HOME - KONTAKT---------------------------------------------*/
 .kontaktamig {
@@ -1593,7 +1595,9 @@ h4 {
   }
 
   /*----------------------------------*/
-
+  .projects-carousel {
+    animation: none;
+  }
   .projectpage {
     width: 82%;
     margin: 0 auto;
@@ -1716,10 +1720,12 @@ h4 {
   h2 {
     font-size: 3rem;
     text-align: center;
+    padding-top: 1.5rem;
   }
   h3 {
     font-size: 1rem;
     justify-content: center;
+    padding: 1rem;
   }
   .navbar {
     padding: 1rem;
@@ -1771,9 +1777,10 @@ h4 {
   }
   .photo-grid {
     justify-content: center;
+    padding: 1rem;
   }
   .photo-grid img {
-    width: 3.4rem;
+    width: 3rem;
     height: auto;
     border-radius: 1px; /* rundade hörn */
   }
@@ -1783,6 +1790,32 @@ h4 {
     padding: 0.2rem;
     gap: 3px;
   }
+
+  .projects-carousel {
+    animation: none;
+  }
+  .showing-projects {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 1rem;
+    touch-action: pan-x;
+  }
+
+  .projects-carousel {
+    display: inline-flex;
+    will-change: transform;
+  }
+
+  .projects-carousel img {
+    width: 20rem;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .projects-carousel img:hover {
+    transform: scale(1.1);
+  }
+
   /*--------------------------------*/
   .pageLayout {
     margin: 0 auto;

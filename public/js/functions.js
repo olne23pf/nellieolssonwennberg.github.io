@@ -38,6 +38,7 @@ window.addEventListener("scroll", () => {
   }
 });*/
 
+//---- HERO ----//
 const heroTitle = document.querySelector(".hero-title");
 const header = document.querySelector(".navbar");
 const pagelayout = document.querySelector(".pageLayout");
@@ -114,6 +115,56 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   );
 
+  //---- PROJECT CAROSEL SCROLL ON MOBILE ----//
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  if (isMobile) {
+    initMobileCarousel();
+  }
+  function initMobileCarousel() {
+    const carousel = document.querySelector(".projects-carousel");
+
+    let position = 0;
+    let speed = 0.3;
+    let isTouching = false;
+    let lastTouchX = 0;
+
+    function animate() {
+      if (!isTouching) {
+        position -= speed;
+      }
+
+      carousel.style.transform = `translateX(${position}px)`;
+
+      if (Math.abs(position) > carousel.scrollWidth / 2) {
+        position = 0;
+      }
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    carousel.addEventListener("touchstart", (e) => {
+      isTouching = true;
+      lastTouchX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener("touchmove", (e) => {
+      const currentX = e.touches[0].clientX;
+      const delta = currentX - lastTouchX;
+
+      position += delta;
+      speed = Math.min(Math.max(Math.abs(delta) * 0.02, 0), 4);
+
+      lastTouchX = currentX;
+    });
+
+    carousel.addEventListener("touchend", () => {
+      isTouching = false;
+    });
+  }
+
   //----  Filter ----//
 
   const filter = document.querySelector(".filter");
@@ -137,6 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //---- Modify Project add images ----//
 
   //---- LogIn or Register forms ----//
+  /*
   const x = document.getElementById("login");
   const y = document.getElementById("register");
   const z = document.getElementById("btn");
@@ -150,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     x.style.left = "15rem";
     y.style.left = "70rem";
     z.style.left = "0rem";
-  }
+  }*/
 
   //---- Projects ----//
   const a = document.getElementById("project");
