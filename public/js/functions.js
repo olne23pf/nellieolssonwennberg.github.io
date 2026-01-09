@@ -125,23 +125,46 @@ document.addEventListener("DOMContentLoaded", () => {
   function initMobileCarousel() {
     const carousel = document.querySelector(".projects-carousel");
 
-    // Duplicera innehållet EN gång för oändlig scroll
-    carousel.innerHTML += carousel.innerHTML;
+    // skydd så vi inte klonar flera gånger
+    if (!carousel.dataset.cloned) {
+      carousel.innerHTML += carousel.innerHTML;
+      carousel.dataset.cloned = "true";
+    }
 
     let position = 0;
     const baseSpeed = 1;
     let speed = baseSpeed;
     let isTouching = false;
     let lastTouchX = 0;
+    let totalWidth = 0;
 
-    const totalWidth = carousel.scrollWidth / 2;
+    // Vänta tills ALLA bilder är laddade
+    const images = carousel.querySelectorAll("img");
+    let loadedImages = 0;
+
+    images.forEach((img) => {
+      if (img.complete) {
+        imageLoaded();
+      } else {
+        img.addEventListener("load", imageLoaded);
+        img.addEventListener("error", imageLoaded);
+      }
+    });
+
+    function imageLoaded() {
+      loadedImages++;
+      if (loadedImages === images.length) {
+        totalWidth = carousel.scrollWidth / 2;
+        requestAnimationFrame(animate);
+      }
+    }
 
     function animate() {
       if (!isTouching) {
         position -= speed;
       }
 
-      // wrap först NÄR hela första uppsättningen passerats
+      // wrap först när hela första setet passerats
       if (position <= -totalWidth) {
         position += totalWidth;
       }
@@ -149,8 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
       carousel.style.transform = `translateX(${position}px)`;
       requestAnimationFrame(animate);
     }
-
-    animate();
 
     carousel.addEventListener("touchstart", (e) => {
       isTouching = true;
