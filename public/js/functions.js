@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.querySelector(".projects-carousel");
 
     let position = 0;
-    let speed = 0.6;
+    let speed = 1;
     let isTouching = false;
     let lastTouchX = 0;
 
@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     carousel.addEventListener("touchend", () => {
       isTouching = false;
+      speed = 1;
     });
   }
 
