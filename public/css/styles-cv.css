@@ -1732,6 +1732,9 @@ h4 {
   p {
     font-size: 12px;
   }
+  a {
+    font-size: 12px;
+  }
   .hero {
     padding-top: 2rem;
   }
@@ -1922,6 +1925,9 @@ h4 {
 
   .createnewproject form {
     width: 90%;
+  }
+  .oatly_content li {
+    width: 100%;
   }
 
   /*----------------------------each project--*/
