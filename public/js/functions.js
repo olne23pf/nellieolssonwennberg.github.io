@@ -121,25 +121,36 @@ document.addEventListener("DOMContentLoaded", () => {
   if (isMobile) {
     initMobileCarousel();
   }
+
   function initMobileCarousel() {
     const carousel = document.querySelector(".projects-carousel");
 
+    // Duplicera innehållet EN gång för oändlig scroll
+    carousel.innerHTML += carousel.innerHTML;
+
     let position = 0;
-    let speed = 1;
+    const baseSpeed = 1;
+    let speed = baseSpeed;
     let isTouching = false;
     let lastTouchX = 0;
+
+    const totalWidth = carousel.scrollWidth / 2;
 
     function animate() {
       if (!isTouching) {
         position -= speed;
       }
 
-      carousel.style.transform = `translateX(${position}px)`;
-
-      if (Math.abs(position) > carousel.scrollWidth / 2) {
-        position = 0;
+      // ÄKTA oändlig loop – inga hopp
+      if (position <= -totalWidth) {
+        position += totalWidth;
       }
 
+      if (position >= 0) {
+        position -= totalWidth;
+      }
+
+      carousel.style.transform = `translateX(${position}px)`;
       requestAnimationFrame(animate);
     }
 
@@ -155,14 +166,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const delta = currentX - lastTouchX;
 
       position += delta;
-      speed = Math.min(Math.max(Math.abs(delta) * 0.02, 0), 4);
+      speed = Math.min(Math.abs(delta) * 0.03, 6);
 
       lastTouchX = currentX;
     });
 
     carousel.addEventListener("touchend", () => {
       isTouching = false;
-      speed = 1;
+      speed = baseSpeed;
+    });
+
+    carousel.addEventListener("touchcancel", () => {
+      isTouching = false;
+      speed = baseSpeed;
     });
   }
 
