@@ -1940,10 +1940,14 @@ h4 {
     width: 90%;
     text-align: left;
   }
+  .oatlyimgs {
+    width: 70%;
+    justify-content: center;
+  }
   .mobile-images {
     gap: 16px;
     width: 70%;
-    margin: 0 auto;
+    justify-content: center;
   }
 
   .desktop-image {
