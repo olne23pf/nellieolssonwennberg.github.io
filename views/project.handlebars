@@ -87,9 +87,102 @@
           />
         </div>
         <h2>On Instagram</h2>
-        <img src="/img/instafeed.png" alt="posters" class="bigimage" />
+        <img src="/img/instafeed.png" alt="posters" class="bigimageinsta" />
+      </div>
+    {{else if (eq project.pid 2)}}
+      <div class="proj2">
+        <h2>Commercial Video for BUBS </h2>
+        <h3>COMING SOON</h3>
+        <!--
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="motion_content">
+        <h2>Concept Development</h2>
+        <h3>Message:</h3>
+        <p>...
+        </p>
+        <h3>Story:</h3>
+        <p>...</p>
+        <h3>Target Audience:</h3>
+        <p>...</p>
+        <h3>Visual Style:</h3>
+        <p>...</p>
+        <h3>Tone:</h3>
+        <p>...</p>
+        <br />
+        <br />
+        <h2>Content Creation</h2>
+        <br />
+        <br />
+        <img src="" alt="" class="" />
+        <br />
+        <br />
+        <h2>Storyboard</h2>
+        <img src="" alt="" class="" />
+-->
       </div>
     {{else if (eq project.pid 3)}}
+      <div class="proj2">
+        <h2>Commercial Video for Ahlgrens Bilar </h2>
+
+        <video controls class="bigvideo">
+          <source src="{{project.video}}" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="motion_content">
+        <h2>Concept Development</h2>
+        <h3>Message:</h3>
+        <p>Ahlgrens bilar bring a burst of fun, flavor, and playfulness to every
+          moment.
+        </p>
+        <h3>Story:</h3>
+        <p>
+          Ahlgrens bilar come alive, turning an ordinary day into a high-speed
+          adventure full of flavor and excitement. The animated candy cars
+          embody energy and joy, inspiring everyone to embrace the fun and share
+          the sweetness.</p>
+        <h3>Target Audience:</h3>
+        <p>
+          Families, children, and young adults seeking a playful, energetic
+          candy experience that brings people together.
+        </p>
+        <h3>Visual Style:</h3>
+        <p>
+          Vivid, dynamic, and lively. The animation should feature smooth,
+          flowing motion with bright colors and special details, reinforcing the
+          fun and imaginative world of Ahlgrens bilar.
+        </p>
+        <h3>Tone:</h3>
+        <p>
+          Playful, energetic, and inclusive. The tone invites viewers to join
+          the candy car adventure and emphasizes the joy of sharing moments and
+          flavors with others.
+        </p>
+        <br />
+        <br />
+        <h2>Content Creation</h2>
+        <br />
+        <br />
+        <img
+          src="{{project.images2}}"
+          alt="{{project.images2}}"
+          class="bigimage"
+        />
+        <br />
+        <br />
+        <h2>Storyboard</h2>
+        <img
+          src="{{project.images}}"
+          alt="{{project.images}}"
+          class="bigimage"
+        />
+
+      </div>
+    {{else if (eq project.pid 4)}}
       <div class="proj2">
         <h2>Outbound Campaign</h2>
 
@@ -160,66 +253,7 @@
               and 5000 units sold.</a></li>
         </div>
       </div>
-
-    {{else if (eq project.pid 2)}}
-      <div class="proj2">
-        <h2>Commercial Video for Ahlgrens Bilar </h2>
-
-        <video controls class="bigvideo">
-          <source src="{{project.video}}" type="video/mp4" />
-        </video>
-      </div>
-
-      <div class="motion_content">
-        <h2>Concept Development</h2>
-        <h3>Message:</h3>
-        <p>Ahlgrens bilar bring a burst of fun, flavor, and playfulness to every
-          moment.
-        </p>
-        <h3>Story:</h3>
-        <p>
-          Ahlgrens bilar come alive, turning an ordinary day into a high-speed
-          adventure full of flavor and excitement. The animated candy cars
-          embody energy and joy, inspiring everyone to embrace the fun and share
-          the sweetness.</p>
-        <h3>Target Audience:</h3>
-        <p>
-          Families, children, and young adults seeking a playful, energetic
-          candy experience that brings people together.
-        </p>
-        <h3>Visual Style:</h3>
-        <p>
-          Vivid, dynamic, and lively. The animation should feature smooth,
-          flowing motion with bright colors and special details, reinforcing the
-          fun and imaginative world of Ahlgrens bilar.
-        </p>
-        <h3>Tone:</h3>
-        <p>
-          Playful, energetic, and inclusive. The tone invites viewers to join
-          the candy car adventure and emphasizes the joy of sharing moments and
-          flavors with others.
-        </p>
-        <br />
-        <br />
-        <h2>Content Creation</h2>
-        <br />
-        <br />
-        <img
-          src="{{project.images2}}"
-          alt="{{project.images2}}"
-          class="bigimage"
-        />
-        <br />
-        <br />
-        <h2>Storyboard</h2>
-        <img
-          src="{{project.images}}"
-          alt="{{project.images}}"
-          class="bigimage"
-        />
-
-      </div>
-    {{else if (eq project.pid 4)}}
+    {{else if (eq project.pid 5)}}
       <div class="project3">
         <div class="images">
           <img
@@ -281,7 +315,7 @@
         </div>
       </div>
 
-    {{else if (eq project.pid 5)}}
+    {{else if (eq project.pid 6)}}
       <div class="proj9title">
         <h2>SushiYaki Noodle</h2></div>
 
@@ -318,7 +352,7 @@
         />
         <img src="{{project.video}}" alt="{{project.video}}" class="bigimage" />
       </div>
-    {{else if (eq project.pid 6)}}
+    {{else if (eq project.pid 7)}}
       <p class="clickplay">Click to try out the game.<br />
         Compatible on computers only</p>
       <div class="proj3">
@@ -348,7 +382,7 @@
           />
         </div>
       </div>
-    {{else if (eq project.pid 7)}}
+    {{else if (eq project.pid 8)}}
       <div class="proj6">
         <img
           src="{{project.images}}"
