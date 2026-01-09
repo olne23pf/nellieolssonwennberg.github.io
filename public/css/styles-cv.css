@@ -1944,6 +1944,7 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 70%;
   }
 
   .desktop-image {
