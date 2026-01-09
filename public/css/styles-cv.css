@@ -1000,10 +1000,6 @@ h4 {
   color: rgb(233, 227, 213);
 }
 
-.projinfo {
-  text-align: center;
-  padding-bottom: 1rem;
-}
 .projectcard p {
   font-family: "karla";
   padding-top: 3rem;
@@ -1762,6 +1758,7 @@ h4 {
   }
   .biografi h2,
   .skills h2 {
+    padding-top: 1rem;
     font-size: 3rem;
     text-align: center;
   }
@@ -1925,7 +1922,19 @@ h4 {
   }
 
   /*----------------------------each project--*/
-
+  #principal h1 {
+    padding-top: 1rem;
+  }
+  .proj4 {
+    padding-top: 1rem;
+  }
+  .proj4 .text {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .bigimage_moodboard {
+    width: 100%;
+  }
   #principal .projectcard {
     width: 95.5%;
     margin: 0 auto;
