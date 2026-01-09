@@ -1941,10 +1941,9 @@ h4 {
     text-align: left;
   }
   .mobile-images {
-    display: flex;
-    flex-direction: column;
     gap: 16px;
     width: 70%;
+    margin: 0 auto;
   }
 
   .desktop-image {
