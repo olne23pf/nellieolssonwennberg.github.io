@@ -141,13 +141,9 @@ document.addEventListener("DOMContentLoaded", () => {
         position -= speed;
       }
 
-      // ÄKTA oändlig loop – inga hopp
+      // wrap först NÄR hela första uppsättningen passerats
       if (position <= -totalWidth) {
         position += totalWidth;
-      }
-
-      if (position >= 0) {
-        position -= totalWidth;
       }
 
       carousel.style.transform = `translateX(${position}px)`;
