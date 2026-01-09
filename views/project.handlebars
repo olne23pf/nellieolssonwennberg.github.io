@@ -53,11 +53,17 @@
           <p>Inspiring,</p>
           <p>Simple.</p>
         </div>
-        <img
-          src="{{project.images}}"
-          alt="{{project.images}}"
-          class="bigimage_moodboard"
-        />
+        <picture>
+          <source
+            media="(max-width: 450px)"
+            srcset="/img/moodboard_gona_02_mobile.png"
+          />
+          <img
+            src="{{project.images}}"
+            alt="{{project.images}}"
+            class="bigimage_moodboard"
+          />
+        </picture>
 
         <img
           src="{{project.images2}}"
