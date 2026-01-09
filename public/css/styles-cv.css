@@ -1072,6 +1072,14 @@ h4 {
   width: 100%;
 }
 
+.mobile-images {
+  display: none;
+}
+
+.desktop-image {
+  display: block;
+}
+
 .proj2 {
   width: 100%;
   margin: 0 auto;
@@ -1928,6 +1936,15 @@ h4 {
   }
   .oatly_content li {
     width: 100%;
+  }
+  .mobile-images {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .desktop-image {
+    display: none;
   }
 
   /*----------------------------each project--*/
