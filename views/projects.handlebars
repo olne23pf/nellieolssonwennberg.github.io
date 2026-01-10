@@ -89,22 +89,20 @@
           <li class="datetext">
             {{this.pdate}}
           </li>
-          <!--
-{{#if ../session.isAdmin}}
-      <div class="editproject">
-        <div><a href="/project/modify/{{pid}}" class="modify">modify</a>
-        </div>
-        <div><a href="/project/delete/{{pid}}" class="delete">delete</a>
-        </div>
-      </div>
-{{/if}}-->
         </ul>
     </div>
+    <div class="project-img">
+  <a href="/project/{{pid}}" class="image-hover">
+    <img src="{{this.pimgURL}}" alt="{{pimgURL}}" class="smallimage" />
+    <span class="hover-text">se mer</span>
+  </a>
+</div>
+    <!--
     <div class="project-img">
         <a href="/project/{{pid}}">
           <img src="{{this.pimgURL}}" alt="{{pimgURL}}" class="smallimage" />
         </a>
-    </div>
+    </div>-->
   </div>
   {{/each}}
 <!--

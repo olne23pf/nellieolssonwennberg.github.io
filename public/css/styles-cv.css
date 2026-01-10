@@ -942,6 +942,50 @@ h4 {
   width: 100%;
   height: auto;
 }
+.image-hover {
+  position: relative;
+  display: block;
+}
+
+.image-hover img {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay */
+.image-hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #391212;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Text */
+.hover-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(233, 227, 213);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover */
+.image-hover:hover::after {
+  opacity: 0.5;
+}
+
+.image-hover:hover .hover-text {
+  opacity: 1;
+}
+
 .projectarkviz img .smallimage {
   max-width: 100%;
   height: auto;
