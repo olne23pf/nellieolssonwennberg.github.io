@@ -1945,9 +1945,8 @@ h4 {
     width: 90%;
     text-align: left;
   }
-  .oatlyimgs {
+  .oatlyimgs img {
     width: 100%;
-    justify-content: center;
   }
   .mobile-images {
     display: flex;
