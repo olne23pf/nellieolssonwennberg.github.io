@@ -1951,11 +1951,16 @@ h4 {
   }
   .mobile-images {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    width: 70%;
-    justify-content: center;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
   }
+  .mobile-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   .mobile-img {
     display: flex;
     width: 100%;
