@@ -983,6 +983,8 @@ h4 {
   text-align: center;
   padding-top: 6rem;
   padding-top: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .projectcard {
   width: 100%;
@@ -1925,11 +1927,11 @@ h4 {
     margin-top: 3rem;
   }
   .project-text .titletext {
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-bottom: 0.8rem;
   }
   .project-text .runningtext {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0.4rem;
   }
   .project-text .datetext {
