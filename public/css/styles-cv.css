@@ -1927,8 +1927,8 @@ h4 {
     grid-template-columns: 1fr;
     margin-top: 3rem;
   }
-  .project-text .titletext {
-    font-size: 18px;
+  .project-text ul .titletext a {
+    font-size: 25px;
     margin-bottom: 0.8rem;
   }
   .project-text .runningtext {
