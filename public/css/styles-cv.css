@@ -1129,10 +1129,18 @@ h4 {
 .desktop-image {
   display: block;
 }
+.texthäppi {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .häppipage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   text-align: center;
+}
+.häppipage h3 {
+  padding-top: 1rem;
 }
 .contentimg {
   display: grid;
