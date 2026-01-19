@@ -1129,6 +1129,11 @@ h4 {
 .desktop-image {
   display: block;
 }
+.häppipage {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
 .contentimg {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 kolumner, lika stora */
@@ -1236,6 +1241,7 @@ h4 {
   padding-left: 4rem;
   padding-right: 4rem;
 }
+
 .proj4 img {
   width: 100%;
 }
