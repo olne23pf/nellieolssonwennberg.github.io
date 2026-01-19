@@ -1156,6 +1156,8 @@ h4 {
   color: rgb(233, 227, 213); /* text color */
   list-style-position: inside; /* brings dot next to text */
   padding-left: 0;
+}
+.project-list li {
   font-family: "Karla", sans-serif;
 }
 
