@@ -1129,7 +1129,15 @@ h4 {
 .desktop-image {
   display: block;
 }
-
+.contentimg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolumner, lika stora */
+  gap: 10px;
+}
+.contentimg img {
+  width: 100%; /* Bilden fyller cellen */
+  height: auto;
+}
 .proj2 {
   width: 100%;
   margin: 0 auto;
@@ -1979,6 +1987,9 @@ h4 {
   }
   .projectpage img {
     width: 100%;
+  }
+  .contentimg {
+    grid-template-columns: 1fr; /* 1 kolumn på små skärmar */
   }
   .project {
     display: grid;
