@@ -2052,6 +2052,7 @@ h4 {
 
   .desktop-image {
     display: none;
+    width: 100%;
   }
 
   /*----------------------------each project--*/
