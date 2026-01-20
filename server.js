@@ -87,6 +87,9 @@ app.get("/about", function (req, res) {
 app.get("/contact", function (req, res) {
   res.render("contact.handlebars");
 });
+app.get("/SEOcert", function (req, res) {
+  res.render("SEOcert.handlebars");
+});
 
 /*
 app.get("/projectsarkviz", function (req, res) {
