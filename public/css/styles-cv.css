@@ -419,6 +419,7 @@ h4 {
 }
 .seocertpage img {
   width: 100%;
+  margin: 0 auto;
 }
 .photo-grid {
   max-width: 1200px;
