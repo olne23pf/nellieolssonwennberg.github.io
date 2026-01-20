@@ -407,7 +407,8 @@ h4 {
 }
 .cert img {
   width: 3%;
-  padding-right: 2rem;
+  height: auto;
+  margin-right: 2rem;
 }
 .cert a {
   color: #77b9f3;
