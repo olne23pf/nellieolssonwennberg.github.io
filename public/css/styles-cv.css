@@ -406,12 +406,16 @@ h4 {
   display: flex;
 }
 .cert img {
-  width: 4%;
+  width: 3%;
+  padding-right: 2rem;
 }
 .cert a {
   color: #77b9f3;
+  padding-top: 2rem;
 }
-
+.seocertpage img {
+  width: 100%;
+}
 .photo-grid {
   max-width: 1200px;
   margin: 0 auto;
