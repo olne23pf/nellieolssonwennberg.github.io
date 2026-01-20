@@ -2077,6 +2077,10 @@ h4 {
     width: 95.5%;
     margin: 0 auto;
   }
+
+  .projectcard h2 {
+    text-align: center;
+  }
   #principal .projectcard .divimage img {
     width: 100%;
   }
