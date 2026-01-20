@@ -402,6 +402,7 @@ h4 {
   padding-bottom: 1rem;
 }
 .cert {
+  padding-top: 3rem;
   display: flex;
 }
 .cert img {
