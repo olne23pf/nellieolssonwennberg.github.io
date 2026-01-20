@@ -401,6 +401,15 @@ h4 {
 .skills-text h2 {
   padding-bottom: 1rem;
 }
+.cert {
+  display: flex;
+}
+.cert img {
+  width: 10%;
+}
+.cert a {
+  color: #77b9f3;
+}
 
 .photo-grid {
   max-width: 1200px;
