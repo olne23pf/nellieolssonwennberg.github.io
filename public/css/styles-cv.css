@@ -1128,6 +1128,7 @@ h4 {
 
 .desktop-image {
   display: block;
+  width: 100%;
 }
 .texthäppi {
   display: flex;
@@ -2052,7 +2053,6 @@ h4 {
 
   .desktop-image {
     display: none;
-    width: 100%;
   }
 
   /*----------------------------each project--*/
