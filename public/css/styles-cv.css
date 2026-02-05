@@ -1879,8 +1879,6 @@ h4 {
   }
 
   .biografi {
-    border-top: 1px solid #77b9f3;
-
     width: 80%;
   }
   .biografi h2,
@@ -1890,6 +1888,7 @@ h4 {
     text-align: center;
   }
   .bio-content {
+    border-top: 1px solid #77b9f3;
     padding-left: 1rem;
     padding-right: 1rem;
   }
