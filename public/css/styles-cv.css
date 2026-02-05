@@ -338,6 +338,7 @@ h4 {
 }
 
 .bio-content {
+  border-top: 1px solid #77b9f3;
   display: flex;
   flex-wrap: wrap; /* så den anpassar sig på mobil */
   gap: 20px;
@@ -517,7 +518,7 @@ h4 {
   max-width: 1150px; /* så att allt inte blir för brett */
   margin: 25px auto; /* centrerar sektionen på sidan */
   padding: 0px;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
   /*border-top: 1px solid #77b9f3;*/
   justify-content: center;
 }
