@@ -517,8 +517,8 @@ h4 {
   max-width: 1150px; /* så att allt inte blir för brett */
   margin: 25px auto; /* centrerar sektionen på sidan */
   padding: 0px;
-  padding-bottom: 3rem;
-  border-top: 1px solid #77b9f3;
+  padding-bottom: 5rem;
+  /*border-top: 1px solid #77b9f3;*/
   justify-content: center;
 }
 
