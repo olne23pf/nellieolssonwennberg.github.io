@@ -457,7 +457,7 @@ h4 {
 }
 /*------------------------------------HOME - PROJECTS---------------------------------------------*/
 .projects {
-  margin-top: 3rem;
+  padding-top: 3rem;
   max-width: 1150px; /* så att allt inte blir för brett */
   margin: 25px auto; /* centrerar sektionen på sidan */
   padding-bottom: 4rem;
