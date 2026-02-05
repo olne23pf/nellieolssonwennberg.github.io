@@ -460,7 +460,6 @@ h4 {
   margin-top: 3rem;
   max-width: 1150px; /* så att allt inte blir för brett */
   margin: 25px auto; /* centrerar sektionen på sidan */
-  border-top: 1px solid #77b9f3;
   padding-bottom: 4rem;
 }
 .projects h3 {
@@ -1880,6 +1879,8 @@ h4 {
   }
 
   .biografi {
+    border-top: 1px solid #77b9f3;
+
     width: 80%;
   }
   .biografi h2,
