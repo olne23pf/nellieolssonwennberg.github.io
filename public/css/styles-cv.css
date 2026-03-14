@@ -408,7 +408,6 @@ h4 {
 }
 .cert img {
   width: 3%;
-  height: 3%;
 }
 .cert a {
   color: #77b9f3;
@@ -1892,6 +1891,10 @@ h4 {
     width: 80%;
     margin: 0 auto;
   }
+  .bio-text p {
+    width: 80%;
+    margin: 0 auto;
+  }
   .bio-image {
     padding-top: 0;
     width: 80%;
@@ -1983,13 +1986,18 @@ h4 {
     justify-content: center;
     margin: 0 auto;
   }
-
+  .cert img {
+    width: 15%;
+    height: 15%;
+    padding-left: 1rem;
+  }
   .cert a {
     padding-right: 1rem;
   }
   /*-------------PROJECTS-----------------*/
   .projects h3 {
     width: 80%;
+    margin: 0 auto;
   }
   .projectheader .title a {
     font-size: 1.5rem;
