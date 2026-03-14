@@ -1886,13 +1886,15 @@ h4 {
   }
   .bio-content {
     border-top: 1px solid #77b9f3;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  }
+  .bio-text {
     width: 80%;
     margin: 0 auto;
   }
   .bio-image {
     padding-top: 0;
+    width: 80%;
+    margin: 0 auto;
   }
   .skills {
     width: 80%;
@@ -1902,7 +1904,7 @@ h4 {
     padding: 1rem;
   }
   .photo-grid img {
-    width: 3rem;
+    width: 2rem;
     height: auto;
     border-radius: 1px; /* rundade hörn */
   }
