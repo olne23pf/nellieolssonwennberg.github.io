@@ -480,7 +480,7 @@ h4 {
 
 .projects-carousel {
   display: inline-flex;
-  animation: scroll 10s linear infinite; /* The animation has a contunious movement */
+  animation: scroll 30s linear infinite; /* The animation has a contunious movement */
 }
 .projects-carousel img {
   width: 25rem;
