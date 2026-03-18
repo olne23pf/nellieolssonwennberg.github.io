@@ -12,7 +12,7 @@ h1 {
   font-family: "korolev", sans-serif;
 }
 h2 {
-  font-size: 6rem;
+  font-size: 4rem;
   font-family: "altesse-std-64pt", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -480,11 +480,11 @@ h4 {
 
 .projects-carousel {
   display: inline-flex;
-  animation: scroll 20s linear infinite; /* The animation has a contunious movement */
+  animation: scroll 10s linear infinite; /* The animation has a contunious movement */
 }
 .projects-carousel img {
-  width: 30rem;
-  margin: 0 0.5rem;
+  width: 25rem;
+  margin: 0 0.2rem;
   transition: transform 0.3s ease;
 }
 .projects-carousel img:hover {
