@@ -483,7 +483,7 @@ h4 {
   animation: scroll 20s linear infinite; /* The animation has a contunious movement */
 }
 .projects-carousel img {
-  width: 20rem;
+  width: 30rem;
   margin: 0 0.5rem;
   transition: transform 0.3s ease;
 }
@@ -1995,7 +1995,7 @@ h4 {
     padding-right: 1rem;
     padding-bottom: 1rem;
   }
-  /*-------------PROJECTS-----------------*/
+  /*-------------------------------*/
   .projects h3 {
     width: 80%;
     margin: 0 auto;
