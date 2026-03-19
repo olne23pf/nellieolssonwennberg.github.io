@@ -1946,6 +1946,9 @@ p {
   .projects-carousel img:hover {
     transform: scale(1.1);
   }
+  .projects p {
+    text-align: center;
+  }
 
   /*--------------------------------*/
   .pageLayout {
