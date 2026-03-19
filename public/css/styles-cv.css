@@ -1948,6 +1948,7 @@ p {
   }
   .projects p {
     text-align: center;
+    padding-bottom: 0.5rem;
   }
 
   /*--------------------------------*/
