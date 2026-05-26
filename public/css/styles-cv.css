@@ -1183,7 +1183,7 @@ p {
 .faeci{
   display:flex;
   grid-template-columns: 1fr;
-  width:100%;
+  width:50%;
 }
 .faeci img{
   width: 70%;
