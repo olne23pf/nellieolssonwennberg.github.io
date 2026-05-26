@@ -1179,6 +1179,16 @@ p {
   width: 100%; /* Bilden fyller cellen */
   height: auto;
 }
+
+.faeci{
+  display:flex;
+  grid-template-columns: 1fr;
+  width:100%;
+}
+.faeci img{
+  width: 70%;
+}
+
 .proj2 {
   width: 100%;
   margin: 0 auto;
@@ -1214,11 +1224,6 @@ p {
   color: #77b9f3; /* bullet color */
 }
 
-.faeci{
-  display:flex;
-  grid-template-columns: 1fr;
-  width:100%;
-}
 
 .motion_content {
   display: grid;
