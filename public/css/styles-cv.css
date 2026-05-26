@@ -1214,6 +1214,12 @@ p {
   color: #77b9f3; /* bullet color */
 }
 
+.faeci{
+  display:flex;
+  grid-template-columns: 1fr;
+  width:100%;
+}
+
 .motion_content {
   display: grid;
   grid-template-columns: 1fr;
