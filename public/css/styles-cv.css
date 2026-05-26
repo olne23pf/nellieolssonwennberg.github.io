@@ -1179,14 +1179,18 @@ p {
   width: 100%; /* Bilden fyller cellen */
   height: auto;
 }
-
+.projfaeci{
+  width: 100%;
+  padding-bottom: 2rem;
+  text-align: center;
+}
 .faeci{
   display:flex;
   grid-template-columns: 1fr;
   width:50%;
 }
 .faeci img{
-  width: 70%;
+  width: 10%;
 }
 
 .proj2 {
