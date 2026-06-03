@@ -1186,8 +1186,9 @@ p {
 }
 .faeci{
   display:flex;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
   width:70%;
+  margin: 0 auto;
 }
 .faeci img{
   width: 100%;
