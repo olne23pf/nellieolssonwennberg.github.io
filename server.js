@@ -25,9 +25,11 @@ const port = 8080;
 const app = express();
 /*const path = require("path");
 const fs = require("fs");*/
-const sqlite3 = require("sqlite3");
+/*const sqlite3 = require("sqlite3");*/
+const Database = require("better-sqlite3");
+const db = new Database("database.db");
+
 const dbFile = "my-project-data.sqlite3.db";
-const db = new sqlite3.Database(dbFile);
 
 const { engine } = require("express-handlebars"); //load the handlebars package for express
 const bodyParser = require("body-parser"); //required to get data from POST forms
