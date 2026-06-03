@@ -1186,6 +1186,8 @@ p {
 }
 .faeci{
   display:flex;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
   width:100%;
   margin: 0 auto;
 }
@@ -1194,6 +1196,7 @@ p {
 }
 .faeci video{
   width: 50%;
+  margin: 0 auto;
 }
 
 .proj2 {
