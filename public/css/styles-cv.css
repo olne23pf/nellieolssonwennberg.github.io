@@ -42,7 +42,9 @@ p {
   margin: 0;
   box-sizing: border-box;
   /* background-color: #6c2c25;*/
-  background-color: #391212;
+/*  background-color: #391212;*/
+    background-color: #43302E;
+
   font-family: "korolev", sans-serif;
 }
 
@@ -54,13 +56,17 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  background-color: #43302E;
 }
 
 .hero-title {
   width: 100%;
   font-size: 6rem;
   text-align: center;
-  color: #77b9f3;
+  /*: #77b9f3;*/
+   /* color: #b3cee6;*/
+    color: #C1DBE8;
+
   position: relative;
   z-index: 2;
   transition: font-size 0.1s linear;
@@ -76,10 +82,13 @@ p {
   width: 100%;
   font-size: 3rem;
   text-align: center;
+      color: #C1DBE8;
+
 }
 .hero h3{
 font-size: 3rem;
   text-align: center;
+  color: #FFF1B5;
 }
 .navbar {
   opacity: 0;
