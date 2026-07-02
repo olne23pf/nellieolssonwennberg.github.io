@@ -44,7 +44,6 @@ p {
   /* background-color: #6c2c25;*/
 /*  background-color: #391212;*/
     background-color: #43302E;
-
   font-family: "korolev", sans-serif;
 }
 
@@ -53,6 +52,7 @@ p {
   height: 80vh;
   padding-top: 20vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 2;
@@ -82,13 +82,14 @@ p {
   width: 100%;
   font-size: 3rem;
   text-align: center;
-      color: #C1DBE8;
+  color: #C1DBE8;
+  font-family: "korolev", sans-serif;
 
 }
 .hero h3{
 font-size: 3rem;
-  text-align: center;
-  color: #FFF1B5;
+text-align: center;
+color: #FFF1B5;
 }
 .navbar {
   opacity: 0;
