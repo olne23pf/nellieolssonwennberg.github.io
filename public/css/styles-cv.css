@@ -3,6 +3,8 @@
   src: url("/fonts/Karla-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+
+  font-family: "Gelasio", serif;
 }
 
 h1 {
@@ -13,7 +15,7 @@ h1 {
 }
 h2 {
   font-size: 4rem;
-  font-family: "altesse-std-64pt", sans-serif;
+  font-family: "Gelasio", serif;
   font-weight: 400;
   font-style: normal;
   color: #77b9f3;
@@ -21,7 +23,7 @@ h2 {
 h3 {
   font-size: 1.4rem;
   font-weight: 100;
-  font-family: "korolev", sans-serif;
+  font-family: "Gelasio", serif;
   color: #77b9f3;
 }
 h4 {
@@ -43,7 +45,7 @@ p {
   box-sizing: border-box;
   /* background-color: #6c2c25;*/
 /*  background-color: #391212;*/
-    background-color: #43302E;
+    background-color: #2b201e;
   font-family: "korolev", sans-serif;
 }
 
@@ -56,7 +58,6 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-color: #43302E;
 }
 
 .hero-title {
@@ -80,14 +81,13 @@ p {
 }
 .hero h2{
   width: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   color: #C1DBE8;
-  font-family: "korolev", sans-serif;
 
 }
 .hero h3{
-font-size: 3rem;
+font-size: 2rem;
 text-align: center;
 color: #FFF1B5;
 }
