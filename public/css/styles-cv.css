@@ -44,8 +44,10 @@ p {
   margin: 0;
   box-sizing: border-box;
   /* background-color: #6c2c25;*/
-/*  background-color: #391212;*/
-    background-color: #2b201e;
+/*  background-color: #391212;
+    background-color: #2b201e;*/
+          background-color: #190e0c;
+
   font-family: "korolev", sans-serif;
 }
 
@@ -78,6 +80,8 @@ p {
   top: 15px; /* justera så det matchar headerns mitt */
   left: 50%;
   transform: translateX(-50%);
+      background-color: #190e0c;
+
 }
 .hero h2{
   width: 100%;
@@ -101,7 +105,7 @@ color: #FFF1B5;
   opacity: 1;
   z-index: 1;
   transition: all 0.8s ease;
-  background-color: #391212;
+    background-color: #2b201e;
 }
 
 .pageLayout {
@@ -333,6 +337,9 @@ color: #FFF1B5;
 .welcomeadmin {
   padding-top: 8rem;
   text-align: center;
+}
+.start{
+  margin:4rem auto;
 }
 
 @keyframes scroll {
@@ -769,7 +776,7 @@ color: #FFF1B5;
   align-items: center;
   padding: 0 50px;
   border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
-  background-color: #391212;
+    background-color: #2b201e;
   z-index: 1000;
 }
 .projectheader .nav-menu li {
@@ -1002,7 +1009,7 @@ color: #FFF1B5;
   content: "";
   position: absolute;
   inset: 0;
-  background-color: #391212;
+    background-color: #2b201e;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
