@@ -72,7 +72,15 @@ p {
   left: 50%;
   transform: translateX(-50%);
 }
-
+.hero h2{
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+.hero h3{
+font-size: 3rem;
+  text-align: center;
+}
 .navbar {
   opacity: 0;
   /*  transform: translateY(-100%);
@@ -1887,7 +1895,7 @@ p {
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: rem;
     padding-top: 1.35rem;
   }
   .headerright.visible {
