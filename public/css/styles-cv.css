@@ -71,7 +71,7 @@ p {
 
 .hero-title {
   width: 100%;
-  font-size: 2rem;
+  font-size: 0.5rem;
   text-align: center;
   /*: #77b9f3;*/
    /* color: #b3cee6;*/
@@ -171,7 +171,8 @@ color: #ffffff;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  border-bottom: 1px solid #FFF1B5;
+  border-bottom: 1px solid #C1DBE8;
+
 ; /* Svart linje under headern */
   background-color: transparent;
 }
@@ -207,8 +208,7 @@ color: #ffffff;
 }
 
 .nav-link:hover {
-  color: #77b9f3;
-}
+  color: #C1DBE8;}
 
 .bar {
   display: block;
@@ -217,7 +217,7 @@ color: #ffffff;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #77b9f3;
+  background-color: #C1DBE8;
 }
 
 .account {
@@ -306,7 +306,7 @@ color: #ffffff;
 }
 
 .left {
-  border-right: 1px solid #FFF1B5;
+  border-right: 1px solid #C1DBE8;
 
   display: flex;
   width: 8%;
@@ -318,7 +318,7 @@ color: #ffffff;
 }
 .left li a {
   display: block;
-  color: #77b9f3;
+  color: #ffffff;
   transform: rotate(-90deg); /* Roterar texten 90 grader */
   transform-origin: left top; /* Valfri: Justerar rotationspunkten */
   margin-left: 3.6rem;
@@ -330,7 +330,7 @@ color: #ffffff;
 }
 
 .right {
-  border-left: 1px solid #FFF1B5;
+  border-left: 1px solid #C1DBE8;
 ; /* Svart linje under headern */
   display: flex;
   position: fixed;
@@ -402,16 +402,15 @@ width: 60%;
 }
 /*-------------------------HOME - BIOGRAFI---------------------------------------- */
 .biografi {
-  max-width: 1150px; /* så att allt inte blir för brett */
   margin: 0 auto; /* centrerar sektionen på sidan */
   padding: 0px;
   padding-bottom: 3rem;
+  width:80%;
 }
 
 .biografi h2 {
   text-align: left; /* titel till vänster */
   padding-top: 5rem;
-  padding-left: 2rem;
   padding-bottom: 5px;
   font-family: "Montserrat", sans-serif;
   font-weight:bold;
@@ -420,7 +419,6 @@ width: 60%;
 .bio-content {
   display: flex;
   flex-wrap: wrap; /* så den anpassar sig på mobil */
-  gap: 20px;
 }
 
 .bio-text {
