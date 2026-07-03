@@ -55,7 +55,7 @@ p {
 /*  background-color: #391212;
     background-color: #2b201e;
           background-color: #190e0c;*/
-
+background-color:#d1dbc3;
   font-family: "korolev", sans-serif;
 }
 
@@ -459,13 +459,14 @@ padding-right:1rem;
   display: flex;
   align-items: flex-start;
   padding-right: 0;
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   margin: 0 auto;
 }
 
 .bio-image img {
   max-width: 35%;
-    transform: rotate(5deg);
+  transform: rotate(5deg);
+  margin: 0 auto;
 }
 /*------------------------------------HOME - SKILLS--------------------------------------------------*/
 .skills {
