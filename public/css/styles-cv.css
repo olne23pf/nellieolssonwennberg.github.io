@@ -101,6 +101,17 @@ font-size: 2rem;
 text-align: center;
 color: #000000;
 }
+.navs{
+     display: flex;
+      justify-content: flex-end;
+    gap: 40px;
+}
+.navs a{
+  text-decoration: none;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
 .navbar {
   opacity: 0;
   /*  transform: translateY(-100%);
