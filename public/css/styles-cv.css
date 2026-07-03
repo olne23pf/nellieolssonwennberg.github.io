@@ -70,7 +70,7 @@ p {
 
 .hero-title {
   width: 100%;
-  font-size: 3rem !important;
+  font-size: 4rem;
   text-align: center;
   color: #C1DBE8;
   position: relative;
@@ -84,7 +84,6 @@ p {
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
-  border-bottom: 1px solid #FFF1B5;
 }
 .hero h2{
   width: 100%;
@@ -407,8 +406,7 @@ width: 60%;
   text-align: left; /* titel till vänster */
   padding-top: 5rem;
   padding-bottom: 5px;
-  font-family: "Montserrat", sans-serif;
-  font-weight:bold;
+  font-family: "korolev", sans-serif;
 }
 
 .bio-content {
@@ -1954,7 +1952,7 @@ width: 60%;
   }
 
   .hero-title {
-    font-size: rem;
+    font-size: 1rem;
     padding-top: 1.35rem;
   }
   .headerright.visible {
