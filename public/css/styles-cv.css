@@ -71,7 +71,7 @@ p {
 
 .hero-title {
   width: 100%;
-  font-size: 6rem;
+  font-size: 4rem;
   text-align: center;
   /*: #77b9f3;*/
    /* color: #b3cee6;*/
@@ -390,7 +390,15 @@ width: 60%;
     transform: translateX(-100%);
   }
 }
+/*-------------------------HOME - projekt---------------------------------------- */
 
+.tasks{
+  text-align: center;
+  width:80%;
+  margin:0 auto;
+  font-size: 0.8rem;
+  font-family: "Montserrat", sans-serif;
+}
 /*-------------------------HOME - BIOGRAFI---------------------------------------- */
 .biografi {
   max-width: 1150px; /* så att allt inte blir för brett */
