@@ -389,6 +389,9 @@ width: 60%;
   }
 }
 /*-------------------------HOME - projekt---------------------------------------- */
+.myProjects{
+  margin: 0 auto;
+}
 .myProjects img{
   width:84%;
   margin: 0 auto;
