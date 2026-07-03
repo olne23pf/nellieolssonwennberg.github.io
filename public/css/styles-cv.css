@@ -354,6 +354,7 @@ color: #000000;
 .start h1{
 font-size: 1rem;
 font-family: "montserrat", sans-serif;
+font-weight: 300;
 text-align: center;
 }
 .start h2{
@@ -370,7 +371,7 @@ width: 60%;
     column-gap: 3rem;
 }
 .hero-link{
-  color: #ffffff73;
+  color: #6c6c6cbd;
     text-decoration: none;
     transition: color .3s ease;
     font-family: "montserrat", sans-serif;
@@ -388,7 +389,9 @@ width: 60%;
   }
 }
 /*-------------------------HOME - projekt---------------------------------------- */
-
+.myProjects img{
+  width:100%;
+}
 .tasks{
   text-align: center;
   width:80%;
