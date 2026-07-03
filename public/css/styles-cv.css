@@ -391,6 +391,7 @@ width: 60%;
 /*-------------------------HOME - projekt---------------------------------------- */
 .myProjects img{
   width:84%;
+  margin: 0 auto;
 }
 .tasks{
   text-align: center;
