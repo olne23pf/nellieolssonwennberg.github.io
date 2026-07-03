@@ -419,7 +419,8 @@ width: 60%;
   text-align: left; /* titel till vänster */
   padding-top: 5rem;
   padding-bottom: 5px;
-  font-family: "korolev", sans-serif;
+font-family: "Bricolage Grotesque", sans-serif;
+  
 }
 
 .bio-content {
@@ -453,6 +454,7 @@ padding-right:1rem;
 
 .bio-image img {
   max-width: 100%;
+    transform: rotate(5deg);
 }
 /*------------------------------------HOME - SKILLS--------------------------------------------------*/
 .skills {
