@@ -672,7 +672,7 @@ padding-right:1rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid #77b9f3;
+  border-bottom: 1px solid #C1DBE8;;
 }
 .aboutinformation {
   padding-top: 8rem;
@@ -694,7 +694,7 @@ padding-right:1rem;
   width: 85%;
   margin: 2rem;
   padding: 0.5rem;
-  border: 1px solid #77b9f3;
+  border: 1px solid #C1DBE8;;
   display: block;
 }
 .cv-header {
@@ -707,7 +707,7 @@ padding-right:1rem;
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  color: #77b9f3;
+  color: #C1DBE8;;
   font-family: "korolov";
   font-size: 20px;
 }
@@ -777,7 +777,7 @@ padding-right:1rem;
 }
 .contactme h2 {
   font-family: "amandine";
-  color: #77b9f3;
+  color: #C1DBE8;
   width: 80%;
   margin: 0 auto;
   font-size: 2.4rem;
@@ -795,7 +795,7 @@ padding-right:1rem;
   justify-content: center;
   text-align: center;
   padding-bottom: 2em;
-  color: #77b9f3;
+  color: #C1DBE8;
 }
 .information ul li {
   text-decoration: none;
@@ -822,7 +822,7 @@ padding-right:1rem;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
+  border-bottom: 1px solid #C1DBE8;; /* Svart linje under headern */
     background-color: #ffffff;
   z-index: 1000;
 }
@@ -860,7 +860,7 @@ padding-right:1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #77b9f3;
+  color: #000000;
 }
 .projectTop {
   width: 100%;
@@ -879,8 +879,8 @@ padding-right:1rem;
   align-items: center;
   padding-left: 2em;
   position: sticky;
-  top: 94px;
-  border-bottom: 1px solid #77b9f3;
+  top: 90px;
+  border-bottom: 1px solid #C1DBE8;
   z-index: 900;
 }
 .filter a {
@@ -897,8 +897,8 @@ padding-right:1rem;
 .filter span {
   width: 0;
   height: 0;
-  border-right: 0.25rem solid #77b9f3;
-  border-bottom: 0.25rem solid #77b9f3;
+  border-right: 0.25rem solid #C1DBE8;
+  border-bottom: 0.25rem solid #C1DBE8;
   border-left: 0.5rem solid transparent;
   border-top: 0.5rem solid transparent;
   transform: rotate(45deg);
@@ -923,7 +923,7 @@ padding-right:1rem;
 .filter .categories .option {
   padding: 8px 12px;
   cursor: pointer;
-  color: #77b9f3;
+  color: #C1DBE8;
   font-family: "karla";
   background-color: transparent;
 }
@@ -945,7 +945,7 @@ padding-right:1rem;
 .btn-selected {
   cursor: pointer;
   border: none;
-  background-color: #77b9f3;
+  background-color: #C1DBE8;
   padding: 0.2rem;
   font-family: "karla";
   color: #391212;
@@ -972,7 +972,7 @@ padding-right:1rem;
   font-family: "karla";
 }
 .addproject .plus {
-  color: #77b9f3;
+  color: #C1DBE8;
   cursor: pointer;
   font-size: 1.7rem;
   padding-right: 0.5rem;
@@ -1003,7 +1003,7 @@ padding-right:1rem;
   list-style: none;
 }
 .project-text ul li {
-  color: rgb(233, 227, 213);
+  color: rgb(134, 134, 134);
 }
 .project-text .titletext {
   margin-bottom: 1.5rem;
