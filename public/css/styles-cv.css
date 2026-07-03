@@ -392,6 +392,7 @@ width: 60%;
 }
 /*-------------------------HOME - projekt---------------------------------------- */
 .myProjects{
+  padding-top:3rem;
   margin: 0 auto;
     width:84%;
     display: flex;  
@@ -453,7 +454,7 @@ padding-right:1rem;
 }
 
 .bio-image img {
-  max-width: 100%;
+  max-width: 40%;
     transform: rotate(5deg);
 }
 /*------------------------------------HOME - SKILLS--------------------------------------------------*/
