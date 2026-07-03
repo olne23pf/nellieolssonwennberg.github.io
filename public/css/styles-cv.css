@@ -5,6 +5,7 @@
   font-style: normal;
 
   font-family: "Gelasio", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -23,8 +24,8 @@ h2 {
 h3 {
   font-size: 1.2rem;
   font-weight: 100;
-  font-family: "montserrat", sans-serif;
-  /*color: #77b9f3;*/
+font-family: "Montserrat", sans-serif;
+font-weight: 300;  /*color: #77b9f3;*/
     color: #C1DBE8;
 
 }
@@ -64,7 +65,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 2;
-            background-color: #190e0c;
+            background-color: #000;
 
 }
 
@@ -86,7 +87,7 @@ p {
   top: 15px; /* justera så det matchar headerns mitt */
   left: 50%;
   transform: translateX(-50%);
-      background-color: #190e0c;
+      background-color: #000;
 
 }
 .hero h2{
@@ -111,7 +112,7 @@ color: #FFF1B5;
   opacity: 1;
   z-index: 1;
   transition: all 0.8s ease;
-          background-color: #190e0c;
+          background-color: #000;
 }
 
 .pageLayout {
@@ -349,6 +350,7 @@ color: #FFF1B5;
 }
 .start{
   width: 100%;
+    padding-top: 4rem;
   margin:4rem auto;
   justify-content: center;
 }
@@ -360,10 +362,15 @@ text-align: center;
 .start h2{
   font-size: 2rem;
   text-align: center;
-
+width: 60%;
+    margin: 0 auto;
 }
 .start-link{
   justify-content: center;
+  margin: 0 auto;
+    width: 100%;
+    display: flex;
+    column-gap: 3rem;
 }
 .hero-link{
   color: #ffffff73;
@@ -399,7 +406,6 @@ text-align: center;
 }
 
 .bio-content {
-  border-top: 1px solid #77b9f3;
   display: flex;
   flex-wrap: wrap; /* så den anpassar sig på mobil */
   gap: 20px;
