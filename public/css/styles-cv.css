@@ -12,7 +12,7 @@
 h1 {
   font-size: 2.2rem;
   font-weight: 100;
-  color: #ffffff;
+  color: #000000;
   font-family: "korolev", sans-serif;
 }
 h2 {
@@ -20,22 +20,22 @@ h2 {
     font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: normal;
-  color: #ffffff;
+  color: #000000;
 }
 h3 {
   font-size: 1.2rem;
   font-weight: 100;
 font-family: "Montserrat", sans-serif;
 font-weight: 300;  /*color: #77b9f3;*/
-    color: #ffffff;
+    color: #000000;
 
 }
 h4 {
-    color: #ffffff;
+    color: #000000;
 }
 p {
   font-family: "Montserrat", sans-serif;
-    color: #ffffff;
+    color: #000000;
     font-size:0.9rem;
 }
 
@@ -53,7 +53,7 @@ p {
 /*  background-color: #391212;
     background-color: #2b201e;
           background-color: #190e0c;*/
-          background-color: #000; 
+          background-color: #ffffff; 
 
   font-family: "korolev", sans-serif;
 }
@@ -67,7 +67,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-color: #000;
+  background-color: #ffffff;
 }
 
 .hero-title {
@@ -84,20 +84,20 @@ p {
   top: 15px; /* justera så det matchar headerns mitt */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #000;
+  background-color: #ffffff;
   border-bottom: 1px solid #C1DBE8;
 }
 .hero h2{
   width: 100%;
   font-size: 1.5rem;
   text-align: center;
-  color: #ffffff;
+  color: #000000;
 
 }
 .hero h3{
 font-size: 2rem;
 text-align: center;
-color: #ffffff;
+color: #000000;
 }
 .navbar {
   opacity: 0;
@@ -109,7 +109,7 @@ color: #ffffff;
   opacity: 1;
   z-index: 1;
   transition: all 0.8s ease;
-          background-color: #000;
+          background-color: #ffffff;
 }
 
 .pageLayout {
@@ -142,7 +142,7 @@ color: #ffffff;
   display: flex;
   justify-content: center;
   align-content: center;
-  color: #ffffff;
+  color: #000000;
   background-color: transparent;
   padding-top: 0.2em;
   z-index: 3;
@@ -268,7 +268,7 @@ color: #ffffff;
   height: 100%;
   top: -100%;
   left: 0;
-  background-color: rgb(233, 227, 213);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   flex-direction: column;
   text-align: center;
@@ -290,7 +290,7 @@ color: #ffffff;
 }
 
 .nav-menu.active li {
-  background-color: rgb(233, 227, 213);
+  background-color: rgb(255, 255, 255);
 }
 
 /*----------------------------------------------------------------*/
@@ -314,7 +314,7 @@ color: #ffffff;
 }
 .left li a {
   display: block;
-  color: #ffffff;
+  color: #000000;
   transform: rotate(-90deg); /* Roterar texten 90 grader */
   transform-origin: left top; /* Valfri: Justerar rotationspunkten */
   margin-left: 3.6rem;
@@ -376,7 +376,7 @@ width: 60%;
     font-family: "montserrat", sans-serif;
 }
 .hero-link:hover{
-      color: #ffffff;
+      color: #000000;
 
 }
 @keyframes scroll {
@@ -779,27 +779,7 @@ padding-right:1rem;
   margin: 0 auto;
   font-size: 2.4rem;
 }
-#contact-form {
-  width: 300px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
-input, textarea {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
 
 .information {
   height: 100%;
