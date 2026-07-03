@@ -833,8 +833,8 @@ padding-right:1rem;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  border-bottom: 1px solid #000;; /* Svart linje under headern */
-    background-color: #d1dbc3;
+  border-bottom: 1px solid #d1dbc3;; /* Svart linje under headern */
+    background-color: #000;
   z-index: 1000;
 }
 .projectheader .nav-menu li {
@@ -849,6 +849,7 @@ padding-right:1rem;
   font-size: 4rem;
   font-family: "Bricolage Grotesque", sans-serif;
   z-index: 1;
+  color:#d1dbc3;
 }
 
 .projectpage {
@@ -872,7 +873,7 @@ padding-right:1rem;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
+  color: #d1dbc3;
 }
 .projectTop {
   width: 100%;
@@ -892,7 +893,7 @@ padding-right:1rem;
   padding-left: 2em;
   position: sticky;
   top: 90px;
-  border-bottom: 1px solid #C1DBE8;
+  border-bottom: 1px solid #d1dbc3;
   z-index: 900;
 }
 .filter a {
@@ -1015,7 +1016,7 @@ padding-right:1rem;
   list-style: none;
 }
 .project-text ul li {
-  color: rgb(134, 134, 134);
+  color: #d1dbc3;
 }
 .project-text .titletext {
   margin-bottom: 1.5rem;
