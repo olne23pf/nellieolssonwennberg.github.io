@@ -71,12 +71,11 @@ p {
 
 .hero-title {
   width: 100%;
-  font-size: 4rem;
   text-align: center;
   color: #C1DBE8;
   position: relative;
   z-index: 2;
-  /*transition: font-size 0.1s linear;*/
+  transition: font-size 0.1s linear;
   background-color: transparent;
 }
 .hero-title.fixed {
@@ -85,6 +84,7 @@ p {
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
+  border-bottom: 1px solid #C1DBE8;
 }
 .hero h2{
   width: 100%;
