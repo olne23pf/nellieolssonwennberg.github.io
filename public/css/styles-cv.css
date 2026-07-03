@@ -76,7 +76,7 @@ p {
   color: #C1DBE8;
   position: relative;
   z-index: 2;
-  transition: font-size 0.1s linear;
+  /*transition: font-size 0.1s linear;*/
   background-color: transparent;
 }
 .hero-title.fixed {
