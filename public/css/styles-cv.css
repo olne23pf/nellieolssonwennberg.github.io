@@ -823,7 +823,7 @@ padding-right:1rem;
   align-items: center;
   padding: 0 50px;
   border-bottom: 1px solid #77b9f3; /* Svart linje under headern */
-    background-color: #000000;
+    background-color: #ffffff;
   z-index: 1000;
 }
 .projectheader .nav-menu li {
@@ -1068,7 +1068,7 @@ padding-right:1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(233, 227, 213);
+  color: rgb(0, 0, 0);
   font-size: 1.2rem;
   text-transform: uppercase;
   opacity: 0;
