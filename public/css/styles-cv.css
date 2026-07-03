@@ -6,36 +6,38 @@
 
   font-family: "Gelasio", serif;
   font-family: "Montserrat", sans-serif;
-    font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
+  font-family: "Bricolage Grotesque", sans-serif;
+
 }
 
 h1 {
   font-size: 2.2rem;
   font-weight: 100;
-  color: #b1330c;
-  font-family: "korolev", sans-serif;
+  color: #000;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 h2 {
   font-size: 2rem;
-    font-family: "Playfair Display", serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #b1330c;
+  color: #000;
 }
 h3 {
   font-size: 1.2rem;
   font-weight: 100;
 font-family: "Montserrat", sans-serif;
 font-weight: 300;  /*color: #77b9f3;*/
-    color: #b1330c;
+    color: #000;
 
 }
 h4 {
-    color: #b1330c;
+    color: #000;
 }
 p {
   font-family: "Montserrat", sans-serif;
-    color: #b1330c;
+    color: #000;
     font-size:0.9rem;
 }
 
@@ -53,7 +55,7 @@ p {
 /*  background-color: #391212;
     background-color: #2b201e;
           background-color: #190e0c;*/
-          background-color: #f2f0eb; 
+          background-color: #d1dbc3; 
 
   font-family: "korolev", sans-serif;
 }
@@ -67,13 +69,13 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  background-color: #ffffff;
+  background-color: #d1dbc3;
 }
 
 .hero-title {
   width: 100%;
   text-align: center;
-  color: #C1DBE8;
+  color: #000;
   position: relative;
   z-index: 2;
   transition: font-size 0.1s linear;
@@ -84,8 +86,8 @@ p {
   top: 15px; /* justera så det matchar headerns mitt */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff;
-  border-bottom: 1px solid #C1DBE8;
+  background-color: #d1dbc3;
+  border-bottom: 1px solid #000;
 }
 .hero h2{
   width: 100%;
@@ -109,7 +111,7 @@ color: #000000;
   opacity: 1;
   z-index: 1;
   transition: all 0.8s ease;
-          background-color: #ffffff;
+          background-color: #d1dbc3;
 }
 
 .pageLayout {
@@ -167,7 +169,7 @@ color: #000000;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  border-bottom: 1px solid #C1DBE8;
+  border-bottom: 1px solid #000;
 
 ; /* Svart linje under headern */
   background-color: transparent;
@@ -180,7 +182,7 @@ color: #000000;
 
 .nav-item a,
 .nav-item2 a {
-  color: #77b9f3;
+  color: #000;
   text-decoration: none;
   font-size: 1.4rem;
   background-color: transparent;
@@ -268,7 +270,7 @@ color: #000000;
   height: 100%;
   top: -100%;
   left: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #d1dbc3;
   width: 100%;
   flex-direction: column;
   text-align: center;
@@ -290,7 +292,7 @@ color: #000000;
 }
 
 .nav-menu.active li {
-  background-color: rgb(255, 255, 255);
+  background-color: #d1dbc3;
 }
 
 /*----------------------------------------------------------------*/
@@ -302,7 +304,7 @@ color: #000000;
 }
 
 .left {
-  border-right: 1px solid #C1DBE8;
+  border-right: 1px solid #000;
 
   display: flex;
   width: 8%;
@@ -326,7 +328,7 @@ color: #000000;
 }
 
 .right {
-  border-left: 1px solid #C1DBE8;
+  border-left: 1px solid #000;
 ; /* Svart linje under headern */
   display: flex;
   position: fixed;
