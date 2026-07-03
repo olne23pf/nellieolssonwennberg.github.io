@@ -37,9 +37,9 @@
   <div class="kontakt-innehåll">
     <div class="kontakt-text">
       <h2>Kontakta mig här</h2>
-
-      <div class="links">
-        <!-- Kolumn 1: Mail -->
+    
+    
+    <!--  <div class="links">
         <div class="kontakt-item">
           <img src="/img/mail@300x.png" alt="Mail ikon" />
           <a href="mailto:nellieolssonwennberg@gmail.com">
@@ -47,7 +47,6 @@
           </a>
         </div>
 
-        <!-- Kolumn 2: LinkedIn -->
         <div class="kontakt-item">
           <img src="/img/linkedin@300x.png" alt="LinkedIn ikon" />
           <a
@@ -57,7 +56,20 @@
           >
             linkedin: nellieolssonwennberg
           </a>
-        </div>
+        </div>-->
+        <form id="contact-form" action="https://formspree.io/f/xxxxxx" method="POST">
+  <label for="name">Namn:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">E-post:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Meddelande:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">Skicka</button>
+</form>
+
       </div>
     </div>
 

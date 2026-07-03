@@ -763,6 +763,7 @@ width: 60%;
 }
 
 /*------------------------------------------CONTACT-------------------------------------------*/
+
 .contactme {
   margin: 14em auto 8em;
   display: flex;
@@ -776,6 +777,27 @@ width: 60%;
   width: 80%;
   margin: 0 auto;
   font-size: 2.4rem;
+}
+#contact-form {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .information {
