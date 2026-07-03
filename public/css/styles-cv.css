@@ -12,7 +12,7 @@
 h1 {
   font-size: 2.2rem;
   font-weight: 100;
-  color: #000000;
+  color: #b1330c;
   font-family: "korolev", sans-serif;
 }
 h2 {
@@ -20,22 +20,22 @@ h2 {
     font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: normal;
-  color: #000000;
+  color: #b1330c;
 }
 h3 {
   font-size: 1.2rem;
   font-weight: 100;
 font-family: "Montserrat", sans-serif;
 font-weight: 300;  /*color: #77b9f3;*/
-    color: #000000;
+    color: #b1330c;
 
 }
 h4 {
-    color: #000000;
+    color: #b1330c;
 }
 p {
   font-family: "Montserrat", sans-serif;
-    color: #000000;
+    color: #b1330c;
     font-size:0.9rem;
 }
 
@@ -53,7 +53,7 @@ p {
 /*  background-color: #391212;
     background-color: #2b201e;
           background-color: #190e0c;*/
-          background-color: #ffffff; 
+          background-color: #f2f0eb; 
 
   font-family: "korolev", sans-serif;
 }
@@ -391,10 +391,12 @@ width: 60%;
 /*-------------------------HOME - projekt---------------------------------------- */
 .myProjects{
   margin: 0 auto;
+    width:84%;
+    display: flex;  
+
 }
 .myProjects img{
-  width:84%;
-  margin: 0 auto;
+  width:100%;
 }
 .tasks{
   text-align: center;
