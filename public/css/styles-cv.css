@@ -217,7 +217,7 @@ color: #000000;
 }
 
 .nav-link:hover {
-  color: #C1DBE8;}
+  color: #3e3e3e;}
 
 .bar {
   display: block;
@@ -464,7 +464,7 @@ padding-right:1rem;
 }
 
 .bio-image img {
-  max-width: 30%;
+  max-width: 35%;
     transform: rotate(5deg);
 }
 /*------------------------------------HOME - SKILLS--------------------------------------------------*/
