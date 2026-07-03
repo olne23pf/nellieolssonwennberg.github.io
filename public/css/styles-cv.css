@@ -71,7 +71,7 @@ p {
 
 .hero-title {
   width: 100%;
-  font-size: 4rem;
+  font-size: 2rem;
   text-align: center;
   /*: #77b9f3;*/
    /* color: #b3cee6;*/
@@ -88,11 +88,12 @@ p {
   left: 50%;
   transform: translateX(-50%);
       background-color: #000;
+  border-bottom: 1px solid #FFF1B5;
 
 }
 .hero h2{
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #ffffff;
 
@@ -350,7 +351,7 @@ color: #ffffff;
 }
 .start{
   width: 100%;
-    padding-top: 4rem;
+    padding-top: 6rem;
   margin:4rem auto;
   justify-content: center;
 }
