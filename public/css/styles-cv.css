@@ -48,8 +48,9 @@ p {
   box-sizing: border-box;
   /* background-color: #6c2c25;*/
 /*  background-color: #391212;
-    background-color: #2b201e;*/
-          background-color: #190e0c;
+    background-color: #2b201e;
+          background-color: #190e0c;*/
+          background-color: #000; 
 
   font-family: "korolev", sans-serif;
 }
@@ -349,25 +350,29 @@ color: #FFF1B5;
 .start{
   width: 100%;
   margin:4rem auto;
+  justify-content: center;
 }
 .start h1{
-font-size: 0.8rem;
+font-size: 1rem;
 font-family: "montserrat", sans-serif;
 text-align: center;
 }
 .start h2{
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
 
 }
 .start-link{
-  color: #fff1b5a2;
+  justify-content: center;
+}
+.hero-link{
+  color: #ffffff73;
     text-decoration: none;
     transition: color .3s ease;
     font-family: "montserrat", sans-serif;
 }
-.start-link:hover{
-      color: #FFF1B5;
+.hero-link:hover{
+      color: #ffffff;
 
 }
 @keyframes scroll {
