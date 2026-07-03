@@ -55,7 +55,6 @@ p {
 /*  background-color: #391212;
     background-color: #2b201e;
           background-color: #190e0c;*/
-          background-color: #d1dbc3; 
 
   font-family: "korolev", sans-serif;
 }
@@ -101,11 +100,7 @@ font-size: 2rem;
 text-align: center;
 color: #000000;
 }
-.navs{
-     display: flex;
-      justify-content: flex-end;
-    gap: 40px;
-}
+
 .navs a{
   text-decoration: none;
   color: #000000;
@@ -124,7 +119,12 @@ color: #000000;
   transition: all 0.8s ease;
           background-color: #d1dbc3;
 }
-
+.navbar.visible .navs{
+     display: flex;
+      justify-content: flex-end;
+    gap: 40px;
+    z-index:1;
+}
 .pageLayout {
   opacity: 0;
 }
@@ -867,6 +867,7 @@ padding-right:1rem;
   margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 2rem;
+  background-color: #000;
 }
 /*
 .projectpage .mytextcard {
