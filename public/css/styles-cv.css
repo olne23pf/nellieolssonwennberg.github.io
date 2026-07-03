@@ -36,6 +36,7 @@ h4 {
 p {
   font-family: "Montserrat", sans-serif;
     color: #ffffff;
+    font-size:0.9rem;
 }
 
 /*
@@ -400,7 +401,7 @@ width: 60%;
   margin: 0 auto; /* centrerar sektionen på sidan */
   padding: 0px;
   padding-bottom: 3rem;
-  width:100%;
+  width:84%;
 }
 
 .biografi h2 {
@@ -418,10 +419,10 @@ width: 60%;
 .bio-text {
   flex: 1;
   min-width: 250px;
-  color: rgb(233, 227, 213);
+  color: rgb(255, 255, 255);
   padding-top: 1rem;
   padding-left: 2rem;
-
+padding-right:1rem;
 }
 .bio-text h2 {
   padding-bottom: 1rem;
