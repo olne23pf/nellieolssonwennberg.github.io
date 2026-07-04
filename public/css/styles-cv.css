@@ -380,15 +380,17 @@ color: #000000;
   padding: 0 30px;
 }
 .home-title{
-  font-size:5rem;
+    transform: scaleY(1.2); /* ökar höjden med 20 % */
+  display: inline-block;  /* krävs för att transform ska fungera */
+  font-size:6.3rem;
   font-weight:400;
-padding-top:4rem;
-padding-bottom:2rem;
+padding-top:5rem;
+padding-bottom:1rem;
 text-align:center;
 }
 .start{
   width: 100%;
-    padding-top: 2rem;
+    padding-top: 3rem;
   margin:0 auto;
   justify-content: center;
 }
@@ -406,6 +408,8 @@ width: 60%;
 }
 .start-link{
   justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   margin: 0 auto;
     width: 100%;
     display: flex;
@@ -431,9 +435,9 @@ width: 60%;
 }
 /*-------------------------HOME - projekt---------------------------------------- */
 .myProjects{
-  padding-top:4rem;
+  padding-top:1rem;
   margin: 0 auto;
-    width:84%;
+padding:0 30px;
     display: flex;  
 
 }
@@ -492,9 +496,7 @@ padding-right:1rem;
 }
 
 .bio-image img {
-  max-width: 35%;
-  transform: rotate(5deg);
-  margin: 0 auto;
+  width: 100%;
 }
 /*------------------------------------HOME - SKILLS--------------------------------------------------*/
 .skills {
