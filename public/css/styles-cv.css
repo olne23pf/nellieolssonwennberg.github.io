@@ -381,11 +381,13 @@ color: #000000;
 .home-title{
     transform: scaleY(1.2); /* ökar höjden med 20 % */
   display: inline-block;  /* krävs för att transform ska fungera */
-  font-size:6.3rem;
+  font-size:7.3rem;
+  text-align:center;
   font-weight:400;
-padding-top:5rem;
-padding-bottom:1rem;
+margin-top:5rem;
+margin-bottom:1rem;
 text-align:center;
+z-index:4;
 }
 .start{
   width: 100%;
