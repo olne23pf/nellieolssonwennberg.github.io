@@ -1553,7 +1553,8 @@ padding: 0 30px;  margin: 0 auto;
 #principal {
   display: flex;
   flex-direction: column;
-  width: 84%;
+  width: 100%;
+  padding: 0 30px;
   height: 100%;
   margin: 0 auto;
 }
@@ -2286,6 +2287,7 @@ padding: 0 30px;  margin: 0 auto;
   }
   .backbtn {
     padding-left: 1rem;
+    display: sticky;
   }
 
   .posterde {
