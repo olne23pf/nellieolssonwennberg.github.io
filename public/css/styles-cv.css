@@ -2033,12 +2033,19 @@ padding: 0 30px;  margin: 0 auto;
   .navs a{
     font-size: 0.5rem;
   }
+  .homepage{
+    width: 100%;
+    padding:0 10px;
+  }
   .homepage h1{
     text-align: center;
   }
 .home-title{
-  font-size:1.55rem;
-  
+opacity: 0;  
+}
+.myProjects img{
+content: url("/img/Projekt_mobil.png");
+height: 110%;
 }
 .start h2{
   width: 100%;
