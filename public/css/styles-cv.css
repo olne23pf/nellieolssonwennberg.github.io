@@ -382,7 +382,7 @@ color: #000000;
 .home-title{
     transform: scaleY(1.2); /* ökar höjden med 20 % */
   display: inline-block;  /* krävs för att transform ska fungera */
-  font-size:7.4rem;
+  font-size:7.65rem;
   text-align:center;
   font-weight:400;
 margin-top:5rem;
@@ -2028,27 +2028,40 @@ padding: 0 30px;  margin: 0 auto;
     font-size: 1.5rem;
     padding-top: 1.1rem;
   }
-
+  .header-title a{
+    font-size: 0.5rem;
+  }
+  .navs a{
+    font-size: 0.5rem;
+  }
+  .homepage h1{
+    text-align: center;
+  }
+.home-title{
+  font-size:1.55rem;
+  
+}
+.start h2{
+  width: 100%;
+}
   .biografi h2,
   .skills h2 {
     padding-top: 1rem;
     font-size: 3rem;
     text-align: center;
   }
-  .bio-content {
-    border-top: 1px solid #77b9f3;
-  }
+ 
   .bio-text {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   .bio-text p {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   .bio-image {
     padding-top: 0;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
   .skills {
