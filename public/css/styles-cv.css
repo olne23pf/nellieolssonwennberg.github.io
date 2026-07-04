@@ -857,6 +857,7 @@ padding-right:1rem;
   opacity: 1;
   padding-top: 0.1rem;
   z-index: 2;
+  background-color: #fefced;
 }
 
 .projectheader {
@@ -870,7 +871,7 @@ padding-right:1rem;
   align-items: center;
   padding: 0 50px;
   border-bottom: 1px solid #d1dbc3;; /* Svart linje under headern */
-    background-color: #000;
+    background-color: #fefced;
   z-index: 1000;
 }
 .projectheader .nav-menu li {
@@ -893,7 +894,7 @@ padding-right:1rem;
   margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 2rem;
-  background-color: #000;
+  background-color: #fefced;
 }
 /*
 .projectpage .mytextcard {
