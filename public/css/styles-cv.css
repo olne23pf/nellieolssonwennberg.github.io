@@ -677,7 +677,7 @@ padding-right:1rem;
   display: flex;
   justify-content: center;
   gap: 40px; /* avstånd mellan kolumnerna */
-  margin-top: 5rem;
+  margin-top: 15rem;
 }
 
 .kontakt-item {
@@ -692,7 +692,7 @@ padding-right:1rem;
 }
 
 .kontakt-item a {
-  color: rgb(233, 227, 213); /* byt färg om du vill */
+  color: rgb(0, 0, 0); /* byt färg om du vill */
   text-decoration: none;
 }
 .kontakt-item a:hover {
@@ -733,7 +733,8 @@ padding-right:1rem;
   padding-top: 2rem;
 }
 .aboutinformation h1 {
-  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   text-align: left;
 }
 .aboutinformation p {
