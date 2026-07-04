@@ -100,12 +100,16 @@ font-size: 2rem;
 text-align: center;
 color: #000000;
 }
-
+.navs{
+  background-color: transparent;
+}
 .navs a{
   text-decoration: none;
   color: #000000;
   font-family: "Montserrat", sans-serif;
+    background-color: transparent;
   font-size: 1rem;
+  padding: 0 10px;
 }
 /*
 .navbar {
@@ -141,10 +145,15 @@ color: #000000;
   justify-self: left;
   z-index: 3;
   text-decoration: none;
-font-family: "Bricolage Grotesque", sans-serif;
-  font-size: 1rem;
   color:#000;
   background-color: transparent;
+}
+.header-title a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1rem;
 }
 /*
 .header-icon {
@@ -188,7 +197,7 @@ font-family: "Bricolage Grotesque", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 20px;
   border-bottom: 1px solid #000;
 
 ; /* Svart linje under headern */
@@ -329,7 +338,7 @@ font-family: "Bricolage Grotesque", sans-serif;
   display: flex;
   width: 8%;
   height: 100%;
-  margin-top: 4.2em;
+  margin-top: 2.4em;
   position: fixed;
   background-color: transparent;
   z-index: 1;
@@ -354,7 +363,7 @@ font-family: "Bricolage Grotesque", sans-serif;
   position: fixed;
   width: 8%;
   height: 100%;
-  margin-top: 4.2em;
+  margin-top: 2.4em;
   justify-self: right;
   right: 0;
   background-color: transparent;
@@ -369,7 +378,9 @@ font-family: "Bricolage Grotesque", sans-serif;
 }
 .home-title{
   font-size:5rem;
-padding-top:2rem;
+  font-weight:600;
+padding-top:4rem;
+padding-bottom:2rem;
 text-align:center;
 }
 .start{
@@ -1826,6 +1837,7 @@ padding-right:1rem;
   .navbar {
     width: 100%;
     padding: 0 30px;
+    background-color: #c1dbc3;
   }
   /*----------------------------------*/
 
