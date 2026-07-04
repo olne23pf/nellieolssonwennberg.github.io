@@ -382,12 +382,11 @@ color: #000000;
 .home-title{
     transform: scaleY(1.2); /* ökar höjden med 20 % */
   display: inline-block;  /* krävs för att transform ska fungera */
-  font-size:7.3rem;
+  font-size:7.4rem;
   text-align:center;
   font-weight:400;
 margin-top:5rem;
 margin-bottom:1rem;
-text-align:center;
 z-index:4;
 }
 .start{
