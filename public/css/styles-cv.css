@@ -720,16 +720,17 @@ padding-right:1rem;
 .aboutpage{
   padding: 0 30px;
   background-color: #d8b8aa;
+  top: 0;
 }
 .about {
   width: 100%;
-  padding-top: 4.5rem;
+  padding-top: 1rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .aboutinformation {
-  padding-top: 8rem;
+  padding-top: 2rem;
 }
 .aboutinformation h1 {
   padding: 1rem;
