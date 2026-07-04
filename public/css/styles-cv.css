@@ -200,6 +200,7 @@ color: #000000;
 
 ; /* Svart linje under headern */
   background-color: transparent;
+  z-index:1;
 }
 
 .nav-menu li {
@@ -931,10 +932,9 @@ padding: 0 30px;  margin: 0 auto;
   display: flex;
   align-items: center;
   padding-left: 2em;
-  padding-top: 1rem;
+  padding-top: 3rem;
   /*position: sticky;*/
   top: 0;
-  border-bottom: 1px solid #d1dbc3;
   z-index: 900;
 }
 .filter a {
@@ -987,7 +987,8 @@ padding: 0 30px;  margin: 0 auto;
   padding-right: 6rem;
 }
 .filter .schools a .btn {
-  color: rgb(85, 85, 85);
+  color: rgb(123, 123, 123);
+  background-color: transparent;
 }
 .btn {
   cursor: pointer;
@@ -1001,6 +1002,7 @@ padding: 0 30px;  margin: 0 auto;
   padding: 0.2rem;
   font-family: "karla";
   color: #000000;
+  background-color: transparent;
 }
 .schools a {
   font-family: "karla";
