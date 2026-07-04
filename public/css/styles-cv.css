@@ -197,8 +197,8 @@ color: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  border-bottom: 1px solid #000;
+  padding: 0 30px;
+  /*border-bottom: 1px solid #000;*/
 
 ; /* Svart linje under headern */
   background-color: transparent;
@@ -333,7 +333,7 @@ color: #000000;
 }
 
 .left {
-  border-right: 1px solid #000;
+  /*border-right: 1px solid #000;*/
 
   display: flex;
   width: 8%;
@@ -357,8 +357,8 @@ color: #000000;
 }
 
 .right {
-  border-left: 1px solid #000;
-; /* Svart linje under headern */
+  /*border-left: 1px solid #000;*/
+ /* Svart linje under headern */
   display: flex;
   position: fixed;
   width: 8%;
@@ -376,9 +376,12 @@ color: #000000;
   padding-top: 8rem;
   text-align: center;
 }
+.homepage{
+  padding: 0 30px;
+}
 .home-title{
   font-size:5rem;
-  font-weight:600;
+  font-weight:400;
 padding-top:4rem;
 padding-bottom:2rem;
 text-align:center;
@@ -386,7 +389,7 @@ text-align:center;
 .start{
   width: 100%;
     padding-top: 2rem;
-  margin:4rem auto;
+  margin:0 auto;
   justify-content: center;
 }
 .start h1{
