@@ -1171,9 +1171,9 @@ padding: 0 30px;  margin: 0 auto;
   list-style-type: none;
 }
 .backbtn a {
-  font-family: "karla";
+  font-family: "montserrat", sans-serif;
   text-decoration: none;
-  color: #77b9f3;
+  color: #000000;
 }
 .projecttitle {
   text-align: center;
@@ -1205,7 +1205,7 @@ padding: 0 30px;  margin: 0 auto;
   text-align: center;
   width: 80%;
   margin: 0 auto;
-  color: rgb(233, 227, 213);
+  color: rgb(0, 0, 0);
 }
 .projectcard .divimage {
   margin: 0 auto;
