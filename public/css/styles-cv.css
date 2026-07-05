@@ -343,6 +343,7 @@ color: #000000;
 .footer-contact-mail{
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 .footer-contact h1{
   font-size: 1rem;
