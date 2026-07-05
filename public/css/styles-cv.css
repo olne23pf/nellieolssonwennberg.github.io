@@ -535,6 +535,21 @@ padding-right:1rem;
 .bio-image img {
   width: 100%;
 }
+/*------------------------------------HOME - KUNDER--------------------------------------------------*/
+.kunder{
+  padding: 0 30px;
+}
+.kunder-img{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+.kunder-img img{
+    max-width: 120px;
+  height: auto;
+}
 /*------------------------------------HOME - SKILLS--------------------------------------------------*/
 .skills {
   max-width: 1150px; /* så att allt inte blir för brett */
