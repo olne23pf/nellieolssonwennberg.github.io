@@ -326,7 +326,7 @@ color: #000000;
 /*-----------------------------FOOTER-----------------------------------*/
 .footer{
   background-color: #000;
-  height: 10rem;
+  height: 12rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -340,9 +340,14 @@ color: #000000;
   color: #ffffff;
   padding-top: 2rem;
 }
+.footer-contact-mail{
+  display: flex;
+  flex-direction: row;
+}
 .footer-contact h1{
   font-size: 1rem;
   color: #ffffff;
+  padding-bottom: 0.5rem;
 }
 .footer-contact p{
   font-size: 0.8rem;
@@ -553,6 +558,7 @@ padding-right:1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   justify-items: left;
+  padding-bottom: 4rem;
 }
 .kunder_img img{
     max-width: 100px;
