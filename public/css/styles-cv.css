@@ -437,8 +437,8 @@ z-index:4;
 }
 .start{
   width: 100%;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
   margin:0 auto;
   justify-content: center;
 }
@@ -492,12 +492,12 @@ width: 60%;
   width:100%;
 }
 .tasks{
-  width:80%;
+  width:100%;
   margin:0 auto;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
-  text-align: justify;       /* gör att texten fyller hela bredden */
-  text-justify: inter-word;
+  word-spacing: 1.3em;
+  padding: 0 10px;
 }
 /*-------------------------HOME - BIOGRAFI---------------------------------------- */
 .biografi {
@@ -548,6 +548,7 @@ padding-right:1rem;
 /*------------------------------------HOME - KUNDER--------------------------------------------------*/
 .kunder{
   padding: 0 30px;
+  padding-top: 5rem;
 }
 .kunder_img{
   display: grid;
