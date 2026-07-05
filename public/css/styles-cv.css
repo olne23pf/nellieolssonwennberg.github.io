@@ -145,7 +145,6 @@ color: #000000;
   text-decoration: none;
   color:#000;
   background-color: transparent;
-  padding-top: 2rem;
 }
 .header-title a {
   text-decoration: none;
@@ -433,7 +432,7 @@ padding-right: 30px;
   font-size:7.65rem;
   text-align:center;
   font-weight:400;
-margin-top:5rem;
+margin-top:7rem;
 margin-bottom:1rem;
 z-index:4;
 }
