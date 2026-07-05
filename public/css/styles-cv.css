@@ -502,7 +502,7 @@ width: 60%;
   margin:0 auto;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
-  word-spacing: 1.3em;
+  word-spacing: 2.3em;
   padding: 0 10px;
 }
 /*-------------------------HOME - BIOGRAFI---------------------------------------- */
@@ -558,7 +558,7 @@ padding-right:1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
   justify-items: left;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
 }
 .kunder_img img{
     max-width: 100px;
