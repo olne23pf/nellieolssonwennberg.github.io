@@ -323,7 +323,43 @@ color: #000000;
   background-color: #d1dbc3;
 }
 
-/*----------------------------------------------------------------*/
+/*-----------------------------FOOTER-----------------------------------*/
+.footer{
+  background-color: #000;
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer-contact{
+  padding-left: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+}
+.footer-contact h1{
+  font-size: 1rem;
+  color: #ffffff;
+}
+.footer-contact a{
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 2px solid #ffffff; 
+}
+.footer-logo{
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+padding-right: 30px;
+  justify-content: right;
+}
+.footer-logo .logo{
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1rem;
+  color:#ffffff;
+}
+/*-----------------------------------------------------------------------*/
 
 .pageLayout {
   display: grid;
@@ -391,7 +427,8 @@ z-index:4;
 }
 .start{
   width: 100%;
-    padding-top: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
   margin:0 auto;
   justify-content: center;
 }
@@ -402,7 +439,7 @@ font-weight: 300;
 text-align: center;
 }
 .start h2{
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
 width: 60%;
     margin: 0 auto;
@@ -445,11 +482,12 @@ width: 60%;
   width:100%;
 }
 .tasks{
-  text-align: center;
   width:80%;
   margin:0 auto;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
+  text-align: justify;       /* gör att texten fyller hela bredden */
+  text-justify: inter-word;
 }
 /*-------------------------HOME - BIOGRAFI---------------------------------------- */
 .biografi {
@@ -729,7 +767,7 @@ padding-right:1rem;
   grid-template-columns: 1fr 1fr;
 }
 .aboutinformation {
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 .aboutinformation h1 {
   padding-top: 2rem;

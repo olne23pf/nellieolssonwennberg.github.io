@@ -1,0 +1,13 @@
+<div class="footer">
+    <div class="footer-contact">
+        <h1>KONTAKT</h1>
+        <div>
+        <p>Nya affärer & frågor: kontakt@nellieolssonwennberg.se</p>
+        <a href="mailto:nellieolssonwennberg@gmail.com" class="mail">nellieolssonwennberg@gmail.com </a>
+        </div>
+    </div>
+    <div class="footer-logo">
+        <p class="logo">NELLIE OLSSON WENNBERG</p>
+        <p>@ 2026</p>
+    </div>
+</div>
