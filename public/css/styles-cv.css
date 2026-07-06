@@ -540,7 +540,6 @@ padding-right:1rem;
 
 .bio-image {
   flex: 1;
-  min-width: 250px;
   display: flex;
   align-items: flex-start;
   padding-right: 0;
