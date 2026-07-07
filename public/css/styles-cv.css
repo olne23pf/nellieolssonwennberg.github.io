@@ -529,10 +529,10 @@ font-family: "Bricolage Grotesque", sans-serif;
 
 .bio-text {
   flex: 1;
-  min-width: 250px;
+width: 50%;
   color: rgb(255, 255, 255);
   padding-top: 1rem;
-padding-right:1rem;
+padding-right:1.5rem;
 }
 .bio-text h2 {
   padding-bottom: 1rem;
@@ -730,7 +730,7 @@ padding-right:1rem;
 .kontakt-text {
   flex: 1;
   min-width: 250px;
-  color: rgb(233, 227, 213);
+  color: rgb(0, 0, 0);
   padding-top: 1rem;
 }
 
@@ -965,7 +965,7 @@ padding-right:1rem;
 .projectpage {
 padding: 0 30px;  margin: 0 auto;
   padding-bottom: 2rem;
-  backgroundcolor: #fefced;
+  background-color: #fefced;
 }
 /*
 .projectpage .mytextcard {
@@ -1263,7 +1263,7 @@ padding: 0 30px;  margin: 0 auto;
   font-family: "karla";
   text-align: center;
   padding-bottom: 3rem;
-  color: rgb(233, 227, 213);
+  color: rgb(0, 0, 0);
 }
 
 .projectcard p {
@@ -1319,7 +1319,7 @@ padding: 0 30px;  margin: 0 auto;
   font-family: "karla";
 }
 .oatly_content li a {
-  color: rgb(233, 227, 213);
+  color: rgb(0, 0, 0);
   text-align: left;
   font-family: "karla";
 }
@@ -1488,7 +1488,7 @@ padding: 0 30px;  margin: 0 auto;
   display: flex;
   justify-content: center;
   text-align: center;
-  color: rgb(233, 227, 213);
+  color: rgb(0, 0, 0);
   font-family: "karla";
   font-size: 18px;
   padding-left: 4rem;
