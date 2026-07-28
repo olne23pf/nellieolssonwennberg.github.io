@@ -1415,7 +1415,7 @@ padding: 0 30px;  margin: 0 auto;
   width: 50%;
 }
 .project-list {
-  color: rgb(233, 227, 213); /* text color */
+  color: rgb(0, 0, 0); /* text color */
   list-style-position: inside; /* brings dot next to text */
   padding-left: 0;
 }
@@ -1438,7 +1438,7 @@ padding: 0 30px;  margin: 0 auto;
   padding-bottom: 2rem;
 }
 .motion_content h3 {
-  color: #77b9f3;
+  color: #000000;
   padding-top: 1rem;
 }
 .motion_content p {
