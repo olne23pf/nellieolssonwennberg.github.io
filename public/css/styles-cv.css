@@ -556,10 +556,13 @@ padding-right:1.5rem;
 .kunder{
   padding-top: 2rem;
 }
+.kunder h2{
+  text-align: center; 
+}
 .kunder_img{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-  justify-items: left;
+  justify-items: center;
   padding-bottom: 8rem;
 }
 .kunder_img img{
