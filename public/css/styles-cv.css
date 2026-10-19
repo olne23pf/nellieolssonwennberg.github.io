@@ -445,7 +445,7 @@ z-index:4;
 .start{
   width: 100%;
     padding-top: 6rem;
-    padding-bottom: 4rem;
+    padding-bottom: 3rem;
   margin:0 auto;
   justify-content: center;
 }
@@ -463,7 +463,7 @@ width: 60%;
 }
 .start-link{
   justify-content: center;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   padding-bottom: 3rem;
   margin: 0 auto;
     width: 100%;
@@ -554,7 +554,7 @@ padding-right:1.5rem;
 }
 /*------------------------------------HOME - KUNDER--------------------------------------------------*/
 .kunder{
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 .kunder h2{
   text-align: center; 
