@@ -524,7 +524,6 @@ font-family: "Bricolage Grotesque", sans-serif;
 
 .bio-content {
   display: flex;
-  flex-wrap: wrap; /* så den anpassar sig på mobil */
 }
 
 .bio-text {
@@ -2119,10 +2118,7 @@ padding:0;
 height:0;
 margin-top:1rem;
 }
-.myProjects img{
-content: url("/img/Projekt_mobil.png");
-height: 110%;
-}
+
 .start h2{
   width: 100%;
 }
@@ -2132,7 +2128,10 @@ height: 110%;
     font-size: 3rem;
     text-align: center;
   }
- 
+ .bio-content {
+  display: flex;
+  flex-direction: row;
+ }
   .bio-text {
     width: 100%;
     margin: 0 auto;
@@ -2142,7 +2141,7 @@ height: 110%;
     margin: 0 auto;
   }
   .bio-text h2{
-    text-align: left;
+    text-align: center;
     padding:0;
   }
   .bio-image {
