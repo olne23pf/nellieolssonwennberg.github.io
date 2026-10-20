@@ -1522,10 +1522,27 @@ padding: 0 30px;  margin: 0 auto;
   padding-right: 4rem;
 }
 .projsoderstrom .soderstromsimg{
-  height:auto;  
-  width:50%;
-  justify-content:center;
-  margin:0 auto;
+      height: auto;
+    width: 40%;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center
+}
+.projectsoderstrom video {
+    height: auto;
+    width: 40%;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center
+}
+.meta{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding-top: 1rem;
 }
 .projav1 {
   display: flex;
