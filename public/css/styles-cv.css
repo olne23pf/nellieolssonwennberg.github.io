@@ -1521,9 +1521,7 @@ padding: 0 30px;  margin: 0 auto;
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.meta h2{
-  padding-top: 2rem;
-}
+
 .meta1 .soderstromsimg{
       height: auto;
     width: 100%;
@@ -1532,7 +1530,7 @@ padding: 0 30px;  margin: 0 auto;
     display: flex;
     align-items: center
 }
-.meta2 video{
+.meta2 .projsoderstrom video{
     height: auto;
     width: 100%;
     justify-content: center;
@@ -1546,7 +1544,8 @@ padding: 0 30px;  margin: 0 auto;
     justify-content: center;
     margin: 0 auto;
     display: flex;
-    align-items: center
+    align-items: center;
+    padding-bottom: 2rem;
 }
 .meta{
   display: flex;
