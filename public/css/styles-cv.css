@@ -1534,16 +1534,17 @@ padding: 0 30px;  margin: 0 auto;
     padding-bottom: 2rem;
 }
 .meta1 .soderstromsimg{
-      height: auto;
-    width: 90%;
+      height: 60%;
+    width: auto;
     justify-content: center;
     margin: 0 auto;
     display: flex;
-    align-items: center
+    align-items: center;
+    padding-top:20px;
 }
 .meta2 video{
-    height: auto;
-    width: 90%;
+    height: 60%;
+    width: auto;
     justify-content: center;
     margin: 0 auto;
     display: flex;
