@@ -2414,6 +2414,13 @@ margin-top:1rem;
   #principal h1 {
     padding-top: 1rem;
   }
+  .projsoderstrom h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
   .projsoderstrom {
     width: 100%;
     margin: 0 auto;
@@ -2423,6 +2430,7 @@ margin-top:1rem;
   }
   .meta{
     width: 50%;
+    flex-direction: column;
   }
   .proj4 {
     padding-top: 1rem;
