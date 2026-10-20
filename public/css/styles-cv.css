@@ -1523,7 +1523,9 @@ padding: 0 30px;  margin: 0 auto;
 }
 .projsoderstrom .soderstromsimg{
   height:auto;  
-  width:60%;
+  width:50%;
+  justify-content:center;
+  margin:0 auto;
 }
 .projav1 {
   display: flex;
