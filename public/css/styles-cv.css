@@ -2427,17 +2427,20 @@ margin-top:1rem;
     margin: 0 auto;
   }
   .S_instareel {
-    width: 50%;
+    width: 100%;
+  }
+  .S_instareel video {
+    width: 100%;
   }
   .meta{
-    width: 50%;
+    width: 100%;
     flex-direction: column;
   }
   .meta1 .soderstromsimg{
-    width: 50%;
+    width: 100%;
   }
   .meta2 video{
-    width: 50%;
+    width: 100%;
   }
   .proj4 {
     padding-top: 1rem;
