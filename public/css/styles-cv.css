@@ -1987,7 +1987,7 @@ padding: 0 30px;  margin: 0 auto;
     animation: none;
   }
   .projectpage {
-    width: 82%;
+    width:100%;
     margin: 0 auto;
     padding-top: 6rem;
   }
@@ -2347,7 +2347,7 @@ margin-top:1rem;
   .projectpage {
     display: grid;
     grid-template-columns: 2fr;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -2417,6 +2417,12 @@ margin-top:1rem;
   .projsoderstrom {
     width: 100%;
     margin: 0 auto;
+  }
+  .S_instareel {
+    width: 50%;
+  }
+  .meta{
+    width: 50%;
   }
   .proj4 {
     padding-top: 1rem;
