@@ -2431,6 +2431,7 @@ margin-top:1rem;
   }
   .S_instareel video {
     width: 100%;
+    height: auto;
   }
   .meta{
     width: 100%;
@@ -2438,9 +2439,11 @@ margin-top:1rem;
   }
   .meta1 .soderstromsimg{
     width: 100%;
+    height: auto;
   }
   .meta2 video{
     width: 100%;
+    height: auto;
   }
   .proj4 {
     padding-top: 1rem;
