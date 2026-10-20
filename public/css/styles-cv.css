@@ -1508,7 +1508,20 @@ padding: 0 30px;  margin: 0 auto;
 .proj4 .store img {
   max-width: 700px;
 }
-.proj4 .soderstromsimg{
+.projsoderstrom h2 {
+  text-align: center;
+}
+.projsoderstrom .text {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: "karla";
+  font-size: 18px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.projsoderstrom .soderstromsimg{
   height:auto;  
   width:60%;
 }
