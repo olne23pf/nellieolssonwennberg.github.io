@@ -1530,7 +1530,7 @@ padding: 0 30px;  margin: 0 auto;
     display: flex;
     align-items: center
 }
-.meta2 .projsoderstrom video{
+.meta2 video{
     height: auto;
     width: 100%;
     justify-content: center;
@@ -1538,7 +1538,7 @@ padding: 0 30px;  margin: 0 auto;
     display: flex;
     align-items: center
 }
-.projsoderstrom video {
+.S_instareel video {
     height: auto;
     width: 40%;
     justify-content: center;
