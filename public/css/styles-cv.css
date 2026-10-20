@@ -1521,15 +1521,26 @@ padding: 0 30px;  margin: 0 auto;
   padding-left: 4rem;
   padding-right: 4rem;
 }
-.projsoderstrom .soderstromsimg{
+.meta h2{
+  padding-top: 2rem;
+}
+.meta1 .soderstromsimg{
       height: auto;
-    width: 40%;
+    width: 100%;
     justify-content: center;
     margin: 0 auto;
     display: flex;
     align-items: center
 }
-.projectsoderstrom video {
+.meta2 video{
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center
+}
+.projsoderstrom video {
     height: auto;
     width: 40%;
     justify-content: center;
@@ -1539,7 +1550,7 @@ padding: 0 30px;  margin: 0 auto;
 }
 .meta{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   justify-content: center;
   padding-top: 1rem;
